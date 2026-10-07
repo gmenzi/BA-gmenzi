@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+    <configuration XML_version="1.2" id="configuration_0">
+        <instance XML_version="1.2" desc="TI MSP430 USB1" href="connections/TIMSP430-USB.xml" id="TI MSP430 USB1" xml="TIMSP430-USB.xml" xmlpath="connections"/>
+        <connection XML_version="1.2" id="TI MSP430 USB1">
+            <instance XML_version="1.2" href="drivers/msp430_emu.xml" id="drivers" xml="msp430_emu.xml" xmlpath="drivers"/>
+            
+            <property id=" some localized interface type override" Type="choicelist" Value="Spy-Bi-Wire (2-wire)"/>
+            
+            <platform XML_version="1.2" id="platform_0">
+                <instance XML_version="1.2" desc="MSP430FR5043" href="devices/MSP430FR5043.xml" id="MSP430FR5043" xml="MSP430FR5043.xml" xmlpath="devices"/>
+                <device XML_version="1.2" id="MSP430FR5043" partnum="MSP430FR5043" HW_revision="1.0" description="MSP430FR5043">
+                    <cpu XML_version="1.2" id="MSP430" HW_revision="1.0" isa="MSP430FR59xx" description="MSP430 CPU">
+                        <property id="interfaceSpeed" Type="choicelist" Value="2"/>
+                    </cpu>
+                </device>
+            </platform>
+        </connection>
+    </configuration>
+</configurations>

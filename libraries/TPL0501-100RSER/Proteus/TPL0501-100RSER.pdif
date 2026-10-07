@@ -1,0 +1,135 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "TPL0501-100RSER"
+   (description "256-Taps, 100k, Single-Channel Potentiometer With SPI Interface")
+   (family "ANA")
+   (package "RSE0008A")
+   (attribute "Datasheet Link" "http://www.ti.com/lit/gpn/tpl0501-100")
+   (attribute "Manufacturer_Name" "Texas Instruments")
+   (attribute "Manufacturer_Part_Number" "TPL0501-100RSER")
+   (attribute "Mouser Part Number" "595-TPL0501-100RSER")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPL0501-100RSER?qs=QtI0yD1FyOOh8PFNz2IgVg%3D%3D")
+   (attribute "Arrow Part Number" "TPL0501-100RSER")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/tpl0501-100rser/texas-instruments?utm_currency=USD&region=nac")
+   (gate
+    (symbol "TPL0501-100RSER")
+    (pin "H" 1 PS)
+    (pin "DIN" 2 PS)
+    (pin "$CS$" 3 PS)
+    (pin "GND" 4 PS)
+    (pin "SCLK" 5 PS)
+    (pin "W" 6 PS)
+    (pin "VDD" 7 PS)
+    (pin "L" 8 PS)
+   )
+  )
+  (symbol "TPL0501-100RSER"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 300) (pt 1000 300) (pt 1000 -600) (pt 200 -600) (pt 200 300) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 600 -800) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 600 500) (rot 90) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "RSE0008A"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -0.75 0.75)
+      (pt 0.75 0.75)
+      (pt 0.75 -0.75)
+      (pt -0.75 -0.75)
+      (pt -0.75 0.75))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (circle
+      (pt -1.233 0.512) (pt -1.161 0.512)
+     )
+    )
+   )
+   (leg 1 (pt -0.675 0.5) (padstack 0))
+   (leg 2 (pt -0.675 0) (padstack 2))
+   (leg 3 (pt -0.675 -0.5) (padstack 0))
+   (leg 4 (pt 0 -0.65) (padstack 4))
+   (leg 5 (pt 0.675 -0.5) (padstack 0))
+   (leg 6 (pt 0.675 0) (padstack 6))
+   (leg 7 (pt 0.675 0.5) (padstack 0))
+   (leg 8 (pt 0 0.65) (padstack 8))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.25 0.55 0 0 0))
+   )
+   (padstack 8
+    (plated false)
+    (pad (layer TCOP) (rectf 0.3 0.6 0 0 90))
+   )
+   (padstack 4
+    (plated false)
+    (pad (layer TCOP) (rectf 0.3 0.6 0 0 90))
+   )
+   (padstack 2
+    (plated false)
+    (pad (layer TCOP) (rectf 0.2 0.55 0 0 0))
+   )
+   (padstack 6
+    (plated false)
+    (pad (layer TCOP) (rectf 0.2 0.55 0 0 0))
+   )
+   (model "TPL0501-100RSER.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

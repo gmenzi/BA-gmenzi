@@ -1,0 +1,562 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8cc4acae-3f14-463c-b0a0-3bc1c8d05954")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 210.82 109.22) (xy 248.92 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a510be1-bcd7-4ca9-bb93-d2aa7bd0054e")
+	)
+	(wire
+		(pts
+			(xy 233.68 73.66) (xy 233.68 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba7975f6-31f3-4f87-b95a-1830d8be5eec")
+	)
+	(wire
+		(pts
+			(xy 233.68 92.71) (xy 248.92 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa2db10a-f412-4387-bba7-93042562d86c")
+	)
+	(sheet
+		(at 102.87 54.61)
+		(size 53.34 80.01)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6c679a7a-a68a-4eba-aef1-9d2acdef366b")
+		(property "Sheetname" "MSP"
+			(at 102.87 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "msp.kicad_sch"
+			(at 102.87 135.2046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PULSER_OUT" input
+			(at 156.21 58.42 0)
+			(uuid "55cd09c1-5dd3-402d-9e91-ea3c415edd83")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ADC_IN" input
+			(at 156.21 62.23 0)
+			(uuid "9c32ac0b-ee09-4091-ba87-5701a8683f39")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 170.18 39.37)
+		(size 69.85 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8e6e7503-3da7-4d51-9f66-311eb0e59877")
+		(property "Sheetname" "TX"
+			(at 170.18 38.6584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "tx.kicad_sch"
+			(at 170.18 74.2446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Field2" ""
+			(at 170.18 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "PULSE_HV_OUT" output
+			(at 233.68 73.66 270)
+			(uuid "f3628b00-f693-4c88-b4cf-f44bcfaccc0c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PULSE_LV_IN" input
+			(at 170.18 46.99 180)
+			(uuid "5062281c-545f-4e99-8ca2-34c121cec0de")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PULSE_EN_N" input
+			(at 170.18 50.8 180)
+			(uuid "7adcaa48-01fd-43d4-abf0-09161b8fa625")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 171.45 83.82)
+		(size 39.37 48.26)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a3b6f7aa-6ef7-488e-b797-42706d211223")
+		(property "Sheetname" "RX"
+			(at 171.45 83.1084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rx.kicad_sch"
+			(at 171.45 132.6646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "LP_FILT_EN" input
+			(at 191.77 83.82 90)
+			(uuid "c4459dee-6915-4ca6-9652-6e5c2a83f173")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "RX_IN" input
+			(at 210.82 109.22 0)
+			(uuid "4f95393d-18fc-43d6-90ff-1eb723c99b90")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIG_FILT_IN" output
+			(at 171.45 118.11 180)
+			(uuid "8eef45dc-0174-4c8e-86aa-e6e179604585")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VGA_PWR_EN" input
+			(at 184.15 83.82 90)
+			(uuid "3cd6aafa-c247-4cc2-bc73-1aa54b8e7b30")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PREAMP_PWR_EN" input
+			(at 186.69 83.82 90)
+			(uuid "011d4f01-d056-4417-b58c-23b170d115b7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VGA_GAIN_CS" input
+			(at 171.45 114.3 180)
+			(uuid "a1253bbb-32ee-4e87-887f-e536d00f02e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VGA_GAIN_RC_SINK" input
+			(at 171.45 110.49 180)
+			(uuid "4d95c988-5e37-4b2b-97ec-6521349bd6b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VGA_GAIN_RC_EN" input
+			(at 171.45 106.68 180)
+			(uuid "73e3507e-deae-4bf5-8dd6-2ef4987dd435")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 22.86 78.74)
+		(size 48.26 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a8ba6e7f-774b-4308-a555-46c064980fee")
+		(property "Sheetname" "NRF"
+			(at 22.86 78.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "nrf.kicad_sch"
+			(at 22.86 102.1846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Field2" ""
+			(at 22.86 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 151.13)
+		(size 48.26 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "af15e2f0-2c1b-4135-9358-6031ad08c9a3")
+		(property "Sheetname" "PPG"
+			(at 25.4 150.4184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ppg.kicad_sch"
+			(at 25.4 174.5746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Field2" ""
+			(at 25.4 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "PPG_GPIO" input
+			(at 64.77 151.13 90)
+			(uuid "b6bb43c3-bcac-4c38-aa89-64907ac40178")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PPG_INT" input
+			(at 59.69 151.13 90)
+			(uuid "2c42f4d2-82f8-4441-9314-f3324a2bde18")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PPG_SCL" output
+			(at 34.29 151.13 90)
+			(uuid "1cb2ee3b-74ea-4b54-a2cc-b0e25925ff78")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PPG_SDA" output
+			(at 38.1 151.13 90)
+			(uuid "85d31ff5-1c17-4ee4-93de-21722c5e3b71")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPARE_PIN" input
+			(at 54.61 151.13 90)
+			(uuid "56740cd0-99d0-4f50-bcc6-0aea547f5e25")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 21.59 27.94)
+		(size 41.91 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d463870e-9fcf-4af5-ace7-dfb7bf5f63b9")
+		(property "Sheetname" "POWER"
+			(at 21.59 27.2284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 21.59 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 248.92 85.09)
+		(size 24.13 45.72)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "edb8e8bc-fb53-4a31-8600-d64a48325b03")
+		(property "Sheetname" "CMUT"
+			(at 248.92 84.3784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cmut.kicad_sch"
+			(at 248.92 131.3946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PULSE_HV_IN" input
+			(at 248.92 92.71 180)
+			(uuid "c9b1ae57-e33d-4588-83f3-f6f2bc486688")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RX_OUT" output
+			(at 248.92 109.22 180)
+			(uuid "cbdf888d-75ef-408d-950d-e28d69edd044")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

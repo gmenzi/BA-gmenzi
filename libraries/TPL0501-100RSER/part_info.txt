@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPL0501-100RSER
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=8
+Version=3.5
+Released=2018-02-08 15:48:10
+Downloaded=2026-10-02 12:21:36
+3D=Y

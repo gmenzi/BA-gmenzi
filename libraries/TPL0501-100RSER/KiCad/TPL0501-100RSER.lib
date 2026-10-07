@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model TPL0501-100RSER
+#/289465/1814162/2.50/8/4/Integrated Circuit
+DEF TPL0501-100RSER IC 0 30 Y Y 1 F N
+F0 "IC" 1050 500 50 H V L CNN
+F1 "TPL0501-100RSER" 1050 400 50 H V L CNN
+F2 "RSE0008A" 1050 300 50 H I L CNN
+F3 "http://www.ti.com/lit/gpn/tpl0501-100" 1050 200 50 H I L CNN
+F4 "256-Taps, 100k, Single-Channel Potentiometer With SPI Interface" 1050 100 50 H I L CNN "Description"
+F5 "" 1050 0 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 -100 50 H I L CNN "Manufacturer_Name"
+F7 "TPL0501-100RSER" 1050 -200 50 H I L CNN "Manufacturer_Part_Number"
+F8 "595-TPL0501-100RSER" 1050 -300 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPL0501-100RSER?qs=QtI0yD1FyOOh8PFNz2IgVg%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F10 "TPL0501-100RSER" 1050 -500 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/tpl0501-100rser/texas-instruments?utm_currency=USD&region=nac" 1050 -600 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X H 1 0 0 200 R 50 50 0 0 P
+X DIN 2 0 -100 200 R 50 50 0 0 P
+X ~CS 3 0 -200 200 R 50 50 0 0 P
+X GND 4 600 -800 200 U 50 50 0 0 P
+X SCLK 5 1200 -200 200 L 50 50 0 0 P
+X W 6 1200 -100 200 L 50 50 0 0 P
+X VDD 7 1200 0 200 L 50 50 0 0 P
+X L 8 600 500 200 D 50 50 0 0 P
+P 5 0 1 6 200 300 1000 300 1000 -600 200 -600 200 300 N
+ENDDRAW
+ENDDEF
+#
+#End Library

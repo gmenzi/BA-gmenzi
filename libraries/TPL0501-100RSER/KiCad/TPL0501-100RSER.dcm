@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPL0501-100RSER
+D 256-Taps, 100k, Single-Channel Potentiometer With SPI Interface
+K
+F http://www.ti.com/lit/gpn/tpl0501-100
+$ENDCMP
+#
+#End Doc Library
