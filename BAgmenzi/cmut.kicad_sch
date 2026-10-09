@@ -1688,7 +1688,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "17a85be2-d98c-4b3f-b3d4-b7ba96356a27")
-		(property "Reference" "R45"
+		(property "Reference" "R41"
 			(at 134.62 41.9099 0)
 			(effects
 				(font
@@ -1742,7 +1742,7 @@
 		(instances
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
-					(reference "R45")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -1824,7 +1824,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "21818c4b-9f43-4183-bec6-64ebbec0c2b0")
-		(property "Reference" "C62"
+		(property "Reference" "C63"
 			(at 142.24 130.8099 0)
 			(effects
 				(font
@@ -1878,7 +1878,7 @@
 		(instances
 			(project ""
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
-					(reference "C62")
+					(reference "C63")
 					(unit 1)
 				)
 			)
@@ -1965,7 +1965,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "37515a96-142f-47f0-af4e-0b428caa8368")
-		(property "Reference" "C61"
+		(property "Reference" "C62"
 			(at 118.11 130.302 0)
 			(effects
 				(font
@@ -2019,7 +2019,7 @@
 		(instances
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
-					(reference "C61")
+					(reference "C62")
 					(unit 1)
 				)
 			)
@@ -2035,7 +2035,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a86ed40-d03c-4082-b199-7c12530b7689")
-		(property "Reference" "R44"
+		(property "Reference" "R43"
 			(at 127 69.8499 0)
 			(effects
 				(font
@@ -2089,7 +2089,7 @@
 		(instances
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
-					(reference "R44")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -2382,7 +2382,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b223d5ca-19d0-4f03-9017-5a4176e6bb29")
-		(property "Reference" "C60"
+		(property "Reference" "C61"
 			(at 134.112 61.722 90)
 			(effects
 				(font
@@ -2436,7 +2436,7 @@
 		(instances
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
-					(reference "C60")
+					(reference "C61")
 					(unit 1)
 				)
 			)
@@ -2797,7 +2797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de82cdfc-9dcb-4237-a505-705721bd3f8d")
-		(property "Reference" "R43"
+		(property "Reference" "R44"
 			(at 123.19 113.03 90)
 			(effects
 				(font
@@ -2849,7 +2849,7 @@
 		(instances
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
-					(reference "R43")
+					(reference "R44")
 					(unit 1)
 				)
 			)

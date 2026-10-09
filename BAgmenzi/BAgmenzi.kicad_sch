@@ -300,8 +300,8 @@
 		)
 	)
 	(sheet
-		(at 22.86 78.74)
-		(size 48.26 22.86)
+		(at 29.21 72.39)
+		(size 35.56 48.26)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -316,7 +316,7 @@
 		)
 		(uuid "a8ba6e7f-774b-4308-a555-46c064980fee")
 		(property "Sheetname" "NRF"
-			(at 22.86 78.0284 0)
+			(at 29.21 71.6784 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -325,7 +325,7 @@
 			)
 		)
 		(property "Sheetfile" "nrf.kicad_sch"
-			(at 22.86 102.1846 0)
+			(at 29.21 121.2346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -339,6 +339,16 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(pin "PPG_I2C{SCL, SDA}" bidirectional
+			(at 55.88 120.65 270)
+			(uuid "10e87125-3fb3-4359-83fb-42d7c997f2df")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -392,8 +402,8 @@
 			)
 		)
 		(pin "PPG_GPIO" input
-			(at 64.77 151.13 90)
-			(uuid "b6bb43c3-bcac-4c38-aa89-64907ac40178")
+			(at 35.56 151.13 90)
+			(uuid "8d307f46-3257-460d-acbf-9b7059805359")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -402,28 +412,8 @@
 			)
 		)
 		(pin "PPG_INT" input
-			(at 59.69 151.13 90)
-			(uuid "2c42f4d2-82f8-4441-9314-f3324a2bde18")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "PPG_SCL" output
-			(at 34.29 151.13 90)
-			(uuid "1cb2ee3b-74ea-4b54-a2cc-b0e25925ff78")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "PPG_SDA" output
-			(at 38.1 151.13 90)
-			(uuid "85d31ff5-1c17-4ee4-93de-21722c5e3b71")
+			(at 39.37 151.13 90)
+			(uuid "435d1227-3739-494a-9d14-cc6013554035")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -432,8 +422,18 @@
 			)
 		)
 		(pin "SPARE_PIN" input
-			(at 54.61 151.13 90)
-			(uuid "56740cd0-99d0-4f50-bcc6-0aea547f5e25")
+			(at 43.18 151.13 90)
+			(uuid "c09b8d51-07c8-40fd-b091-ef0d0a0ca0c7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PPG_I2C{SCL, SDA}" bidirectional
+			(at 57.15 151.13 90)
+			(uuid "1653687b-5083-4a18-857a-4f4ca6cf106d")
 			(effects
 				(font
 					(size 1.27 1.27)

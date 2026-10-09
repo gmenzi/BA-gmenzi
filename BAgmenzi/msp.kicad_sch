@@ -3801,7 +3801,7 @@
 	)
 	(rectangle
 		(start 217.17 224.79)
-		(end 243.84 267.97)
+		(end 248.92 267.97)
 		(stroke
 			(width 0)
 			(type default)
@@ -3841,9 +3841,9 @@
 		)
 		(uuid "87ecdadd-2633-4a43-911a-026ad3936ba9")
 	)
-	(text "Debug LED\n"
+	(text "Debug LED: keep or drop...\n"
 		(exclude_from_sim no)
-		(at 222.758 223.774 0)
+		(at 230.378 223.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3853,7 +3853,7 @@
 	)
 	(text "Stecker muss noch ausgewählt werden.\n"
 		(exclude_from_sim no)
-		(at 336.804 58.42 0)
+		(at 334.772 71.374 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3870,6 +3870,48 @@
 			)
 		)
 		(uuid "e81f6294-7c6f-4233-9b29-a11d196efd6e")
+	)
+	(text_box "use pinheaders on BREAKAWAY-> directly connect jumper cables from pin headers to MSP FET. "
+		(exclude_from_sim no)
+		(at 316.23 53.34 0)
+		(size 33.02 16.51)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 249 155 255 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2f4446c3-02df-4cd5-ab6d-9809bb343f18")
+	)
+	(text_box "add possibility to program through UART bootloader: \ndescribed in TI's FRAM bootloader guide, SLAU550"
+		(exclude_from_sim no)
+		(at 339.09 15.24 0)
+		(size 55.88 10.16)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 249 155 255 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ce8a320d-c392-45e9-b079-2f1a209b063e")
 	)
 	(junction
 		(at 313.69 124.46)
@@ -4131,7 +4173,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 50.8) (xy 40.64 50.8)
+			(xy 36.83 49.53) (xy 40.64 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4211,7 +4253,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 60.96) (xy 92.71 60.96)
+			(xy 86.36 60.96) (xy 92.71 60.96)
 		)
 		(stroke
 			(width 0)
@@ -4561,16 +4603,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 68.58) (xy 36.83 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43d3b402-1def-47c8-857e-4d1e24575d7d")
-	)
-	(wire
-		(pts
 			(xy 314.96 167.64) (xy 314.96 165.1)
 		)
 		(stroke
@@ -4698,16 +4730,6 @@
 			(type default)
 		)
 		(uuid "5b9c11ea-01b0-4390-a97b-f70a37558fb7")
-	)
-	(wire
-		(pts
-			(xy 43.18 64.77) (xy 36.83 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d747d7c-1326-4fd6-92f0-7e29893cb187")
 	)
 	(wire
 		(pts
@@ -5011,6 +5033,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 60.96) (xy 35.56 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ce2322e-b50c-48a5-a304-e647acac6a53")
+	)
+	(wire
+		(pts
 			(xy 369.57 45.72) (xy 369.57 49.53)
 		)
 		(stroke
@@ -5261,7 +5293,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 54.61) (xy 36.83 54.61)
+			(xy 40.64 53.34) (xy 36.83 53.34)
 		)
 		(stroke
 			(width 0)
@@ -5621,16 +5653,6 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 58.42) (xy 36.83 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6eb6763-863c-4416-a38d-df25caa9efa1")
-	)
-	(wire
-		(pts
 			(xy 337.82 176.53) (xy 340.36 176.53)
 		)
 		(stroke
@@ -5650,7 +5672,7 @@
 		(uuid "ff966dd9-1ccc-4441-8320-6f73da579f22")
 	)
 	(label "VGA_GAIN_RC_EN"
-		(at 40.64 54.61 0)
+		(at 40.64 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5688,16 +5710,6 @@
 			(justify left bottom)
 		)
 		(uuid "0e573e78-8afe-48c6-a20d-213604c2e1ab")
-	)
-	(label "PREAMP_PWR_EN"
-		(at 43.18 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0e5f8ffe-6d8d-4d5c-bd0e-b0437af9f3bb")
 	)
 	(label "VGA_SPI.MISO"
 		(at 90.17 129.54 180)
@@ -5738,6 +5750,16 @@
 			(justify left bottom)
 		)
 		(uuid "100fef81-3ac8-40fe-b72d-c54e6a82e689")
+	)
+	(label "VRX_EN"
+		(at 43.18 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2385c9c1-6323-4129-9d14-6d53af7df3f0")
 	)
 	(label "CH0_OUT"
 		(at 236.22 55.88 0)
@@ -5880,7 +5902,7 @@
 		(uuid "4e2a70f6-b81d-4820-8017-91f11ba55b7d")
 	)
 	(label "VGA_GAIN_CS"
-		(at 40.64 50.8 0)
+		(at 40.64 49.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6039,16 +6061,6 @@
 		)
 		(uuid "7392c6ae-929d-4b6e-b6e7-a1286b18f4a8")
 	)
-	(label "PREAMP_EN"
-		(at 43.18 64.77 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "740c9e9c-ae86-4cbf-915b-7e97153e19de")
-	)
 	(label "UUPS_TRIG_IN"
 		(at 90.17 71.12 180)
 		(effects
@@ -6099,7 +6111,7 @@
 		)
 		(uuid "914dd1af-7ebb-4dcc-a240-5a10d18c0545")
 	)
-	(label "+VCC_MAP430"
+	(label "+VCC_MSP430"
 		(at 369.57 34.29 0)
 		(effects
 			(font
@@ -6239,16 +6251,6 @@
 		)
 		(uuid "b32e1ac1-c749-42fc-9464-c21844d19a8b")
 	)
-	(label "VGA_PWR_EN"
-		(at 40.64 58.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b55bdc2e-8d37-483a-92aa-15dbb47c9968")
-	)
 	(label "LINK_READY"
 		(at 43.18 140.97 0)
 		(effects
@@ -6329,16 +6331,6 @@
 		)
 		(uuid "cd64e4ae-ce68-46d1-b508-790f337e2e5c")
 	)
-	(label "PREAMP_EN"
-		(at 90.17 60.96 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d24bc720-6bbe-4361-91e9-e0d3bee6798a")
-	)
 	(label "HFXIN"
 		(at 234.95 45.72 0)
 		(effects
@@ -6358,16 +6350,6 @@
 			(justify right bottom)
 		)
 		(uuid "d4b8101a-c3ee-47ed-9d14-d2863aa12d9f")
-	)
-	(label "PREAMP_PWR_EN"
-		(at 90.17 66.04 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e00f4d5a-bb54-4a13-bbec-14b7e62f2db4")
 	)
 	(label "DVCC1"
 		(at 355.6 167.64 0)
@@ -6389,15 +6371,15 @@
 		)
 		(uuid "e573e6ea-20ab-452b-8400-1cbaaa97da97")
 	)
-	(label "VGA_PWR_EN"
-		(at 90.17 58.42 180)
+	(label "VRX_EN"
+		(at 86.36 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "eb476d8f-477f-4a1c-8282-78766bc397f0")
+		(uuid "ec9952ae-1401-48cd-99ae-de5c228cbcd9")
 	)
 	(label "PVCC"
 		(at 90.17 45.72 180)
@@ -6490,9 +6472,9 @@
 			)
 		)
 	)
-	(global_label "PREAMP_PWR_EN"
+	(global_label "VRX_EN"
 		(shape output)
-		(at 36.83 68.58 180)
+		(at 35.56 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6500,30 +6482,9 @@
 			)
 			(justify right)
 		)
-		(uuid "0f435ca6-c751-4385-bd3a-f67df701f1f5")
+		(uuid "24812917-781f-4cef-9b5c-2a3a417e1bbb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 17.9397 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "VGA_PWR_EN"
-		(shape output)
-		(at 36.83 58.42 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1f50361e-6ca4-46c5-986c-f6d6279bf0d2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.9915 58.42 0)
+			(at 25.5596 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6597,7 +6558,7 @@
 	)
 	(global_label "VGA_GAIN_RC_EN"
 		(shape output)
-		(at 36.83 54.61 180)
+		(at 36.83 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6607,7 +6568,7 @@
 		)
 		(uuid "5d845b12-0a6b-493e-9a22-159f14062644")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 18.1814 54.61 0)
+			(at 18.1814 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6658,27 +6619,6 @@
 			)
 		)
 	)
-	(global_label "PREAMP_EN"
-		(shape output)
-		(at 36.83 64.77 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "77e41c28-8181-4b6c-8343-b05c96bea28c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.8987 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "SPARE_PIN"
 		(shape bidirectional)
 		(at 38.1 151.13 180)
@@ -6702,7 +6642,7 @@
 	)
 	(global_label "VGA_GAIN_CS"
 		(shape output)
-		(at 36.83 50.8 180)
+		(at 36.83 49.53 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6712,7 +6652,7 @@
 		)
 		(uuid "8e494ee4-aee9-43a0-bd6f-9e999e1bd088")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.689 50.8 0)
+			(at 21.689 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
