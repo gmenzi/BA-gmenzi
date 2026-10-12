@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NSR20F30NXT5G
+D Very Low Forward Voltage Drop (VF); Low Reverse Current (IR); High ESD Ratings: HMB(3B), MM(C); 2.0 A of continuous forward current
+K
+F https://www.onsemi.com/pub/Collateral/NSR20F30-D.PDF
+$ENDCMP
+#
+#End Doc Library

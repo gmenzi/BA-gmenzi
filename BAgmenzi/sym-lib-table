@@ -18,4 +18,5 @@
   (lib (name "WULPUS_HV_PCB_V2")(type "Altium")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/WULPUS_HV_PCB_V2.SCHLIB")(options "")(descr ""))
   (lib (name "wulpus_pro_acq_pcb")(type "Altium")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/wulpus_pro_acq_pcb.SCHLIB")(options "")(descr ""))
   (lib (name "wulpus_pro_shield")(type "Altium")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/wulpus_pro_shield.IntLib")(options "")(descr ""))
+  (lib (name "NSR20F30NXT5G")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/NSR20F30NXT5G/KiCad/NSR20F30NXT5G.kicad_sym")(options "")(descr ""))
 )

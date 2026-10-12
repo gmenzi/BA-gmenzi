@@ -1,4 +1,4 @@
-26754710808975363
+26758293899946489
 AN54LM-20_PCB-260723
 AN54LM-20_P20
 
@@ -69901,13 +69901,6 @@ solder jumper open
 0
 3
 3
-KiCad
-RSE0008A
-RSE0008A
-Integrated Circuit
-0
-8
-8
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
@@ -74024,6 +74017,13 @@ threaded screw
 0
 4
 1
+NSR20F30NXT5G
+DSN2_1
+DSN2, 1.6x0.8, 0.9P, (0603) CASE 152AB ISSUE B
+Diode
+0
+2
+2
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -98525,6 +98525,13 @@ USB307630A
 11
 11
 SamacSys_Parts
+DSN2_1
+DSN2, 1.6x0.8, 0.9P, (0603) CASE 152AB ISSUE B
+Diode
+0
+2
+2
+SamacSys_Parts
 NE555DR
 D (R-PDSO-G8)
 Integrated Circuit
@@ -100645,6 +100652,13 @@ Logo WEEE
 0
 0
 0
+TPL0501
+RSE0008A
+RSE0008A
+Integrated Circuit
+0
+8
+8
 TerminalBlock
 TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
 terminal block MaiXu MX126-5.0-02P, 2 pins, pitch 5mm, size 10.5x7.8mm, drill diameter 1.3mm, pad diameter 2.8mm, https://www.lcsc.com/datasheet/lcsc_datasheet_2309150913_MAX-MX126-5-0-03P-GN01-Cu-S-A_C5188435.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MaiXu

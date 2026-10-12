@@ -1590,27 +1590,47 @@
 			)
 		)
 	)
-	(hierarchical_label "PULSE_HV_IN"
+	(global_label "PULSE_HV"
 		(shape input)
 		(at 68.58 87.63 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "5272a833-ff72-4df5-940e-91710f2552fc")
+		(uuid "f92fa9aa-c5c8-4760-96b8-3d72413b5e3c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 56.221 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
-	(hierarchical_label "RX_OUT"
+	(global_label "RX_IN"
 		(shape output)
 		(at 67.31 93.98 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "8463ef63-e408-4609-8b94-c95898a3a60d")
+		(uuid "ff8140ec-69b1-4daa-8798-1314068fa1f8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 58.9424 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")

@@ -21,5 +21,6 @@
   (lib (name "AN54LM-20_PCB-260723")(type "Altium Designer")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/AN54LM20 Altium Library/AN54LM-20_PCB-260723.PcbLib")(options "")(descr ""))
   (lib (name "AN54LM-P20_PCB-260723")(type "Altium Designer")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/AN54LM20 Altium Library/AN54LM-P20_PCB-260723.PcbLib")(options "")(descr ""))
   (lib (name "AN54LM-U20_PCB-260723")(type "Altium Designer")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/AN54LM20 Altium Library/AN54LM-U20_PCB-260723.PcbLib")(options "")(descr ""))
-  (lib (name "KiCad")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/TPL0501-100RSER/KiCad")(options "")(descr ""))
+  (lib (name "TPL0501")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/TPL0501-100RSER/KiCad")(options "")(descr ""))
+  (lib (name "NSR20F30NXT5G")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/NSR20F30NXT5G/KiCad")(options "")(descr ""))
 )

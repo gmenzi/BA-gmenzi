@@ -2512,6 +2512,18 @@
 		(uuid "fd95037e-b759-4125-83d0-4a00d406fed1")
 	)
 	(no_connect
+		(at 234.95 54.61)
+		(uuid "519684b1-6da4-48f9-8200-ec75d772822d")
+	)
+	(no_connect
+		(at 199.39 72.39)
+		(uuid "58f3570b-3f17-45fe-8f9a-24e17c6cfe3e")
+	)
+	(no_connect
+		(at 199.39 67.31)
+		(uuid "8170c293-a705-4944-a908-9df941f0eac3")
+	)
+	(no_connect
 		(at 234.95 67.31)
 		(uuid "d554bf3c-2ab3-4262-b408-3c8069f21cfd")
 	)
@@ -3607,7 +3619,7 @@
 		)
 		(uuid "8d39a974-c6c6-4a5b-8bc8-7a917b12a331")
 	)
-	(label "RX_PATH_SPI.CLK"
+	(label "VGA_SPI.SCLK"
 		(at 184.15 203.2 0)
 		(effects
 			(font
@@ -3677,8 +3689,8 @@
 		)
 		(uuid "f01a0b2e-cf55-4105-9bdd-2af71016db27")
 	)
-	(global_label "VGA_SPI{CLK MOSI MISO}"
-		(shape input)
+	(global_label "VGA_SPI{SCLK, MOSI, MISO}"
+		(shape bidirectional)
 		(at 172.72 215.9 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3689,7 +3701,7 @@
 		)
 		(uuid "2e354eb5-1783-479b-84b4-67f5d6089cd8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.5934 215.9 0)
+			(at 203.1238 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3716,6 +3728,48 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "VGA_GAIN_CS"
+		(shape input)
+		(at 195.58 180.34 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "45d609f6-97ba-4cc1-8c10-97aeeeecdc39")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 180.439 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SIG_FILT_IN"
+		(shape output)
+		(at 373.38 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4fe0abad-28bf-4184-8dae-27524a029892")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 387.0091 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -3758,6 +3812,48 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "LP_FILT_EN"
+		(shape input)
+		(at 294.64 95.25 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "85ba80e6-5112-4948-bddc-287c147e8931")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 281.2529 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RX_IN"
+		(shape input)
+		(at 48.26 72.39 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8c2ce4df-fc43-40a3-925b-a4e699980209")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 39.8924 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3824,6 +3920,27 @@
 			)
 		)
 	)
+	(global_label "VGA_GAIN_RC_EN"
+		(shape input)
+		(at 182.88 175.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c9385b34-4e89-4d9a-9a59-ecc21c14eea0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 164.2314 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "VRX_EN"
 		(shape input)
 		(at 83.82 62.23 90)
@@ -3842,6 +3959,27 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "VGA_GAIN_RC_SINK"
+		(shape input)
+		(at 220.98 151.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d6226f56-0850-4d42-8667-9014a82c5a8d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.3961 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3865,72 +4003,6 @@
 				(justify right)
 			)
 		)
-	)
-	(hierarchical_label "VGA_GAIN_CS"
-		(shape input)
-		(at 195.58 180.34 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1f317413-8f20-4a3d-868b-abda100367f2")
-	)
-	(hierarchical_label "RX_IN"
-		(shape input)
-		(at 48.26 72.39 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "42a3fa7c-450f-4940-b26c-892b0be433cb")
-	)
-	(hierarchical_label "VGA_GAIN_RC_EN"
-		(shape input)
-		(at 182.88 175.26 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6f88e22c-ed55-43dc-b044-bda10ac13095")
-	)
-	(hierarchical_label "VGA_GAIN_RC_SINK"
-		(shape input)
-		(at 220.98 151.13 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7104fbd3-df0d-45a7-ac18-d3a81a3312cd")
-	)
-	(hierarchical_label "SIG_FILT_IN"
-		(shape output)
-		(at 373.38 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e5259b61-35b8-4a43-9c87-74c9787ddb64")
-	)
-	(hierarchical_label "LP_FILT_EN"
-		(shape input)
-		(at 294.64 95.25 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ed8ebff4-cd54-4da6-8d03-b75c4970b0a0")
 	)
 	(symbol
 		(lib_id "Device:C")

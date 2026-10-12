@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'NSR20F30NXT5G'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "onsemi", "NSR20F30NXT5G" (!) = "", "DSN2_1", "Other", "863-NSR20F30NXT5G", "https://www.mouser.co.uk/ProductDetail/onsemi/NSR20F30NXT5G?qs=3ezCrKCRT5K%2FARb%252BJ8n8Hg%3D%3D", "NSR20F30NXT5G", "https://www.arrow.com/en/products/nsr20f30nxt5g_1/on-semiconductor.html?utm_currency=USD&region=nac", "Very Low Forward Voltage Drop (VF); Low Reverse Current (IR); High ESD Ratings: HMB(3B), MM(C); 2.0 A of continuous forward current", "https://www.onsemi.com/pub/Collateral/NSR20F30-D.PDF"
+END_PART
+
+END.

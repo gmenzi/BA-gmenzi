@@ -1,0 +1,9 @@
+Manufacturer=onsemi
+PartNumber=NSR20F30NXT5G
+PartCategory=Diode
+PackageCategory=Other
+PinCount=2
+Version=2.1
+Released=2017-11-09 14:24:23
+Downloaded=2026-10-09 13:31:25
+3D=Y
