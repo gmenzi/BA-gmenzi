@@ -5597,7 +5597,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EEG_PcbLib.PcbLib:CONN_3220-10-0100-00_CNC"
+		(property "Footprint" "EEG_PcbLib:CONN_3220-10-0100-00_CNC"
 			(at 53.34 168.91 0)
 			(effects
 				(font

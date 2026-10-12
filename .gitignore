@@ -5,3 +5,4 @@ fp-info-cache
 *.bak
 *-backups/
 _autosave-*
+\#auto_saved_files\#

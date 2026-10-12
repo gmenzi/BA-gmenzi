@@ -1,0 +1,93 @@
+(footprint "cmut-dummy"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "cmut-dummy16x16"
+		(at -0.5 9.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "205ac2ef-79bb-4342-b828-99184396e3b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "cmut-dummy"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e1484d18-a8fc-4863-8412-9a608a0319f4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b748f48b-b9ce-4b22-892e-465f92ba49b6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3c28f489-fbd2-48e3-ad03-48ce192ffb70")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -8.5 -8)
+		(end 7.5 8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "27259334-7402-40e7-a560-00733c9b7b62")
+	)
+	(fp_rect
+		(start -4.5 -4)
+		(end 3.5 4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "10162b48-b477-4354-85dd-d655a4ac5ae7")
+	)
+	(fp_text user "cmut-dummy"
+		(at 0 2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "543ade21-99e8-4abc-a110-08886f782198")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(embedded_fonts no)
+)

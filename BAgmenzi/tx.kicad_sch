@@ -3064,7 +3064,7 @@
 		)
 	)
 	(rectangle
-		(start 22.86 25.4)
+		(start 19.05 25.4)
 		(end 81.28 78.74)
 		(stroke
 			(width 0)
@@ -7195,7 +7195,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 81.28 148.2852 0)
 			(effects
 				(font
@@ -9655,7 +9655,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EEG_PcbLib:TEST_POINT_KEYSTONE_5007_TRAD"
+		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
 			(at 36.83 100.33 0)
 			(effects
 				(font

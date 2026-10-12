@@ -1726,7 +1726,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 130.302 43.18 90)
 			(effects
 				(font
@@ -1862,7 +1862,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EEG_PcbLib:0402"
 			(at 139.3952 135.89 0)
 			(effects
 				(font
@@ -1931,7 +1931,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "cmut_dummy:cmut-dummy"
 			(at 152.4 90.17 0)
 			(effects
 				(font
@@ -1969,6 +1969,10 @@
 		)
 		(instances
 			(project ""
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/d463870e-9fcf-4af5-ace7-dfb7bf5f63b9"
+					(reference "J4")
+					(unit 1)
+				)
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
 					(reference "J4")
 					(unit 1)
@@ -2003,7 +2007,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EEG_PcbLib:0402"
 			(at 131.7752 135.89 0)
 			(effects
 				(font
@@ -2073,7 +2077,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EEG_PcbLib:0402"
 			(at 122.682 71.12 90)
 			(effects
 				(font
@@ -2207,7 +2211,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 124.46 53.34 0)
 			(effects
 				(font
@@ -2278,7 +2282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 144.78 113.03 0)
 			(effects
 				(font
@@ -2351,7 +2355,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 87.122 71.12 90)
 			(effects
 				(font
@@ -2420,7 +2424,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EEG_PcbLib:0402"
 			(at 127 64.4652 0)
 			(effects
 				(font
@@ -2620,7 +2624,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 128.27 35.56 0)
 			(effects
 				(font
@@ -2691,7 +2695,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 88.9 48.26 0)
 			(effects
 				(font
@@ -2762,7 +2766,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 95.25 35.56 0)
 			(effects
 				(font
@@ -2833,7 +2837,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EEG_PcbLib:0402"
 			(at 123.19 121.158 90)
 			(effects
 				(font

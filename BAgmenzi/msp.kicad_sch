@@ -5,114 +5,7 @@
 	(uuid "d6c09fe9-2e34-4310-bec0-2c50dbf33d66")
 	(paper "A3")
 	(lib_symbols
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic_MountingPin:Conn_01x07_MountingPin"
+		(symbol "Connector_Generic:Conn_01x07"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -128,13 +21,12 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x07_MountingPin"
-				(at 1.27 -10.16 0)
+			(property "Value" "Conn_01x07"
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -155,7 +47,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connectable mounting pin connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -173,7 +65,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??-1MP*"
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -182,7 +74,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x07_MountingPin_1_1"
+			(symbol "Conn_01x07_1_1"
 				(rectangle
 					(start -1.27 8.89)
 					(end 1.27 -8.89)
@@ -269,26 +161,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -9.652) (xy 1.016 -9.652)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "Mounting"
-					(at 0 -9.271 0)
-					(effects
-						(font
-							(size 0.381 0.381)
-						)
 					)
 				)
 				(pin passive line
@@ -410,24 +282,6 @@
 						)
 					)
 					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -12.7 90)
-					(length 3.048)
-					(name "MountPin"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "MP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1677,432 +1531,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "wulpus:CMP-44529-000045-1"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 4.064 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-				)
-			)
-			(property "Value" "APHD1608LZGCK"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "FP-APHD1608LZGCK-MFG"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "LED GREEN CLEAR 1608 SMD"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Mount" "Surface Mount"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Test Current" "2mA"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Dominant Wavelength" "525nm"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Lens Color" "Colorless"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Luminous Intensity" "180mcd"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Packaging" "Tape and Reel"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Viewing Angle" "100°"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Lens Transparency" "Clear"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Height" "0.75mm"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Case/Package" "0603"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Length" "1.6mm"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Case Code (Metric)" "1608"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Lens Size" "0.7mm"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Width" "0.8mm"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Lens Style" "Round"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Case Code (Imperial)" "0603"
-				(at -0.508 5.842 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Forward Voltage" "2.65V"
-				(at 4.064 -5.334 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Color" "Green"
-				(at 4.064 -7.874 0)
-				(effects
-					(font
-						(size 1.8288 1.8288)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "ki_fp_filters" "*FP-APHD1608LZGCK-MFG*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CMP-44529-000045-1_1_0"
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 10.16 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 0) (xy 4.318 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.54) (xy 10.16 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 3.048) (xy 8.89 5.588)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 8.128 2.032) (xy 10.668 4.572)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 8.89 5.588) (xy 7.62 5.588)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 8.89 5.588) (xy 8.89 4.318)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 2.54) (xy 10.16 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 10.922 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.668 4.572) (xy 9.398 4.572)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.668 4.572) (xy 10.668 3.302)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 15.24 0 180)
-					(length 5.08)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3925,18 +3353,6 @@
 		)
 		(uuid 9d8ce7ea-817a-45f0-8cbe-4c27178d019e)
 	)
-	(rectangle
-		(start 217.17 224.79)
-		(end 248.92 267.97)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid f976d45e-2ae7-4dd5-aa40-7f8baf35f710)
-	)
 	(text "bypass caps and power supply filters"
 		(exclude_from_sim no)
 		(at 311.15 168.656 0)
@@ -3966,16 +3382,6 @@
 			)
 		)
 		(uuid "87ecdadd-2633-4a43-911a-026ad3936ba9")
-	)
-	(text "Debug LED: keep or drop...\n"
-		(exclude_from_sim no)
-		(at 230.378 223.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "8ec5511c-faba-4911-9a74-9b7cbe3bbf14")
 	)
 	(text "Stecker muss noch ausgewählt werden.\n"
 		(exclude_from_sim no)
@@ -4200,12 +3606,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e9eb79f2-d291-4d33-81ac-053e39063ba3")
-	)
-	(junction
-		(at 231.14 231.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eb91a6b8-471f-4671-aa92-8b941d960b30")
 	)
 	(no_connect
 		(at 328.93 43.18)
@@ -4903,16 +4303,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 255.27) (xy 231.14 257.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "512cbb7e-80e7-485d-a4a4-e64a9a9a01e8")
-	)
-	(wire
-		(pts
 			(xy 129.54 257.81) (xy 149.86 257.81)
 		)
 		(stroke
@@ -5173,16 +4563,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 246.38) (xy 231.14 247.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b820d93-e11d-41dd-969c-617c7bae5160")
-	)
-	(wire
-		(pts
 			(xy 33.02 113.03) (xy 39.37 113.03)
 		)
 		(stroke
@@ -5273,16 +4653,6 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 179.07) (xy 115.57 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "950aa94b-4114-4a15-b789-b6eba1ed8b78")
-	)
-	(wire
-		(pts
 			(xy 90.17 124.46) (xy 92.71 124.46)
 		)
 		(stroke
@@ -5370,16 +4740,6 @@
 			(type default)
 		)
 		(uuid "a2de3692-b8f6-4b17-91e8-d78adfef4d90")
-	)
-	(wire
-		(pts
-			(xy 231.14 231.14) (xy 231.14 234.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3e59017-4e5c-4acc-a6ce-89b5bd57d850")
 	)
 	(wire
 		(pts
@@ -5813,16 +5173,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 228.6) (xy 231.14 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea78c0e6-969f-4972-841e-cae18697972b")
-	)
-	(wire
-		(pts
 			(xy 49.53 120.65) (xy 50.8 120.65)
 		)
 		(stroke
@@ -6211,16 +5561,6 @@
 		)
 		(uuid "3a74ca2b-b721-4b62-a826-ad4d6092e10e")
 	)
-	(label "TRIG_OUT"
-		(at 88.9 147.32 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3a99403d-72c8-44c2-8c09-c34d9c384fb7")
-	)
 	(label "DVDD_3.3"
 		(at 316.23 208.28 180)
 		(effects
@@ -6510,26 +5850,6 @@
 			(justify left bottom)
 		)
 		(uuid "81995eeb-c8c3-407a-9b2d-b64f58d1cdd7")
-	)
-	(label "LED_MSP430"
-		(at 231.14 228.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "826c13ef-1516-4e6f-9686-e42899ac8906")
-	)
-	(label "TRIG_OUT"
-		(at 115.57 179.07 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "86598622-80d2-4ee7-b1cc-3692fc58e764")
 	)
 	(label "NRF_SPI.MOSI"
 		(at 77.47 114.3 0)
@@ -8498,94 +7818,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic_MountingPin:Conn_01x07_MountingPin")
-		(at 323.85 50.8 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4679d95e-c06d-4a89-b009-1c5f0568d155")
-		(property "Reference" "J1"
-			(at 321.31 49.1743 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x07_MountingPin"
-			(at 318.008 38.862 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 323.85 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 323.85 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connectable mounting pin connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 323.85 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b5bf1d70-43fc-474c-ac0c-0489b3e4661c")
-		)
-		(pin "3"
-			(uuid "b834ec37-2084-4cf4-9dc5-35e62887fb9a")
-		)
-		(pin "7"
-			(uuid "7978a13c-d664-4751-ac1b-bb21f4e6de11")
-		)
-		(pin "5"
-			(uuid "db26e9e8-dcb5-492b-817e-04c575f97fb5")
-		)
-		(pin "MP"
-			(uuid "0f6683f4-1f4b-4a44-9648-367d7f83fe0a")
-		)
-		(pin "1"
-			(uuid "ea8c555f-49e5-4599-b0b7-cad1ea345d9c")
-		)
-		(pin "4"
-			(uuid "ea98122d-55c8-491e-a623-bbd0f964dbf7")
-		)
-		(pin "6"
-			(uuid "8755a88c-20dd-4176-8428-e3add1bb275c")
-		)
-		(instances
-			(project ""
-				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 312.42 240.03 90)
 		(unit 1)
@@ -8991,76 +8223,6 @@
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
 					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 231.14 251.46 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5ffec3c2-72fe-42bf-b323-627f2ac8b5bc")
-		(property "Reference" "R6"
-			(at 233.68 250.1899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "22"
-			(at 233.68 252.7299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 232.918 251.46 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 231.14 251.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 231.14 251.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2eb13651-14f8-4df6-a4c3-1317088ebb0e")
-		)
-		(pin "1"
-			(uuid "24d622dd-3da8-4cd5-b8d3-b67ee9d668fb")
-		)
-		(instances
-			(project "BAgmenzi"
-				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
-					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -9776,72 +8938,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 231.14 257.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "871d05c6-4bb4-48d1-8935-c6dbd390dd45")
-		(property "Reference" "#PWR015"
-			(at 231.14 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 231.14 262.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 231.14 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 231.14 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6228fcb1-684d-45c5-88b5-f6b557c6c901")
-		)
-		(instances
-			(project "BAgmenzi"
-				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 38.1 199.39 90)
 		(unit 1)
@@ -10543,255 +9639,6 @@
 		)
 	)
 	(symbol
-		(lib_id "wulpus:CMP-44529-000045-1")
-		(at 231.14 231.14 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "967dc7be-324c-490e-a6c8-cd44487f3cca")
-		(property "Reference" "D1"
-			(at 237.49 234.9499 90)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "APHD1608LZGCK"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "wulpus:FP-APHD1608LZGCK-MFG"
-			(at 231.14 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "LED GREEN CLEAR 1608 SMD"
-			(at 231.14 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mount" "Surface Mount"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Test Current" "2mA"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Dominant Wavelength" "525nm"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Lens Color" "Colorless"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Luminous Intensity" "180mcd"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Packaging" "Tape and Reel"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Viewing Angle" "100°"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Lens Transparency" "Clear"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Height" "0.75mm"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Case/Package" "0603"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Length" "1.6mm"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Case Code (Metric)" "1608"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Lens Size" "0.7mm"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Width" "0.8mm"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Lens Style" "Round"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Case Code (Imperial)" "0603"
-			(at 236.982 230.632 0)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Forward Voltage" "2.65V"
-			(at 237.49 238.7599 90)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left)
-			)
-		)
-		(property "Color" "Green"
-			(at 237.49 242.5699 90)
-			(effects
-				(font
-					(size 1.8288 1.8288)
-				)
-				(justify left)
-			)
-		)
-		(pin "1"
-			(uuid "564de84e-3700-4c11-918a-578d106c4b4a")
-		)
-		(pin "2"
-			(uuid "4a82298d-a161-41ce-b922-7dc694a42991")
-		)
-		(instances
-			(project ""
-				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 121.92 232.41 90)
 		(unit 1)
@@ -11055,73 +9902,6 @@
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 123.19 179.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a98b4344-a2dc-4980-b449-848b23fb06b9")
-		(property "Reference" "TP1"
-			(at 125.73 174.4979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 125.73 177.0379 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 128.27 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 123.19 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "17af4cd4-e87d-4d9f-903e-eb12dcfd6efe")
-		)
-		(instances
-			(project ""
-				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
-					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -11528,6 +10308,89 @@
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x07")
+		(at 323.85 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "daad027f-f86d-4133-8f81-059223b5cd7c")
+		(property "Reference" "J1"
+			(at 323.85 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x07"
+			(at 323.85 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
+			(at 323.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 323.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 323.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "af98ce8a-0363-4675-85a3-8b28e4665e00")
+		)
+		(pin "1"
+			(uuid "a7312ad8-18a1-4614-913d-0e6a69c3b3df")
+		)
+		(pin "7"
+			(uuid "e9fc4861-08a4-45af-8df8-c5a9f28cba3d")
+		)
+		(pin "6"
+			(uuid "8a87742e-5f9c-460b-a68e-5fca1de3e518")
+		)
+		(pin "3"
+			(uuid "f1a1551c-c426-4b4e-aac8-def86892ed56")
+		)
+		(pin "4"
+			(uuid "9847e322-dc43-48d5-b90e-fc422aae67de")
+		)
+		(pin "5"
+			(uuid "243e0d48-531b-49ce-b2b4-05ca171af5bc")
+		)
+		(instances
+			(project ""
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/6c679a7a-a68a-4eba-aef1-9d2acdef366b"
+					(reference "J1")
 					(unit 1)
 				)
 			)

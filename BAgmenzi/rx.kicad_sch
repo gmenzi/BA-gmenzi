@@ -2224,8 +2224,8 @@
 		(uuid 682bd74e-215f-4ff5-bbfe-671dc362db2e)
 	)
 	(rectangle
-		(start 19.05 22.86)
-		(end 139.7 107.95)
+		(start 19.05 21.59)
+		(end 139.7 106.68)
 		(stroke
 			(width 0)
 			(type default)
@@ -2404,6 +2404,12 @@
 		(uuid "444a8d25-8611-4784-a292-570dd283afd5")
 	)
 	(junction
+		(at 120.65 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60d8ee61-cb42-40b0-98aa-71458f0d7792")
+	)
+	(junction
 		(at 80.01 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2444,12 +2450,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "86d1924d-4d69-4946-b5ca-4ac7f5505e9a")
-	)
-	(junction
-		(at 120.65 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "890ee110-7520-4013-8658-b8e047f7d418")
 	)
 	(junction
 		(at 191.77 54.61)
@@ -6132,7 +6132,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.85mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
 			(at 173.99 80.01 0)
 			(effects
 				(font
@@ -8071,7 +8071,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
 			(at 227.33 151.13 0)
 			(effects
 				(font
