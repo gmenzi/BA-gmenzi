@@ -2851,6 +2851,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 203.2) (xy 229.87 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4af1859c-e63c-4f13-92d5-150660862d24")
+	)
+	(wire
+		(pts
 			(xy 67.31 72.39) (xy 62.23 72.39)
 		)
 		(stroke
@@ -3481,23 +3491,13 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 203.2) (xy 231.14 203.2)
+			(xy 181.61 203.2) (xy 229.87 203.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e79d6c4b-ff15-4d3f-bb55-d4c268c85271")
-	)
-	(wire
-		(pts
-			(xy 231.14 180.34) (xy 231.14 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8cf8210-8014-404a-a9f2-0daa635e96c6")
 	)
 	(wire
 		(pts
@@ -3518,16 +3518,6 @@
 			(type default)
 		)
 		(uuid "f4b787c2-1a4c-4b84-a3d9-100540d500a8")
-	)
-	(wire
-		(pts
-			(xy 231.14 180.34) (xy 229.87 180.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5653da5-87be-45b5-b6bb-47ef4c02b632")
 	)
 	(bus
 		(pts
@@ -3620,14 +3610,14 @@
 		(uuid "8d39a974-c6c6-4a5b-8bc8-7a917b12a331")
 	)
 	(label "VGA_SPI.SCLK"
-		(at 184.15 203.2 0)
+		(at 196.85 203.2 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "c5bc7e5a-f9b1-425b-a8ee-9187cbb2bbd1")
+		(uuid "bff79377-afa8-4646-9302-2459f92f4bdc")
 	)
 	(label "FILTER_SHDN_N"
 		(at 299.72 93.98 90)
@@ -3923,7 +3913,6 @@
 	(global_label "VGA_GAIN_RC_EN"
 		(shape input)
 		(at 182.88 175.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

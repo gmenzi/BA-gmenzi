@@ -2439,6 +2439,48 @@
 		)
 		(uuid "0aa1a25a-d95e-45d6-926e-c84c3d09020e")
 	)
+	(text_box "power enable signals from MSP to nRF\n\n"
+		(exclude_from_sim no)
+		(at 13.97 83.82 0)
+		(size 43.18 26.67)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 212 248 255 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "54a19f68-0c1f-4a37-a8ed-9bda435c58f5")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 38.1 105.41 0)
+		(size 0 0)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 194 112 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "9ec3647b-125e-468c-a8e5-ec0f5d375173")
+	)
 	(text_box "Das ist das schematic von RayTac. Zum bestellten Modul gibt es kein Schematic zum download. "
 		(exclude_from_sim no)
 		(at 123.19 72.39 0)
@@ -2760,6 +2802,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 73.66) (xy 180.34 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17ad5ca7-88e1-4415-80b5-945d35362a58")
+	)
+	(wire
+		(pts
 			(xy 247.65 140.97) (xy 234.95 140.97)
 		)
 		(stroke
@@ -2787,6 +2839,16 @@
 			(type default)
 		)
 		(uuid "236f72e4-5c04-4ec7-8624-22ab2367cef2")
+	)
+	(wire
+		(pts
+			(xy 195.58 71.12) (xy 180.34 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25ca2271-b3a6-42c0-a0c7-93f2e9aef944")
 	)
 	(wire
 		(pts
@@ -2877,6 +2939,16 @@
 			(type default)
 		)
 		(uuid "3e4d6ab0-9e98-402d-b4e7-4c4d8c017e3f")
+	)
+	(wire
+		(pts
+			(xy 40.64 106.68) (xy 33.02 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "424d61e0-9f70-4bdf-af48-2cfed3880218")
 	)
 	(bus
 		(pts
@@ -3000,6 +3072,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 76.2) (xy 180.34 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bd560b3-3f1c-4fe9-b079-fac0e2224101")
+	)
+	(wire
+		(pts
 			(xy 43.18 173.99) (xy 29.21 173.99)
 		)
 		(stroke
@@ -3057,6 +3139,16 @@
 			(type default)
 		)
 		(uuid "8588479a-93d7-458f-87db-92e09eaa815f")
+	)
+	(wire
+		(pts
+			(xy 39.37 92.71) (xy 35.56 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8665dcb8-009a-4a73-8e95-7c376abc34ff")
 	)
 	(wire
 		(pts
@@ -3240,6 +3332,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 68.58) (xy 180.34 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b57fa14e-4140-4c4e-828b-13fb895a086b")
+	)
+	(wire
+		(pts
 			(xy 29.21 166.37) (xy 29.21 168.91)
 		)
 		(stroke
@@ -3398,6 +3500,16 @@
 		)
 		(uuid "db24c7b2-d681-4e8e-b720-d792432a601c")
 	)
+	(wire
+		(pts
+			(xy 39.37 100.33) (xy 35.56 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc1b6880-aef9-4fd9-ae3b-d233e85c70b1")
+	)
 	(bus
 		(pts
 			(xy 246.38 69.85) (xy 243.84 69.85)
@@ -3417,6 +3529,16 @@
 			(type default)
 		)
 		(uuid "e01d4164-8bc9-4112-9f18-7be522529b4e")
+	)
+	(wire
+		(pts
+			(xy 39.37 96.52) (xy 35.56 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e141592b-48b6-4ad7-a898-118d1ebe69c5")
 	)
 	(wire
 		(pts
@@ -3558,6 +3680,16 @@
 		)
 		(uuid "027d4ac3-17f3-477b-94e1-3aa5039c355c")
 	)
+	(label "HV_NEG_EN"
+		(at 195.58 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "036fe493-f189-4e5d-b2d5-b281e79af780")
+	)
 	(label "SWCLK"
 		(at 88.9 167.64 180)
 		(effects
@@ -3627,6 +3759,16 @@
 			(justify left bottom)
 		)
 		(uuid "14c778ef-c84e-40aa-8c9a-ad6964c32ead")
+	)
+	(label "HV_POS_EN"
+		(at 195.58 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "162c4757-6434-4fe3-86db-d5528a68f51a")
 	)
 	(label "PMIC_I2C.SDA"
 		(at 226.06 109.22 0)
@@ -3738,6 +3880,16 @@
 		)
 		(uuid "5f04cc3b-89b6-4859-9b37-44e674d62783")
 	)
+	(label "HV_POS_EN"
+		(at 39.37 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "684bc8b2-f7e2-4cf8-9535-990cb7f3da00")
+	)
 	(label "nRST"
 		(at 74.93 58.42 0)
 		(effects
@@ -3787,6 +3939,16 @@
 			(justify right bottom)
 		)
 		(uuid "7b2d0a43-c967-4519-87ed-be5268d5a86c")
+	)
+	(label "HV_NEG_EN"
+		(at 39.37 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7daeb798-4718-4126-a119-6e32f92466c2")
 	)
 	(label "LINK_READY"
 		(at 152.4 152.4 90)
@@ -3878,6 +4040,16 @@
 		)
 		(uuid "a3e7959d-754a-42db-9838-9692a5e528a2")
 	)
+	(label "HV_PWR_EN"
+		(at 39.37 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a62abe0f-68ff-4cbf-8996-0ba59ce0a079")
+	)
 	(label "DVDD_3.3"
 		(at 223.52 78.74 180)
 		(effects
@@ -3958,6 +4130,16 @@
 		)
 		(uuid "c4c6b6cd-0653-4abf-a1b3-c1d62528a0fa")
 	)
+	(label "VRX_EN"
+		(at 195.58 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c5a343d6-8c6c-40fa-bed9-cb2bf1749ce1")
+	)
 	(label "PMIC_I2C.SDA"
 		(at 194.31 55.88 180)
 		(effects
@@ -3967,6 +4149,16 @@
 			(justify right bottom)
 		)
 		(uuid "d2af136e-b826-40e9-a48e-8009e7351dcf")
+	)
+	(label "VRX_EN"
+		(at 40.64 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d710af65-b7bd-482c-bb7a-f967905c78b0")
 	)
 	(label "PPG_I2C.SCL"
 		(at 195.58 119.38 180)
@@ -3987,6 +4179,16 @@
 			(justify right bottom)
 		)
 		(uuid "de3683b8-e5c7-4f4e-aaa0-1a27ea329629")
+	)
+	(label "HV_PWR_EN"
+		(at 195.58 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f07894c9-3466-4f77-9685-b1b34c23ec4b")
 	)
 	(label "NRF_SPI.MOSI"
 		(at 242.57 73.66 180)
@@ -4067,6 +4269,27 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "HV_PWR_EN"
+		(shape output)
+		(at 35.56 100.33 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49ba9a7a-30a0-4091-9771-d6dd4f87383a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.7496 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -4172,6 +4395,48 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "VRX_EN"
+		(shape output)
+		(at 33.02 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a1b3cb68-d792-4f64-ad24-4713cc041627")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 23.0196 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "HV_POS_EN"
+		(shape output)
+		(at 35.56 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a8d70e9d-1857-4ba8-9616-0489ca99f51f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.931 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -4361,6 +4626,27 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "HV_NEG_EN"
+		(shape output)
+		(at 35.56 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f7b11586-5787-4f59-bc9b-40d50cdb0a1b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.9915 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)

@@ -3621,7 +3621,7 @@
 		(uuid "15eb34ae-a758-4b85-bbdd-1e607277ffaa")
 	)
 	(bus_entry
-		(at 50.8 125.73)
+		(at 55.88 125.73)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -3657,7 +3657,7 @@
 		(uuid "72bf0def-b5e0-4c6e-ba50-cb4da97bd029")
 	)
 	(bus_entry
-		(at 46.99 125.73)
+		(at 52.07 125.73)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -3666,7 +3666,7 @@
 		(uuid "7873a40b-4d59-4138-82a5-e00f8e3cd027")
 	)
 	(bus_entry
-		(at 43.18 125.73)
+		(at 48.26 125.73)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -3703,7 +3703,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 118.11) (xy 46.99 118.11)
+			(xy 50.8 118.11) (xy 52.07 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3811,19 +3811,9 @@
 		)
 		(uuid "0d8419db-2f6f-44e1-aece-3ebc6badd576")
 	)
-	(wire
-		(pts
-			(xy 81.28 60.96) (xy 92.71 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0db0b0a7-72b2-418c-b474-e60acbaa295a")
-	)
 	(bus
 		(pts
-			(xy 46.99 125.73) (xy 50.8 125.73)
+			(xy 52.07 125.73) (xy 55.88 125.73)
 		)
 		(stroke
 			(width 0)
@@ -4003,16 +3993,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 92.71) (xy 38.1 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26de04a0-e8ba-4935-8f59-6e9e7b6d7365")
-	)
-	(wire
-		(pts
 			(xy 332.74 46.99) (xy 332.74 48.26)
 		)
 		(stroke
@@ -4043,7 +4023,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 123.19) (xy 45.72 118.11)
+			(xy 50.8 123.19) (xy 50.8 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4203,16 +4183,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 88.9) (xy 92.71 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49505fdf-6254-4c3b-a26f-d41bff191668")
-	)
-	(wire
-		(pts
 			(xy 46.99 229.87) (xy 57.15 229.87)
 		)
 		(stroke
@@ -4333,16 +4303,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 93.98) (xy 92.71 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59e8238b-eea2-485c-a21d-22bc87ff8b85")
-	)
-	(wire
-		(pts
 			(xy 81.28 86.36) (xy 92.71 86.36)
 		)
 		(stroke
@@ -4373,17 +4333,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 85.09) (xy 38.1 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65ad8097-d06e-4600-9468-783de67795bd")
-	)
-	(wire
-		(pts
-			(xy 49.53 123.19) (xy 49.53 120.65)
+			(xy 54.61 123.19) (xy 54.61 120.65)
 		)
 		(stroke
 			(width 0)
@@ -4453,7 +4403,7 @@
 	)
 	(bus
 		(pts
-			(xy 41.91 125.73) (xy 43.18 125.73)
+			(xy 46.99 125.73) (xy 48.26 125.73)
 		)
 		(stroke
 			(width 0)
@@ -4623,16 +4573,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 60.96) (xy 35.56 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ce2322e-b50c-48a5-a304-e647acac6a53")
-	)
-	(wire
-		(pts
 			(xy 369.57 45.72) (xy 369.57 49.53)
 		)
 		(stroke
@@ -4660,16 +4600,6 @@
 			(type default)
 		)
 		(uuid "96aa72c1-9837-47bb-88b3-8cd6fc4fc765")
-	)
-	(wire
-		(pts
-			(xy 81.28 91.44) (xy 92.71 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97bd831f-2337-4f84-9779-47a82f823ac3")
 	)
 	(wire
 		(pts
@@ -5103,7 +5033,7 @@
 	)
 	(bus
 		(pts
-			(xy 43.18 125.73) (xy 46.99 125.73)
+			(xy 48.26 125.73) (xy 52.07 125.73)
 		)
 		(stroke
 			(width 0)
@@ -5173,7 +5103,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 120.65) (xy 50.8 120.65)
+			(xy 54.61 120.65) (xy 55.88 120.65)
 		)
 		(stroke
 			(width 0)
@@ -5230,16 +5160,6 @@
 			(type default)
 		)
 		(uuid "eecf7075-277f-493c-b36f-339d11844599")
-	)
-	(wire
-		(pts
-			(xy 41.91 88.9) (xy 38.1 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0511065-275e-477c-aa28-cb57014a6f32")
 	)
 	(wire
 		(pts
@@ -5441,16 +5361,6 @@
 		)
 		(uuid "1305b310-7985-4c09-a5ea-77b2d7531ad6")
 	)
-	(label "VRX_EN"
-		(at 43.18 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2385c9c1-6323-4129-9d14-6d53af7df3f0")
-	)
 	(label "CH0_OUT"
 		(at 236.22 58.42 0)
 		(effects
@@ -5490,16 +5400,6 @@
 			(justify left bottom)
 		)
 		(uuid "2d617ce1-9dd6-4ac1-af37-77e7bb4718c5")
-	)
-	(label "VGA_SPI.SCLK"
-		(at 50.8 120.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "301724be-d4e8-4587-953b-c5829c0c7ba2")
 	)
 	(label "BSL.UART_RX"
 		(at 334.01 44.45 0)
@@ -5621,16 +5521,6 @@
 		)
 		(uuid "4b50dae5-3cc2-4226-9275-8fc84fa152dd")
 	)
-	(label "HV_POS_EN"
-		(at 41.91 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4e2a70f6-b81d-4820-8017-91f11ba55b7d")
-	)
 	(label "VGA_GAIN_CS"
 		(at 40.64 49.53 0)
 		(effects
@@ -5682,7 +5572,7 @@
 		(uuid "57a0415f-eff2-4df4-a998-3244645f47b5")
 	)
 	(label "VGA_SPI.MOSI"
-		(at 53.34 123.19 0)
+		(at 58.42 123.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5721,16 +5611,6 @@
 		)
 		(uuid "6790c9c3-2a37-45f4-9a95-9bca9946fc7d")
 	)
-	(label "HV_PWR_EN"
-		(at 81.28 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "67e4e663-a531-4930-83df-8e2ae8a17e5d")
-	)
 	(label "NRF_SPI.MISO"
 		(at 77.47 116.84 0)
 		(effects
@@ -5740,16 +5620,6 @@
 			(justify left bottom)
 		)
 		(uuid "68832e51-3003-4607-ba9b-13b5f67875e6")
-	)
-	(label "HV_NEG_EN"
-		(at 81.28 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6c96181b-e30e-4095-bf1d-66d502ecb7ff")
 	)
 	(label "LINK_READY"
 		(at 90.17 132.08 180)
@@ -5792,7 +5662,7 @@
 		(uuid "736d6ca6-8be1-40f8-9601-acd4dfaf91ad")
 	)
 	(label "VGA_SPI.MISO"
-		(at 46.99 118.11 0)
+		(at 52.07 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5860,16 +5730,6 @@
 			(justify left bottom)
 		)
 		(uuid "8b460a3b-6da2-46f9-bcab-b773358fdcd2")
-	)
-	(label "HV_NEG_EN"
-		(at 41.91 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "914dd1af-7ebb-4dcc-a240-5a10d18c0545")
 	)
 	(label "DVDD_3.3"
 		(at 369.57 34.29 0)
@@ -5981,7 +5841,7 @@
 		)
 		(uuid "b218b5d4-9faa-487f-ab43-5e79975a056d")
 	)
-	(label "VGA_SPI.CLK"
+	(label "VGA_SPI.SCLK"
 		(at 90.17 124.46 180)
 		(effects
 			(font
@@ -6020,16 +5880,6 @@
 			(justify right bottom)
 		)
 		(uuid "c27d2882-0839-492f-ac11-1fe42bbbc2f5")
-	)
-	(label "HV_POS_EN"
-		(at 81.28 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c3d72e2a-b963-4646-8934-6c9a97dbccf2")
 	)
 	(label "BSL.UART_TX"
 		(at 334.01 46.99 0)
@@ -6101,6 +5951,16 @@
 		)
 		(uuid "cd64e4ae-ce68-46d1-b508-790f337e2e5c")
 	)
+	(label "VGA_SPI.SCLK"
+		(at 55.88 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cfe5c3b9-e2f0-4617-b183-5338d1156ac5")
+	)
 	(label "HFXIN"
 		(at 234.95 45.72 0)
 		(effects
@@ -6131,16 +5991,6 @@
 		)
 		(uuid "e1325b9f-27db-4009-9219-d34030f6913a")
 	)
-	(label "VRX_EN"
-		(at 81.28 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ec9952ae-1401-48cd-99ae-de5c228cbcd9")
-	)
 	(label "PVCC"
 		(at 85.09 45.72 0)
 		(effects
@@ -6150,16 +6000,6 @@
 			(justify left bottom)
 		)
 		(uuid "f09c80af-e6bb-441f-b642-33b2ecb93dcc")
-	)
-	(label "HV_PWR_EN"
-		(at 41.91 92.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f39582db-d423-4b5a-ab6c-4a6a5aa54dea")
 	)
 	(label "NRF_SPI.SCLK"
 		(at 55.88 104.14 0)
@@ -6204,48 +6044,6 @@
 		(uuid "1b376d33-2a2d-4eaf-8f23-8c464c5cb447")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 12.5949 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "VRX_EN"
-		(shape output)
-		(at 35.56 60.96 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "24812917-781f-4cef-9b5c-2a3a417e1bbb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 25.5596 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "HV_NEG_EN"
-		(shape output)
-		(at 38.1 88.9 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "32bf6e56-6792-4aec-844f-63e102d5c85f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 24.5315 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6485,27 +6283,6 @@
 			)
 		)
 	)
-	(global_label "HV_POS_EN"
-		(shape output)
-		(at 38.1 85.09 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a69069b5-4c62-4571-8082-52e8e16bf45f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 24.471 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "LP_FILT_EN"
 		(shape output)
 		(at 38.1 81.28 180)
@@ -6569,30 +6346,9 @@
 			)
 		)
 	)
-	(global_label "HV_PWR_EN"
-		(shape output)
-		(at 38.1 92.71 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e6b47f0a-939e-4a2f-8506-7364a3045a99")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 24.2896 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "VGA_SPI{SCLK, MOSI, MISO}"
 		(shape bidirectional)
-		(at 41.91 125.73 180)
+		(at 46.99 125.73 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6602,7 +6358,7 @@
 		)
 		(uuid "ee3e963d-d941-4a26-b7c0-15324cf574f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 11.5062 125.73 0)
+			(at 16.5862 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
