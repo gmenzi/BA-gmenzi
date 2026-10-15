@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "nRF_LIB-altium-import")(type "KiCad")(uri "${KIPRJMOD}/nRF_LIB-altium-import.kicad_sym")(options "")(descr ""))
+  (lib (name "nRF-LIB")(type "KiCad")(uri "${KIPRJMOD}/nRF-LIB.kicad_sym")(options "")(descr ""))
+)

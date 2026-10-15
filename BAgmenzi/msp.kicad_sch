@@ -5431,16 +5431,6 @@
 		)
 		(uuid "360dbf14-29bd-4dbb-bfd0-fc29301870c6")
 	)
-	(label "LED_MSP430"
-		(at 92.71 101.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3697db57-9f2e-43b2-b37a-35b22ee152b9")
-	)
 	(label "USSXTIN"
 		(at 234.95 68.58 0)
 		(effects
@@ -5822,12 +5812,12 @@
 		(uuid "ae579298-5fc7-43d6-bd6e-4495f939b8e6")
 	)
 	(label "VGA_GAIN_RC_SINK"
-		(at 72.39 81.28 0)
+		(at 72.39 81.28 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "af9942ad-e375-4d65-95b5-f0810fe50402")
 	)
@@ -9487,7 +9477,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 257.81 52.3748 0)
 			(effects
 				(font

@@ -2961,6 +2961,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 62.23) (xy 83.82 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6385db61-609f-4eae-a9d2-9b49a6131225")
+	)
+	(wire
+		(pts
 			(xy 177.8 80.01) (xy 179.07 80.01)
 		)
 		(stroke
@@ -3742,6 +3752,27 @@
 			)
 		)
 	)
+	(global_label "V_RX"
+		(shape input)
+		(at 86.36 62.23 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4cef28e6-3b13-4880-bf6c-370adb4044fc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.36 54.7091 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SIG_FILT_IN"
 		(shape output)
 		(at 373.38 69.85 0)
@@ -3927,27 +3958,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "VRX_EN"
-		(shape input)
-		(at 83.82 62.23 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d1c1f7ad-d8af-4f14-a728-fca2ebe5a59d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 83.82 52.2296 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)

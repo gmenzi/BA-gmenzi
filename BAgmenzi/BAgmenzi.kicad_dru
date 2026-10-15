@@ -1,5 +1,15 @@
 (version 1)
 (rule "PMIC_WLP_fine"
   (condition "A.intersectsCourtyard('U11') || B.intersectsCourtyard('U11')")
-  (constraint clearance (min 0.075mm))
-  (constraint track_width (min 0.08mm) (opt 0.1mm)))
+  (constraint clearance (min 0.09mm))
+  (constraint track_width (min 0.09mm) (opt 0.1mm)))
+
+(rule "BM20C_fanout"
+  (condition "A.intersectsCourtyard('M1') || B.intersectsCourtyard('M1')")
+  (constraint clearance (min 0.15mm))
+  (constraint track_width (min 0.15mm) (opt 0.15mm)))
+
+(rule "MSP_QFN"
+  (condition "A.intersectsCourtyard('U1') || B.intersectsCourtyard('U1')")
+  (constraint clearance (min 0.12mm))
+  (constraint track_width (min 0.12mm) (opt 0.15mm)))

@@ -24,4 +24,6 @@
   (lib (name "TPL0501")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/TPL0501-100RSER/KiCad")(options "")(descr ""))
   (lib (name "NSR20F30NXT5G")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/NSR20F30NXT5G/KiCad")(options "")(descr ""))
   (lib (name "cmut_dummy")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/cmut_dummy.pretty")(options "")(descr ""))
+  (lib (name "nRF-backups")(type "KiCad")(uri "${KIPRJMOD}/nRF/nRF-backups")(options "")(descr ""))
+  (lib (name "nRFPCB")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/nRFPCB.pretty")(options "")(descr ""))
 )

@@ -7860,7 +7860,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 52.07 35.56 90)
+		(at 52.07 35.56 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7869,23 +7869,25 @@
 		(fields_autoplaced yes)
 		(uuid "b1dc3a0f-5adb-45b9-9159-e566e19808fa")
 		(property "Reference" "R17"
-			(at 52.07 29.21 90)
+			(at 54.61 34.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Value" "51"
-			(at 52.07 31.75 90)
+			(at 54.61 36.8299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 52.07 37.338 90)
+			(at 53.848 35.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
