@@ -6461,7 +6461,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EEG_PcbLib:0402"
 			(at 72.39 169.418 90)
 			(effects
 				(font
@@ -7808,7 +7808,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EEG_PcbLib:0402"
 			(at 72.39 165.608 90)
 			(effects
 				(font
@@ -7875,7 +7875,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EEG_PcbLib:CONN_3220-10-0100-00_CNC"
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD"
 			(at 53.34 168.91 0)
 			(effects
 				(font
