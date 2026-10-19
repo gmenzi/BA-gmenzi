@@ -2,14 +2,35 @@
 (rule "PMIC_WLP_fine"
   (condition "A.intersectsCourtyard('U11') || B.intersectsCourtyard('U11')")
   (constraint clearance (min 0.09mm))
-  (constraint track_width (min 0.09mm) (opt 0.1mm)))
+  (constraint track_width (min 0.09mm) (opt 0.1mm))
+  (constraint via_diameter (min 0.25mm))
+  (constraint hole_size (min 0.15mm))
+  (constraint annular_width (min 0.05mm))
+  (constraint hole_clearance (min 0.2mm))
+  (constraint hole_to_hole (min 0.2mm)))
 
 (rule "BM20C_fanout"
   (condition "A.intersectsCourtyard('M1') || B.intersectsCourtyard('M1')")
   (constraint clearance (min 0.15mm))
-  (constraint track_width (min 0.15mm) (opt 0.15mm)))
+  (constraint track_width (min 0.127mm) (opt 0.15mm)))
 
 (rule "MSP_QFN"
   (condition "A.intersectsCourtyard('U1') || B.intersectsCourtyard('U1')")
   (constraint clearance (min 0.12mm))
   (constraint track_width (min 0.12mm) (opt 0.15mm)))
+
+(rule "PPG_AFE"
+  (condition "A.intersectsCourtyard('U9') || B.intersectsCourtyard('U9')")
+  (constraint clearance (min 0.15mm)))
+
+(rule "U8_WLP"
+  (condition "A.intersectsCourtyard('U8') || B.intersectsCourtyard('U8')")
+  (constraint clearance (min 0.17mm)))
+
+(rule "U2_WLP"
+  (condition "A.intersectsCourtyard('U2') || B.intersectsCourtyard('U2')")
+  (constraint clearance (min 0.15mm)))
+
+(rule "D4_WLP"
+  (condition "A.intersectsCourtyard('D4') || B.intersectsCourtyard('D4')")
+  (constraint clearance (min 0.13mm)))
