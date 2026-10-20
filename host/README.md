@@ -1,0 +1,140 @@
+# BioGUI
+
+[![Documentation](https://img.shields.io/badge/docs-github%20pages-blue)](https://pulp-bio.github.io/biogui/)
+
+Modular PySide6 GUI for acquiring and visualizing bio-signals from different sources.
+
+## BioGUI Requirements
+
+- `uv`: The project uses uv as its package manager. uv will automatically download and manage the required Python version for you (the project is pinned to Python 3.11). To install uv: `pip install uv` or see [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+
+## BioGUI Setup
+
+To install dependencies, run:
+
+```bash
+uv sync
+```
+
+### Development
+
+To install the pre-commit hooks (ruff, black, prettier, license headers), run:
+
+```bash
+uv run pre-commit install
+```
+
+### Run
+
+Run the script [`main.py`](https://github.com/pulp-bio/biogui/blob/main/main.py), which launches the main window.
+
+You can run the application in two ways:
+
+**Option 1:** Run with uv:
+
+```bash
+uv run main.py
+```
+
+**Option 2:** Activate the virtual environment and run directly:
+
+```bash
+source .venv/bin/activate
+python main.py
+```
+
+#### Interface with board
+
+To enable communication between the GUI and a board, one must provide a Python file with the following specifications:
+
+- `packetSize`: integer representing the number of bytes to be read;
+- `startSeq`: sequence of commands to start the board, expressed as a list of bytes;
+- `stopSeq`: sequence of commands to stop the board, expressed as a list of bytes;
+- `sigInfo`: dictionary containing, for each signal, a sub-dictionary with:
+  - `fs`: sampling rate (float)
+  - `nCh`: number of channels (int)
+  - `extras`: dictionary containing additional configurations, must contain at least:
+    - `type`: signal type, either `"ultrasound"` or `"time-series"` (string)
+- `decodeFn`: function that decodes each packet of bytes read from the board into the specified signals.
+
+Bundled board interfaces live under [`biogui/platforms`](https://github.com/pulp-bio/biogui/blob/main/biogui/platforms) (each device family in its own subfolder, as `interface_*.py` files).
+
+### Additional modules
+
+The BioGUI provides additional functionalities via the [`modules`](biogui/modules) sub-folder. The main modules are:
+
+- [trigger](biogui/modules/trigger.py) — Given a gesture configuration (in JSON), it shows gesture cues to the user and generates a corresponding trigger signal that is appended to the incoming data; useful for screen-guided training
+- [forwarding](biogui/modules/forwarding.py) — It forwards the incoming data from selected signals to other processes via TCP or Unix sockets; useful to integrate the BioGUI within control applications
+- [teleprompter](biogui/modules/teleprompter.py) — Given a JSON configuration, it shows on-screen sentences, that are stored alongside the acquired signals; useful for speech recognition applications
+
+### Utilities
+
+In the [`utils`](https://github.com/pulp-bio/biogui/blob/main/utils) folder, there are some utility scripts: the most useful one is [`plot_signal.py`](https://github.com/pulp-bio/biogui/blob/main/utils/plot_signal.py), which shows how to open the `.bio` binary file containing the acquired signals.
+
+## Applications
+
+As mentioned above, the BioGUI can be integrated within more complex applications via the forwarding module. The components for said applications are contained in the [`applications`](applications) folder as `git submodules`: to download them, refer to the following commands:
+
+```
+# Full clone, pulling submodule contents too
+git clone --recurse-submodules git@github.com:pulp-bio/biogui.git
+
+# Without re-cloning
+git submodule update --init applications/bio-bridge  # just one
+git submodule update --init --recursive              # all of them
+```
+
+The two main applications are the following:
+- [`bio-bridge`](applications/bio-bridge/README.md) — BioBridge: real-time ML inference middleware
+- [`motion-lab`](applications/motion-lab/README.md) — MotionLab: Unity environment for hand control and task evaluation
+
+To run the full gesture-control pipeline, additional setup is required for BioBridge and MotionLab.
+See [`bio-bridge/README.md`](bio-bridge/README.md) and [`motion-lab/README.md`](motion-lab/README.md).
+
+**Preparation** (order does not matter):
+
+- Open BioGUI and configure the interface and forwarding settings.
+- Open MotionLab in Unity and load a scene (do not press Play yet).
+
+**Start** (in this order):
+
+1. Run BioBridge — waits for an incoming BioGUI connection.
+2. Start acquisition in BioGUI with forwarding enabled — data is displayed and forwarded to BioBridge.
+3. Press Play in Unity — receives hand pose data from BioBridge and starts rendering.
+
+**Live Demonstration**
+
+https://github.com/user-attachments/assets/95f8e462-f49c-4d70-b516-1d78edc6c5a5
+
+## Authors
+
+This work was realized mainly at the [MICREL lab](https://dei.unibo.it/it/ricerca/laboratori-di-ricerca/micrel)
+of University of Bologna (Italy), and at the [Digital Circuits and Systems (IIS)](https://iis.ee.ethz.ch/research/research-groups/Digital%20Circuits%20and%20Systems.html) of ETH Zurich by:
+
+- [Mattia Orlandi](https://www.unibo.it/sitoweb/mattia.orlandi/en) (University of Bologna)
+- [Pierangelo Maria Rapa](https://www.unibo.it/sitoweb/pierangelomaria.rapa/en) (University of Bologna)
+- Enzo Baraldi (ETH Zurich)
+- Giusy Spacone (ETH Zurich)
+- Sebastian Frey (ETH Zurich)
+- Giovanni Pollo (Polytechnic University of Turin)
+
+## Citation
+
+If you would like to reference the project, please cite the following paper:
+
+```bibtex
+@ARTICLE{10552147,
+  author={Orlandi, Mattia and Rapa, Pierangelo Maria and Zanghieri, Marcello and Frey, Sebastian and Kartsch, Victor and Benini, Luca and Benatti, Simone},
+  journal={IEEE Transactions on Biomedical Circuits and Systems},
+  title={Real-Time Motor Unit Tracking From sEMG Signals With Adaptive ICA on a Parallel Ultra-Low Power Processor},
+  year={2024},
+  volume={18},
+  number={4},
+  pages={771-782},
+  keywords={Electrodes;Real-time systems;Muscles;Motors;Electromyography;Circuits and systems;Graphical user interfaces;Blind source separation;human-machine interfaces;independent component analysis;low-power;machine learning;on-device learning;online learning;PULP;surface EMG},
+  doi={10.1109/TBCAS.2024.3410840}}
+```
+
+## License
+
+All files are released under the Apache-2.0 license (see [`LICENSE`](https://github.com/pulp-bio/biogui/blob/main/LICENSE)).

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1080</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>BioGUI</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout1">
+    <item>
+     <widget class="QWidget" name="sidebarPanel">
+      <property name="minimumSize">
+       <size>
+        <width>280</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="confLayout" stretch="0,1,2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout2">
+        <item>
+         <widget class="QPushButton" name="startStreamingButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Start streaming</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stopStreamingButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Stop streaming</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="streamConfGroupBox">
+        <property name="title">
+         <string>Configuration</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout1" stretch="0,0,0">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout3" stretch="1,0,0">
+           <item>
+            <widget class="QPushButton" name="addDataSourceButton">
+             <property name="text">
+              <string>Add data source</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="editButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>Edit the selected signal</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset theme="edit-entry"/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deleteDataSourceButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>Delete selected source</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset theme="user-trash">
+               <normaloff>../../../.designer/backup</normaloff>../../../.designer/backup</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTreeView" name="dataSourceTree">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout4" stretch="0,0,0">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Render length:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="renderLenComboBox">
+             <item>
+              <property name="text">
+               <string>100 ms</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>200 ms</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>500 ms</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1 s</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2 s</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>5 s</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>10 s</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="moduleContainer">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>433</width>
+           <height>675</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout3">
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="plotsContainer">
+      <layout class="QVBoxLayout" name="plotsLayout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <property name="bottomMargin">
+        <number>4</number>
+       </property>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionToggleSidebar">
+   <property name="text">
+    <string>Toggle sidebar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionConfigureAcq">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Configure acquisition</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>startStreamingButton</tabstop>
+  <tabstop>stopStreamingButton</tabstop>
+  <tabstop>addDataSourceButton</tabstop>
+  <tabstop>editButton</tabstop>
+  <tabstop>deleteDataSourceButton</tabstop>
+  <tabstop>dataSourceTree</tabstop>
+  <tabstop>renderLenComboBox</tabstop>
+  <tabstop>scrollArea</tabstop>
+ </tabstops>
+ <resources>
+  <include location="biogui.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,156 @@
+# Copyright University of Bologna - ETH Zurich 2026
+# Licensed under Apache v2.0 see LICENSE for details.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+"""
+Wizard for configuring signals.
+"""
+
+from __future__ import annotations
+
+from PySide6.QtWidgets import QMessageBox, QVBoxLayout, QWidget, QWizard, QWizardPage
+
+from .signal_config_widget import SignalConfigWidget
+
+
+class SignalConfigWizardPage(QWizardPage):
+    """
+    Wizard page for configuring a signal.
+
+    Parameters
+    ----------
+    sigName : str
+        Name of the signal.
+    fs : float
+        Sampling frequency.
+    nCh : int
+        Number of channels.
+    extras : dict
+        Dictionary with extra configuration.
+    parent : QWidget or None, default=None
+        Parent widget.
+
+    Attributes
+    ----------
+    _configWidget : ConfigureSignalWidget
+        Instance of ConfigureSignalWidget.
+    """
+
+    def __init__(
+        self,
+        sigName: str,
+        fs: float,
+        nCh: int,
+        extras: dict,
+        parent: QWidget | None = None,
+    ) -> None:
+        super().__init__(parent)
+
+        self._configWidget = SignalConfigWidget(sigName, fs, nCh, extras, parent=parent)
+        layout = QVBoxLayout()
+        layout.addWidget(self._configWidget)
+        self.setLayout(layout)
+
+    @property
+    def sigName(self) -> str:
+        """str: Property for getting the signal name."""
+        return self._configWidget.sigName
+
+    @property
+    def sigConfig(self) -> dict:
+        """
+        dict: Property for getting the dictionary with the signal configuration, namely:
+        - "fs": the sampling frequency;
+        - "nCh": the number of channels;
+        - "filtType": the filter type (optional);
+        - "freqs": list with the cut-off frequencies (optional);
+        - "filtOrder" the filter order (optional);
+        - "chSpacing": the channel spacing (optional);
+        - "showYAxis": whether to show the Y axis (optional);
+        - "minRange": minimum of the Y range (optional);
+        - "maxRange": maximum of the Y range (optional).
+        """
+        return self._configWidget.sigConfig
+
+    def validatePage(self) -> bool:
+        """Validate the page."""
+        isValid, errMessage = self._configWidget.validateForm()
+        if not isValid:
+            QMessageBox.critical(
+                self,
+                "Invalid signal configuration",
+                errMessage,
+                buttons=QMessageBox.Retry,  # type: ignore
+                defaultButton=QMessageBox.Retry,  # type: ignore
+            )
+            return False
+
+        return True
+
+
+class SignalConfigWizard(QWizard):
+    """
+    Wizard for configuring signals.
+
+    Parameters
+    ----------
+    sigInfo : dict
+        Dictionary with the signal information, namely:
+        - signal name;
+        - sampling frequency;
+        - number of channels.
+    parent : QWidget or None, default=None
+        Parent widget.
+    """
+
+    def __init__(
+        self,
+        sigInfo: dict,
+        parent: QWidget | None = None,
+    ) -> None:
+        super().__init__(parent)
+        self.setWizardStyle(QWizard.ClassicStyle)  # type: ignore
+
+        self.setWindowTitle("Signal Configuration")
+
+        # Populate wizard
+        self._sigsConfigs = {}
+        for sigName in sigInfo:
+            # Skip hidden signals (e.g., acquisition_number, tx_rx_id) in wizard
+            if sigInfo[sigName].get("hidden", False):
+                # Add default config for hidden signals
+                self._sigsConfigs[sigName] = {
+                    "fs": sigInfo[sigName]["fs"],
+                    "nCh": sigInfo[sigName]["nCh"],
+                }
+                continue
+            self.addPage(SignalConfigWizardPage(sigName, **sigInfo[sigName], parent=self))
+
+        finishButton = self.button(QWizard.FinishButton)  # type: ignore
+        finishButton.clicked.connect(self.onFinishedClicked)
+
+    @property
+    def sigsConfigs(self) -> dict:
+        """
+        dict: Property for getting, for each signal, the dictionary with its configuration, namely:
+        - "fs": the sampling frequency;
+        - "nCh": the number of channels;
+        - "filtType": the filter type (optional);
+        - "freqs": list with the cut-off frequencies (optional);
+        - "filtOrder" the filter order (optional);
+        - "chSpacing": the channel spacing (optional);
+        - "showYAxis": whether to show the Y axis (optional);
+        - "minRange": minimum of the Y range (optional);
+        - "maxRange": maximum of the Y range (optional).
+        """
+        return self._sigsConfigs
+
+    def onFinishedClicked(self) -> None:
+        """Handler for the event raised when the finish button is clicked."""
+        # Iterate through all pages in the wizard
+        for pageId in self.pageIds():
+            page = self.page(pageId)
+            if isinstance(page, SignalConfigWizardPage):
+                # Merge the configuration from each page
+                self._sigsConfigs[page.sigName] = page.sigConfig
