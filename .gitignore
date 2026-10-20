@@ -6,3 +6,4 @@ fp-info-cache
 *-backups/
 _autosave-*
 \#auto_saved_files\#
+.clangd
