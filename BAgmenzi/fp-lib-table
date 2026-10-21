@@ -26,4 +26,5 @@
   (lib (name "cmut_dummy")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/cmut_dummy.pretty")(options "")(descr ""))
   (lib (name "nRF-backups")(type "KiCad")(uri "${KIPRJMOD}/nRF/nRF-backups")(options "")(descr ""))
   (lib (name "nRFPCB")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/nRFPCB.pretty")(options "")(descr ""))
+  (lib (name "polyCMUT")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/library-ubc/UBC-libs-Kicad9.pretty")(options "")(descr ""))
 )

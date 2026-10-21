@@ -1,4 +1,4 @@
-26761877684411367
+26763670267500335
 AN54LM-20_PCB-260723
 AN54LM-20_P20
 
@@ -107680,6 +107680,13 @@ BM20-C
 0
 100
 100
+polyCMUT
+polyCMUT
+polyCMUT module, 16.0 x 16.0 mm, 0.8 mm thick. Host lands sit just outside the castellations, with a gap so solder stays in the fillet.
+polyCMUT module castellation
+0
+12
+12
 wulpus
 629105136821
 

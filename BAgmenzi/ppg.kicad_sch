@@ -1018,6 +1018,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 109.22) (xy 88.9 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cce0a2d-3379-46a2-85c2-4dbe244780bd")
+	)
+	(wire
+		(pts
 			(xy 139.7 90.17) (xy 152.4 90.17)
 		)
 		(stroke
@@ -1075,6 +1085,16 @@
 			(type default)
 		)
 		(uuid "2c7d7874-e15b-4a1e-b138-be41aee60d64")
+	)
+	(wire
+		(pts
+			(xy 88.9 109.22) (xy 88.9 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f78cc30-1e22-4537-88e5-ebf4c9f6f519")
 	)
 	(bus
 		(pts
@@ -1488,16 +1508,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 102.87) (xy 88.9 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea085605-536e-4979-8e7a-53cdccb41f92")
-	)
-	(wire
-		(pts
 			(xy 88.9 88.9) (xy 88.9 92.71)
 		)
 		(stroke
@@ -1675,7 +1685,7 @@
 	)
 	(global_label "V_LED"
 		(shape input)
-		(at 88.9 110.49 180)
+		(at 85.09 109.22 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1685,7 +1695,7 @@
 		)
 		(uuid "fe41349c-9e06-47c0-a476-983f4173e551")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 80.4115 110.49 0)
+			(at 76.6015 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2047,7 +2057,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 141.224 77.47 0)
+			(at 140.716 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2664,7 +2674,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 147.32 77.216 0)
+			(at 147.066 77.216 0)
 			(effects
 				(font
 					(size 1.27 1.27)

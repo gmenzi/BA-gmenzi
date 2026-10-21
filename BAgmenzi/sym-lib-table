@@ -21,4 +21,5 @@
   (lib (name "NSR20F30NXT5G")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/NSR20F30NXT5G/KiCad/NSR20F30NXT5G.kicad_sym")(options "")(descr ""))
   (lib (name "nRF_LIB-altium-import")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/nRF_LIB/nRF_LIB-altium-import.kicad_sym")(options "")(descr ""))
   (lib (name "nRF-LIB")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/nRF_LIB/nRF-LIB.kicad_sym")(options "")(descr ""))
+  (lib (name "polyCMUT")(type "KiCad")(uri "C:/Users/menzi/GIT-BA/BA-gmenzi/libraries/library-ubc/polyCMUT.kicad_sym")(options "")(descr ""))
 )

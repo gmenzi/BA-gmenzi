@@ -1639,7 +1639,6 @@
 					(stroke
 						(width 0)
 						(type solid)
-						(color 0 0 0 1)
 					)
 					(fill
 						(type none)
@@ -1652,6 +1651,7 @@
 					(stroke
 						(width 0)
 						(type solid)
+						(color 0 0 0 1)
 					)
 					(fill
 						(type none)
@@ -1736,7 +1736,6 @@
 					(stroke
 						(width 0)
 						(type solid)
-						(color 0 0 0 1)
 					)
 					(fill
 						(type none)
@@ -1749,6 +1748,7 @@
 					(stroke
 						(width 0)
 						(type solid)
+						(color 0 0 0 1)
 					)
 					(fill
 						(type none)
