@@ -3035,6 +3035,27 @@
 		)
 		(uuid "9732d0da-b519-460d-a59a-4932862e1ed6")
 	)
+	(text_box "ist nicht der gleiche Treiber, wie bei WULPUS-PRO, funktioniert mit nur einem Kanal. Sonst gleich"
+		(exclude_from_sim no)
+		(at 128.27 58.42 0)
+		(size 31.75 12.7)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 111 245 255 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "992eefc3-07b3-47cc-9fb2-236ab990ac3f")
+	)
 	(text_box "for direct filtering (-HV)we need C to shield pulser from -HV. with indirect biasing we dont need it. \n\nD_direct: 10nF"
 		(exclude_from_sim no)
 		(at 233.68 13.97 0)
@@ -4535,7 +4556,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C270305"
+		(property "LCSC Part #" "C191984 "
 			(at 50.8 63.5 0)
 			(effects
 				(font
@@ -4680,7 +4701,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C270305"
+		(property "LCSC Part #" "C191984 "
 			(at 58.42 146.05 0)
 			(effects
 				(font
@@ -4756,7 +4777,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C325619"
+		(property "LCSC Part #" "C416536 "
 			(at 107.95 124.46 90)
 			(effects
 				(font
@@ -4917,7 +4938,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C270305"
+		(property "LCSC Part #" "C191984 "
 			(at 68.58 41.91 0)
 			(effects
 				(font
@@ -5126,7 +5147,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C364372"
+		(property "LCSC Part #" "C190119 "
 			(at 231.14 45.72 90)
 			(effects
 				(font
@@ -5203,7 +5224,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C325948"
+		(property "LCSC Part #" "C278596 "
 			(at 116.84 114.3 90)
 			(effects
 				(font
@@ -5280,7 +5301,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 156.21 38.1 90)
 			(effects
 				(font
@@ -5424,7 +5445,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C20441333"
+		(property "LCSC Part #" "C14445 "
 			(at 36.83 109.22 0)
 			(effects
 				(font
@@ -5502,7 +5523,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 203.2 105.41 0)
 			(effects
 				(font
@@ -5578,7 +5599,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 196.85 36.83 90)
 			(effects
 				(font
@@ -5930,7 +5951,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 231.14 139.7 0)
 			(effects
 				(font
@@ -6007,6 +6028,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C3717002 "
+			(at 215.9 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fcea47b1-1248-488c-87bb-94a8e5d2b950")
 		)
@@ -6049,7 +6079,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "wulpus:INDC1005X45N"
+		(property "Footprint" "wulpus_pro_acq:FP-LQH3NPH_ME-MFG"
 			(at 50.8 121.92 0)
 			(effects
 				(font
@@ -6674,7 +6704,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C5452416"
+		(property "LCSC Part #" "C701168 "
 			(at 50.8 121.92 0)
 			(effects
 				(font
@@ -6752,7 +6782,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 138.43 149.86 0)
 			(effects
 				(font
@@ -7019,7 +7049,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C117169"
+		(property "LCSC Part #" "C580060 "
 			(at 73.66 109.22 0)
 			(effects
 				(font
@@ -7124,7 +7154,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C723496"
+		(property "LCSC Part #" "C192169 "
 			(at 91.44 180.34 0)
 			(effects
 				(font
@@ -7268,7 +7298,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C53084447 "
+		(property "LCSC Part #" "C913614 "
 			(at 85.09 147.32 90)
 			(effects
 				(font
@@ -7545,7 +7575,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C270305"
+		(property "LCSC Part #" "C191984 "
 			(at 49.53 146.05 0)
 			(effects
 				(font
@@ -7772,7 +7802,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C460116"
+		(property "LCSC Part #" "C460116 "
 			(at 118.11 139.7 0)
 			(effects
 				(font
@@ -7850,7 +7880,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 128.27 109.22 0)
 			(effects
 				(font
@@ -7994,7 +8024,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C778407"
+		(property "LCSC Part #" "C482204 "
 			(at 52.07 35.56 0)
 			(effects
 				(font
@@ -8073,7 +8103,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" " C473625"
+		(property "LCSC Part #" "C413126 "
 			(at 127 130.81 0)
 			(effects
 				(font
@@ -8151,7 +8181,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" " C473625"
+		(property "LCSC Part #" "C413126 "
 			(at 109.22 107.95 0)
 			(effects
 				(font
@@ -8300,7 +8330,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 204.47 139.7 0)
 			(effects
 				(font
@@ -8370,6 +8400,15 @@
 		)
 		(property "Description" "Ferrite bead"
 			(at 217.17 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C3717002 "
+			(at 217.17 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8775,7 +8814,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C126632"
+		(property "LCSC Part #" "C668357 "
 			(at 229.87 105.41 0)
 			(effects
 				(font
@@ -8826,7 +8865,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "wulpus:INDC1005X45N"
+		(property "Footprint" "wulpus_pro_acq:FP-LQH3NPH_ME-MFG"
 			(at 50.8 130.81 0)
 			(effects
 				(font
@@ -9451,7 +9490,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C5452416"
+		(property "LCSC Part #" "C701168 "
 			(at 50.8 130.81 0)
 			(effects
 				(font
@@ -9598,7 +9637,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2653792"
+		(property "LCSC Part #" "C2653792 "
 			(at 160.02 41.91 0)
 			(effects
 				(font

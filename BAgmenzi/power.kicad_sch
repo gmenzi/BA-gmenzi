@@ -6242,7 +6242,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2190182"
+		(property "LCSC Part #" "C26404 "
 			(at 213.36 146.05 90)
 			(effects
 				(font
@@ -6902,7 +6902,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C723496"
+		(property "LCSC Part #" "C192169 "
 			(at 68.58 154.94 0)
 			(effects
 				(font
@@ -7224,7 +7224,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS7A2033DBVDQN"
+		(property "Value" "TPS7A2033PDQNR"
 			(at 170.18 238.76 0)
 			(effects
 				(font
@@ -7251,6 +7251,15 @@
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, X2SON-5"
+			(at 170.18 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C2871641 "
 			(at 170.18 246.38 0)
 			(effects
 				(font
@@ -7408,7 +7417,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C145508"
+		(property "LCSC Part #" "C145508 "
 			(at 105.41 43.18 0)
 			(effects
 				(font
@@ -7616,7 +7625,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C12530"
+		(property "LCSC Part #" "C77002 "
 			(at 182.88 248.92 0)
 			(effects
 				(font
@@ -7764,7 +7773,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C1713"
+		(property "LCSC Part #" "C408132 "
 			(at 219.71 252.73 0)
 			(effects
 				(font
@@ -8082,6 +8091,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C105226 "
+			(at 193.04 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6fb238d0-c1ee-4d5c-8b2a-62cc011b1649")
 		)
@@ -8123,7 +8141,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCB1:FP-BLM18-0_15-t0_8-IPC_A"
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 205.74 245.618 90)
 			(effects
 				(font
@@ -8143,6 +8161,15 @@
 		)
 		(property "Description" "Ferrite bead"
 			(at 205.74 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C3717002 "
+			(at 205.74 243.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8648,6 +8675,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C77131 "
+			(at 154.94 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0d060951-09b3-43bb-a979-7e753cdb793e")
 		)
@@ -8708,6 +8744,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 278.13 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C105226 "
+			(at 278.13 123.19 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8850,7 +8895,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C723496"
+		(property "LCSC Part #" "C192169 "
 			(at 167.64 269.24 0)
 			(effects
 				(font
@@ -9332,7 +9377,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C15525"
+		(property "LCSC Part #" ""
 			(at 54.61 323.85 0)
 			(effects
 				(font
@@ -9654,7 +9699,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C6007475"
+		(property "LCSC Part #" "C6007475 "
 			(at 142.24 52.07 0)
 			(effects
 				(font
@@ -9806,7 +9851,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C20441333"
+		(property "LCSC Part #" "C14445 "
 			(at 265.43 127 0)
 			(effects
 				(font
@@ -9884,7 +9929,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C423829"
+		(property "LCSC Part #" "C25900 "
 			(at 96.52 153.67 0)
 			(effects
 				(font
@@ -10108,7 +10153,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2760983"
+		(property "LCSC Part #" "C2760983 "
 			(at 69.85 184.15 0)
 			(effects
 				(font
@@ -10331,7 +10376,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C82431"
+		(property "LCSC Part #" "C82431 "
 			(at 198.12 36.83 0)
 			(effects
 				(font
@@ -10413,7 +10458,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C20441333"
+		(property "LCSC Part #" "C14445 "
 			(at 151.13 247.65 0)
 			(effects
 				(font
@@ -10492,7 +10537,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C723496"
+		(property "LCSC Part #" "C192169 "
 			(at 58.42 154.94 0)
 			(effects
 				(font
@@ -10569,7 +10614,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C270305"
+		(property "LCSC Part #" "C191984 "
 			(at 156.21 166.37 90)
 			(effects
 				(font
@@ -10748,6 +10793,15 @@
 					(size 1.8288 1.8288)
 				)
 				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C2891571 "
+			(at 213.36 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -11088,7 +11142,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C20441333"
+		(property "LCSC Part #" "C14445 "
 			(at 158.75 129.54 0)
 			(effects
 				(font
@@ -11440,7 +11494,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C161362"
+		(property "LCSC Part #" "C169842 "
 			(at 279.4 152.4 0)
 			(effects
 				(font
@@ -11655,7 +11709,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C423829"
+		(property "LCSC Part #" "C25900 "
 			(at 101.6 153.67 0)
 			(effects
 				(font
@@ -11723,6 +11777,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 269.24 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C105226 "
 			(at 269.24 152.4 0)
 			(effects
 				(font
