@@ -3741,6 +3741,10 @@
 		(uuid "22f822fc-0ddd-4a16-bccd-25b01db2e03a")
 	)
 	(no_connect
+		(at 257.81 121.92)
+		(uuid "25ab5bba-c9cc-4ce9-b033-dc8614c0852d")
+	)
+	(no_connect
 		(at 161.29 40.64)
 		(uuid "2be54106-1d79-4cd2-96ab-4cae6556337e")
 	)
@@ -3787,10 +3791,6 @@
 	(no_connect
 		(at 257.81 71.12)
 		(uuid "7c110c32-4248-49e7-80f0-7b83f3a4221a")
-	)
-	(no_connect
-		(at 257.81 109.22)
-		(uuid "7f0c7ed2-99cc-4944-9793-f6359bfd2dde")
 	)
 	(no_connect
 		(at 257.81 40.64)
@@ -4454,7 +4454,7 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 106.68) (xy 257.81 106.68)
+			(xy 274.32 106.68) (xy 257.81 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4724,13 +4724,13 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 121.92) (xy 257.81 121.92)
+			(xy 274.32 109.22) (xy 257.81 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a34a70e6-3704-4021-bc45-7610e68db64c")
+		(uuid "a13cdc19-4d3e-4f14-8265-56fc9b1cf8a5")
 	)
 	(wire
 		(pts
@@ -5133,7 +5133,7 @@
 		(uuid "06a0698d-4faf-4a30-9025-43a1653cf734")
 	)
 	(label "nRST"
-		(at 267.97 106.68 180)
+		(at 274.32 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5222,16 +5222,6 @@
 		)
 		(uuid "2067fe95-ef26-4157-b28b-41a40c141d04")
 	)
-	(label "PPG_I2C.SDA"
-		(at 274.32 121.92 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "21339b9d-89f3-4efd-832a-8cbacc6e3979")
-	)
 	(label "SWCLK"
 		(at 269.24 33.02 180)
 		(effects
@@ -5281,6 +5271,16 @@
 			(justify right bottom)
 		)
 		(uuid "324b4f96-98cb-4333-b280-62d02a383b9e")
+	)
+	(label "PPG_I2C.SDA"
+		(at 274.32 109.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "32ce4f72-5205-4ca0-91ea-044602947f70")
 	)
 	(label "nRST"
 		(at 88.9 173.99 180)
@@ -6558,6 +6558,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25091"
+			(at 72.39 167.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0b4ead39-78b0-41c2-8df5-b7a3e4c0be1c")
 		)
@@ -6821,6 +6830,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 140.97 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C161362"
 			(at 140.97 96.52 0)
 			(effects
 				(font
@@ -7165,6 +7183,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C23733"
+			(at 281.94 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "766be6ab-86f0-465c-995f-4558ac61b025")
 		)
@@ -7226,6 +7253,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 214.63 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C606165"
 			(at 214.63 153.67 0)
 			(effects
 				(font
@@ -7296,6 +7332,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 151.13 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C23733"
 			(at 151.13 77.47 0)
 			(effects
 				(font
@@ -7432,6 +7477,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 149.86 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C161362"
 			(at 149.86 100.33 0)
 			(effects
 				(font
@@ -7908,6 +7962,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C606165"
+			(at 217.17 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "dff509e1-170e-4bfa-8bd6-dfba1e4a48c5")
 		)
@@ -8043,6 +8106,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25091"
+			(at 72.39 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "65c4e9d1-88b6-4b4a-9ba2-8acd79424d27")
 		)
@@ -8151,6 +8223,15 @@
 			(effects
 				(font
 					(size 1.8288 1.8288)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C5154224"
+			(at 53.34 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)

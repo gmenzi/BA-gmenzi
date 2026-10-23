@@ -1900,7 +1900,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "100k"
 			(at 134.62 44.4499 0)
 			(effects
 				(font
@@ -1928,6 +1928,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 132.08 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C22369186"
 			(at 132.08 43.18 0)
 			(effects
 				(font
@@ -2036,7 +2045,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2U 50v"
+		(property "Value" "2.2u 50V"
 			(at 142.24 133.3499 0)
 			(effects
 				(font
@@ -2045,7 +2054,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "EEG_PcbLib:0402"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 139.3952 135.89 0)
 			(effects
 				(font
@@ -2105,7 +2114,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2U 50v"
+		(property "Value" "2.2u 50V"
 			(at 118.11 132.842 0)
 			(effects
 				(font
@@ -2114,7 +2123,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "EEG_PcbLib:0402"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 131.7752 135.89 0)
 			(effects
 				(font
@@ -2175,7 +2184,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "100k"
 			(at 127 72.3899 0)
 			(effects
 				(font
@@ -2203,6 +2212,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 124.46 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C22369186"
 			(at 124.46 71.12 0)
 			(effects
 				(font
@@ -2453,7 +2471,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "100k"
 			(at 91.44 72.3899 0)
 			(effects
 				(font
@@ -2481,6 +2499,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 88.9 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C22369186"
 			(at 88.9 71.12 0)
 			(effects
 				(font
@@ -2620,7 +2647,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2U 50v"
+		(property "Value" "2.2u 50V"
 			(at 137.414 63.246 90)
 			(effects
 				(font
@@ -2629,7 +2656,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "EEG_PcbLib:0402"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 127 64.4652 0)
 			(effects
 				(font
@@ -3128,6 +3155,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 123.19 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C2909347"
+			(at 123.19 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
