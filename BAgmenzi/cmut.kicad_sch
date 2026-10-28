@@ -1936,7 +1936,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C192169 "
+		(property "LCSC Part #" "C192169"
 			(at 132.08 43.18 0)
 			(effects
 				(font
@@ -2081,7 +2081,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C668357 "
+		(property "LCSC Part #" "C668357"
 			(at 138.43 132.08 0)
 			(effects
 				(font
@@ -2159,7 +2159,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C668357 "
+		(property "LCSC Part #" "C668357"
 			(at 130.81 132.08 0)
 			(effects
 				(font
@@ -2238,7 +2238,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C192169 "
+		(property "LCSC Part #" "C192169"
 			(at 124.46 71.12 0)
 			(effects
 				(font
@@ -2525,7 +2525,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C192169 "
+		(property "LCSC Part #" "C192169"
 			(at 88.9 71.12 0)
 			(effects
 				(font
@@ -2701,7 +2701,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C668357 "
+		(property "LCSC Part #" "C668357"
 			(at 130.81 63.5 90)
 			(effects
 				(font
@@ -3241,7 +3241,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 144.78 109.22 0)
 			(effects
 				(font
