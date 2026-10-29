@@ -1122,7 +1122,7 @@
 		)
 		(uuid "7b2f19cc-a0f2-4c63-90e0-cb5c700c5b91")
 	)
-	(text_box "the common electrode is on pad 1\nTX is on pad 4\nRX is on pad 7"
+	(text_box "the common electrode is on pad 1\nTX is on pad 4\nRX is on pad 7\n\nBOT_EL = GND (?)"
 		(exclude_from_sim no)
 		(at 193.04 113.03 0)
 		(size 29.21 17.78)
@@ -1235,20 +1235,20 @@
 		(uuid "3452ac5c-3ae2-46de-9c0f-c3a675a5ef4b")
 	)
 	(no_connect
-		(at 191.77 86.36)
-		(uuid "4e08293e-16fb-4f6f-ad39-6d77f6573a19")
-	)
-	(no_connect
 		(at 191.77 81.28)
 		(uuid "747b54ac-cead-437e-bfb7-00801c64e8fe")
+	)
+	(no_connect
+		(at 191.77 91.44)
+		(uuid "7fccea5a-5cf8-40ad-9819-2f411f743b5b")
 	)
 	(no_connect
 		(at 209.55 96.52)
 		(uuid "a28fd911-65a6-4d53-abe3-c2a27ab9e7ea")
 	)
 	(no_connect
-		(at 191.77 93.98)
-		(uuid "c4d21590-1f83-486b-8ce7-5bf0e98379e7")
+		(at 191.77 83.82)
+		(uuid "b31aacd8-0b47-4028-8dfa-88b69b11f048")
 	)
 	(no_connect
 		(at 191.77 96.52)
@@ -1267,6 +1267,16 @@
 			(type default)
 		)
 		(uuid "0064fb02-1f0f-4f69-a9cd-3f6fe91ea2ad")
+	)
+	(wire
+		(pts
+			(xy 173.99 86.36) (xy 173.99 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02a109f2-e3b5-4eac-adcc-56306294a172")
 	)
 	(wire
 		(pts
@@ -1310,16 +1320,6 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 85.09) (xy 173.99 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c186880-9d37-4090-aec0-2c89e75c240d")
-	)
-	(wire
-		(pts
 			(xy 127 119.38) (xy 130.81 119.38)
 		)
 		(stroke
@@ -1337,6 +1337,16 @@
 			(type default)
 		)
 		(uuid "2258041d-6db4-4082-8428-208b73d8c027")
+	)
+	(wire
+		(pts
+			(xy 180.34 93.98) (xy 180.34 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2371c34e-2b23-4d11-9c8f-9444425c50e8")
 	)
 	(wire
 		(pts
@@ -1360,7 +1370,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 91.44) (xy 191.77 91.44)
+			(xy 88.9 91.44) (xy 180.34 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1440,6 +1450,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 86.36) (xy 173.99 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46c0fe5d-8154-47cc-9af1-25f32a1e2570")
+	)
+	(wire
+		(pts
 			(xy 134.62 85.09) (xy 173.99 85.09)
 		)
 		(stroke
@@ -1467,6 +1487,16 @@
 			(type default)
 		)
 		(uuid "55ca464b-5d78-4031-8810-573d50485557")
+	)
+	(wire
+		(pts
+			(xy 191.77 93.98) (xy 180.34 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bd6ea5e-5f13-4283-ac2c-3d92d5bf5ffe")
 	)
 	(wire
 		(pts
@@ -1537,16 +1567,6 @@
 			(type default)
 		)
 		(uuid "a0b18519-bde9-442b-beb4-8bb61c2ac04a")
-	)
-	(wire
-		(pts
-			(xy 173.99 83.82) (xy 191.77 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab6a531b-5123-417c-8b64-b9ca49d39fe0")
 	)
 	(wire
 		(pts
@@ -1630,13 +1650,13 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 99.06) (xy 191.77 99.06)
+			(xy 144.78 100.33) (xy 191.77 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ed7bc5a0-aec1-4a94-a167-6373f176fdfd")
+		(uuid "e20b7d3d-9a81-4dfc-a27d-0007c06dcfc6")
 	)
 	(wire
 		(pts
@@ -1650,23 +1670,23 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 99.06) (xy 144.78 104.14)
+			(xy 144.78 100.33) (xy 144.78 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f23563b6-b7a0-493a-a4cd-f721e902678c")
+		(uuid "f3e70d1e-6b65-4ff5-9b10-e2a5300f565d")
 	)
 	(wire
 		(pts
-			(xy 186.69 101.6) (xy 191.77 101.6)
+			(xy 191.77 100.33) (xy 191.77 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f7090359-fef0-4fa5-837d-647bc79b06b9")
+		(uuid "fab11623-6e84-451d-9b8e-89689edac4aa")
 	)
 	(global_label "+HV"
 		(shape input)
@@ -2556,7 +2576,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ac08e058-c7a7-4bb1-a5c6-f7f2218e4130")
 		(property "Reference" "U5"
@@ -3065,72 +3085,6 @@
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
 					(reference "JP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 186.69 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dc7414b9-a317-409f-8b17-72a87dee65ce")
-		(property "Reference" "#PWR091"
-			(at 186.69 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 186.69 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 186.69 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ea71e4aa-3278-4adc-967c-bae3add54f3e")
-		)
-		(instances
-			(project ""
-				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/edb8e8bc-fb53-4a31-8600-d64a48325b03"
-					(reference "#PWR091")
 					(unit 1)
 				)
 			)

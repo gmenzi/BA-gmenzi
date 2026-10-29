@@ -6856,12 +6856,12 @@
 		(at 240.03 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c8d9c3c-c947-4069-a0d2-1bd527997b46")
-		(property "Reference" "+HV2"
+		(property "Reference" "-HV2"
 			(at 242.57 91.9479 0)
 			(effects
 				(font
@@ -6912,7 +6912,7 @@
 		(instances
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/8e6e7503-3da7-4d51-9f66-311eb0e59877"
-					(reference "+HV2")
+					(reference "-HV2")
 					(unit 1)
 				)
 			)
@@ -7517,12 +7517,12 @@
 		(at 160.02 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "72d2174e-4313-4e34-95d5-a11f6ed9df2a")
-		(property "Reference" "-HV1"
+		(property "Reference" "+HV1"
 			(at 162.56 22.0979 0)
 			(effects
 				(font
@@ -7573,7 +7573,7 @@
 		(instances
 			(project "BAgmenzi"
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/8e6e7503-3da7-4d51-9f66-311eb0e59877"
-					(reference "-HV1")
+					(reference "+HV1")
 					(unit 1)
 				)
 			)

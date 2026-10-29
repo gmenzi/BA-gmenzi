@@ -6044,12 +6044,12 @@
 		(uuid "ae579298-5fc7-43d6-bd6e-4495f939b8e6")
 	)
 	(label "VGA_GAIN_RC_SINK"
-		(at 72.39 81.28 180)
+		(at 72.39 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "af9942ad-e375-4d65-95b5-f0810fe50402")
 	)

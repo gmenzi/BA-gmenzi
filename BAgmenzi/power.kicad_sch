@@ -4204,6 +4204,12 @@
 		(uuid "69ac3bf1-ea9d-43f2-baed-e3229b8e504b")
 	)
 	(junction
+		(at 280.67 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c018344-2fea-4138-8aec-415be4586df0")
+	)
+	(junction
 		(at 97.79 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4892,6 +4898,16 @@
 	)
 	(wire
 		(pts
+			(xy 280.67 140.97) (xy 283.21 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5545f185-aaf9-4aa5-80a4-93163e73677d")
+	)
+	(wire
+		(pts
 			(xy 78.74 143.51) (xy 78.74 163.83)
 		)
 		(stroke
@@ -5062,7 +5078,7 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 140.97) (xy 283.21 140.97)
+			(xy 279.4 140.97) (xy 280.67 140.97)
 		)
 		(stroke
 			(width 0)
@@ -6836,7 +6852,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "136f7501-09c4-4d5c-ad1f-224e1f86c52e")
 		(property "Reference" "U10"
 			(at 103.886 68.072 0)
@@ -7096,7 +7112,7 @@
 		(at 236.22 243.84 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8722,7 +8738,7 @@
 		(at 273.05 107.95 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10024,6 +10040,73 @@
 			(project ""
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/d463870e-9fcf-4af5-ace7-dfb7bf5f63b9"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 280.67 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "854ef194-3a97-4ece-98ed-e7a7f898f5f1")
+		(property "Reference" "VLED1"
+			(at 283.21 136.3979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 283.21 138.9379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 285.75 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 285.75 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 280.67 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "910448ea-c338-4481-ba2f-0a585c07c592")
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/d463870e-9fcf-4af5-ace7-dfb7bf5f63b9"
+					(reference "VLED1")
 					(unit 1)
 				)
 			)

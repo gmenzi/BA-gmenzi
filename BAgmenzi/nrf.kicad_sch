@@ -5,6 +5,113 @@
 	(uuid "3e65a7bd-6b37-4fc8-8847-d84ba9b381b6")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3777,10 +3884,6 @@
 		(uuid "558c668e-b27c-4a8d-ab36-828bf99d629a")
 	)
 	(no_connect
-		(at 207.01 147.32)
-		(uuid "57ed6e11-90e2-4f1f-8cd5-c591c44435cf")
-	)
-	(no_connect
 		(at 219.71 147.32)
 		(uuid "5853def1-ba3a-47b2-9840-cb403c745cf2")
 	)
@@ -4484,6 +4587,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 147.32) (xy 207.01 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e2a4f3a-17f8-4b4e-a1c9-3791b2cb17e9")
+	)
+	(wire
+		(pts
 			(xy 257.81 93.98) (xy 273.05 93.98)
 		)
 		(stroke
@@ -4501,6 +4614,16 @@
 			(type default)
 		)
 		(uuid "70ac2e16-b0f8-4873-91ee-ac5e66441314")
+	)
+	(wire
+		(pts
+			(xy 198.12 154.94) (xy 207.01 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75e6abf7-2203-44a0-a650-6004231423e2")
 	)
 	(wire
 		(pts
@@ -5621,6 +5744,16 @@
 			(justify left bottom)
 		)
 		(uuid "e7245fd6-a143-429b-a2c2-f34d30f1e721")
+	)
+	(label "DBG_TX"
+		(at 198.12 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eaaa54e4-fd24-475f-ad2d-f4802fca5420")
 	)
 	(label "NRF_SPI.MOSI"
 		(at 107.95 85.09 0)
@@ -7577,13 +7710,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 198.12 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "bbe966e6-1d2d-4e8b-9025-bb52b757747a")
+		(property "Reference" "TP1"
+			(at 198.628 150.114 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DBG_TX"
+			(at 198.628 151.892 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 203.2 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 203.2 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 198.12 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cbc5ed35-9f43-4fca-8251-cdcc4cce1024")
+		)
+		(instances
+			(project ""
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/a8ba6e7f-774b-4308-a555-46c064980fee"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "nRF_LIB-altium-import:root_0_NRF51822-44P_130_*")
 		(at 168.91 15.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "c12b1348-9043-4355-8f3e-ba2fa1c17949")
 		(property "Reference" "M1"
@@ -7594,7 +7793,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "DNP"
 			(at 209.55 12.7 0)
 			(effects
 				(font
