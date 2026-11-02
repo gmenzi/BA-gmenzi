@@ -3275,6 +3275,12 @@
 		(uuid "9ca43f63-4b64-4811-b337-71218155fc9b")
 	)
 	(junction
+		(at 140.97 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a08550d6-8949-4e76-86c5-000d8b2aae3f")
+	)
+	(junction
 		(at 231.14 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3394,7 +3400,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 175.26) (xy 140.97 175.26)
+			(xy 129.54 170.18) (xy 140.97 170.18)
 		)
 		(stroke
 			(width 0)
@@ -3704,7 +3710,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 180.34) (xy 129.54 179.07)
+			(xy 129.54 190.5) (xy 129.54 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4144,7 +4150,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 175.26) (xy 129.54 176.53)
+			(xy 129.54 170.18) (xy 129.54 176.53)
 		)
 		(stroke
 			(width 0)
@@ -4253,7 +4259,7 @@
 		(uuid "166489ff-2f78-4b47-9f3f-a9478c266365")
 	)
 	(label "+V_IN_HV"
-		(at 129.54 180.34 0)
+		(at 129.54 190.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4416,7 +4422,7 @@
 	)
 	(global_label "V_BAT"
 		(shape input)
-		(at 135.89 171.45 180)
+		(at 135.89 166.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4426,7 +4432,7 @@
 		)
 		(uuid "28f7d047-874f-4890-bee0-7ef0bbb95681")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.5224 171.45 0)
+			(at 127.5224 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4605,7 +4611,7 @@
 	)
 	(global_label "V_SYS"
 		(shape input)
-		(at 146.05 171.45 0)
+		(at 146.05 166.37 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4615,7 +4621,7 @@
 		)
 		(uuid "e6593a3b-8990-412c-8c19-ae6ac26faa54")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.599 171.45 0)
+			(at 154.599 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7581,6 +7587,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 140.97 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75188cba-26fd-49dc-b9f6-0b779482d3e5")
+		(property "Reference" "#PWR091"
+			(at 140.97 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 140.97 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bbf14f2f-e596-4b58-9c26-9c24dcd7802a")
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/8e6e7503-3da7-4d51-9f66-311eb0e59877"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 101.6 179.07 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8006,7 +8078,7 @@
 				)
 			)
 		)
-		(property "Value" "ZHCS400QTA"
+		(property "Value" "PMEG4005EJ,115"
 			(at 118.11 135.89 0)
 			(effects
 				(font
@@ -8059,7 +8131,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C460116"
+		(property "LCSC Part #" "C426868"
 			(at 118.11 139.7 0)
 			(effects
 				(font
@@ -8464,7 +8536,7 @@
 	)
 	(symbol
 		(lib_id "Jumper:SolderJumper_3_Open")
-		(at 140.97 171.45 0)
+		(at 140.97 166.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8472,7 +8544,7 @@
 		(dnp no)
 		(uuid "c32aa2b5-606b-4269-98d7-b4a22d131be3")
 		(property "Reference" "JP6"
-			(at 140.97 168.148 0)
+			(at 140.97 163.068 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8480,7 +8552,7 @@
 			)
 		)
 		(property "Value" "SolderJumper_3_Open"
-			(at 140.97 167.64 0)
+			(at 140.97 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8489,7 +8561,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
-			(at 140.97 171.45 0)
+			(at 140.97 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8498,7 +8570,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 140.97 171.45 0)
+			(at 140.97 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8507,7 +8579,7 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 3-pole, open"
-			(at 140.97 171.45 0)
+			(at 140.97 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8880,6 +8952,84 @@
 			(project ""
 				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/8e6e7503-3da7-4d51-9f66-311eb0e59877"
 					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 140.97 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d842a6a4-367a-4c1e-912a-c0b626127fb1")
+		(property "Reference" "C71"
+			(at 144.526 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2u"
+			(at 144.78 175.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 141.9352 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 140.97 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C77002"
+			(at 140.97 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "872102a7-4d7b-424b-aa39-3d4c3adf5557")
+		)
+		(pin "1"
+			(uuid "c138497a-d747-41be-a062-029f99768202")
+		)
+		(instances
+			(project "BAgmenzi"
+				(path "/8cc4acae-3f14-463c-b0a0-3bc1c8d05954/8e6e7503-3da7-4d51-9f66-311eb0e59877"
+					(reference "C71")
 					(unit 1)
 				)
 			)
@@ -9776,9 +9926,9 @@
 		(at 160.02 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e4f49be0-7e93-4011-b95e-2f7fc1da09e0")
 		(property "Reference" "B1"

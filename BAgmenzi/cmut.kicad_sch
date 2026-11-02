@@ -3108,7 +3108,7 @@
 				)
 			)
 		)
-		(property "Value" "30k"
+		(property "Value" "499k"
 			(at 123.19 115.57 90)
 			(effects
 				(font
@@ -3143,7 +3143,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C2909347"
+		(property "LCSC Part #" "C25793"
 			(at 123.19 119.38 90)
 			(effects
 				(font
