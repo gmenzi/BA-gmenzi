@@ -19,11 +19,11 @@
   (constraint clearance (min 0.12mm))
   (constraint track_width (min 0.12mm) (opt 0.15mm)))
 
-(rule "PPG_AFE"
+(rule "PPG_AFE_U9"
   (condition "A.intersectsCourtyard('U9') || B.intersectsCourtyard('U9')")
   (constraint clearance (min 0.15mm)))
 
-(rule "PPG_AFE"
+(rule "PPG_AFE_U6"
   (condition "A.intersectsCourtyard('U6') || B.intersectsCourtyard('U6')")
   (constraint clearance (min 0.15mm)))
 
@@ -36,9 +36,5 @@
   (constraint clearance (min 0.15mm)))
 
 (rule "D4_WLP"
-  (condition "A.intersectsCourtyard('D4') || B.intersectsCourtyard('D4')")
+  (condition "(A.intersectsCourtyard('D4') || B.intersectsCourtyard('D4')) && A.Type != 'Zone' && B.Type != 'Zone'")
   (constraint clearance (min 0.13mm)))
-
-(rule "USB"
-  (condition "A.intersectsCourtyard('U10') || B.intersectsCourtyard('U10')")
-  (constraint clearance (min 0.15mm)))
