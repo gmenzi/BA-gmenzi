@@ -3592,7 +3592,7 @@
 		)
 		(uuid "f01a0b2e-cf55-4105-9bdd-2af71016db27")
 	)
-	(global_label "VGA_SPI{SCLK, MOSI, MISO}"
+	(global_label "VGA_SPI{SCLK, MOSI}"
 		(shape bidirectional)
 		(at 172.72 215.9 0)
 		(fields_autoplaced yes)
@@ -3604,7 +3604,7 @@
 		)
 		(uuid "2e354eb5-1783-479b-84b4-67f5d6089cd8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 203.1238 215.9 0)
+			(at 196.9552 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)

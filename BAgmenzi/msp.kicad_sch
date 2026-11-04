@@ -3445,6 +3445,27 @@
 		)
 		(uuid "4fa77dd3-5822-4a4c-8038-d751a30c05cf")
 	)
+	(text_box "VGA_SPI.MISO is not used. Set pin to low in fw)"
+		(exclude_from_sim no)
+		(at 19.05 129.54 0)
+		(size 39.37 5.08)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 147 234 255 1)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "accd12ab-933f-42aa-aa07-4fdec37d8ac1")
+	)
 	(text_box "add possibility to program through UART bootloader: \ndescribed in TI's FRAM bootloader guide, SLAU550"
 		(exclude_from_sim no)
 		(at 339.09 15.24 0)
@@ -3650,6 +3671,10 @@
 		(uuid "e9eb79f2-d291-4d33-81ac-053e39063ba3")
 	)
 	(no_connect
+		(at 92.71 129.54)
+		(uuid "04bde9df-0d4c-4a77-888a-d4c20ce7989e")
+	)
+	(no_connect
 		(at 88.9 144.78)
 		(uuid "1f176205-d8a0-4522-a0ff-05822546c8b7")
 	)
@@ -3772,15 +3797,6 @@
 		(uuid "7873a40b-4d59-4138-82a5-e00f8e3cd027")
 	)
 	(bus_entry
-		(at 48.26 125.73)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f58dbf4-b0be-45a4-918c-70364fec5d52")
-	)
-	(bus_entry
 		(at 49.53 106.68)
 		(size 2.54 -2.54)
 		(stroke
@@ -3806,16 +3822,6 @@
 			(type default)
 		)
 		(uuid "f85890e3-b32b-4b89-8e02-33cab2cda4b2")
-	)
-	(wire
-		(pts
-			(xy 50.8 118.11) (xy 53.34 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "012632f6-7a50-4e0d-be8c-e69599705a6a")
 	)
 	(wire
 		(pts
@@ -4166,16 +4172,6 @@
 			(type default)
 		)
 		(uuid "2e47c07f-2736-4fe5-8611-457de3cb59a8")
-	)
-	(wire
-		(pts
-			(xy 50.8 123.19) (xy 50.8 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "328271f4-c286-4601-bdd2-f3fe85b3a4ec")
 	)
 	(wire
 		(pts
@@ -4569,7 +4565,7 @@
 	)
 	(bus
 		(pts
-			(xy 46.99 125.73) (xy 48.26 125.73)
+			(xy 46.99 125.73) (xy 52.07 125.73)
 		)
 		(stroke
 			(width 0)
@@ -4886,16 +4882,6 @@
 			(type default)
 		)
 		(uuid "a8b3be4b-37a3-4f64-ba96-dde269201429")
-	)
-	(wire
-		(pts
-			(xy 77.47 129.54) (xy 92.71 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab7652ca-9743-4f05-8bf6-765dab245c0c")
 	)
 	(wire
 		(pts
@@ -5267,16 +5253,6 @@
 		)
 		(uuid "d95dd50f-65e2-413e-8ad4-b0704a4c7905")
 	)
-	(bus
-		(pts
-			(xy 48.26 125.73) (xy 52.07 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd0ad51c-1fd9-4ef8-8c7b-9238b7eca2fe")
-	)
 	(wire
 		(pts
 			(xy 31.75 215.9) (xy 31.75 229.87)
@@ -5607,16 +5583,6 @@
 		)
 		(uuid "0e573e78-8afe-48c6-a20d-213604c2e1ab")
 	)
-	(label "VGA_SPI.MISO"
-		(at 77.47 129.54 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0f095932-9e34-479e-895b-8e35f7f6ffdd")
-	)
 	(label "LFXOUT"
 		(at 58.42 247.65 0)
 		(effects
@@ -5916,16 +5882,6 @@
 			(justify left bottom)
 		)
 		(uuid "736d6ca6-8be1-40f8-9601-acd4dfaf91ad")
-	)
-	(label "VGA_SPI.MISO"
-		(at 53.34 118.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7392c6ae-929d-4b6e-b6e7-a1286b18f4a8")
 	)
 	(label "BSL.UART_TX"
 		(at 59.69 67.31 180)
@@ -6725,7 +6681,7 @@
 			)
 		)
 	)
-	(global_label "VGA_SPI{SCLK, MOSI, MISO}"
+	(global_label "VGA_SPI{SCLK, MOSI}"
 		(shape bidirectional)
 		(at 46.99 125.73 180)
 		(fields_autoplaced yes)
@@ -6737,7 +6693,7 @@
 		)
 		(uuid "ee3e963d-d941-4a26-b7c0-15324cf574f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.5862 125.73 0)
+			(at 22.7548 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
