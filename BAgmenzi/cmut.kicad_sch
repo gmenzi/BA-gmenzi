@@ -1258,6 +1258,10 @@
 		(at 191.77 88.9)
 		(uuid "e9416e1b-8dcb-4a76-9105-864cc58a46c2")
 	)
+	(no_connect
+		(at 191.77 99.06)
+		(uuid "f8c0127d-d17e-4d47-be89-3d83e8f14640")
+	)
 	(wire
 		(pts
 			(xy 88.9 52.07) (xy 88.9 67.31)
@@ -1620,6 +1624,16 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 101.6) (xy 191.77 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0f2d5b4-3082-4418-922b-a4d816d4db55")
+	)
+	(wire
+		(pts
 			(xy 124.46 93.98) (xy 134.62 93.98)
 		)
 		(stroke
@@ -1650,7 +1664,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 100.33) (xy 191.77 100.33)
+			(xy 144.78 100.33) (xy 190.5 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1680,7 +1694,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 100.33) (xy 191.77 101.6)
+			(xy 190.5 100.33) (xy 190.5 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3172,7 +3186,7 @@
 		(at 144.78 104.14 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)

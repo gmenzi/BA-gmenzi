@@ -4949,7 +4949,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NX7002BKMBYL"
+		(property "Value" "NX7002BKMYL"
 			(at 99.06 58.4199 0)
 			(effects
 				(font
@@ -4985,7 +4985,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C478246"
+		(property "LCSC Part #" "C551611"
 			(at 92.71 57.15 0)
 			(effects
 				(font
@@ -7007,9 +7007,9 @@
 		(at 73.66 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6d74dd29-0e75-4ba6-986b-c5eea4126db8")
 		(property "Reference" "U7"

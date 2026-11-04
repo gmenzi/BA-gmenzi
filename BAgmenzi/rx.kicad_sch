@@ -7177,9 +7177,9 @@
 		(at 199.39 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "bbf5b154-ba41-41d8-80bb-cb51b148c576")
 		(property "Reference" "U2"

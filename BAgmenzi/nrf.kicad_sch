@@ -4138,7 +4138,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 163.83) (xy 226.06 161.29)
+			(xy 224.79 163.83) (xy 224.79 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4168,7 +4168,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 161.29) (xy 222.25 161.29)
+			(xy 224.79 161.29) (xy 222.25 161.29)
 		)
 		(stroke
 			(width 0)
@@ -5426,7 +5426,7 @@
 		)
 		(uuid "4903f11f-8a76-484e-adac-0fc37d49c388")
 	)
-	(label "NRF_MSP_CS"
+	(label "NRF_SPI_CS"
 		(at 101.6 77.47 180)
 		(effects
 			(font
@@ -5547,7 +5547,7 @@
 		(uuid "882e9c2a-3527-427b-bfc5-b8bce7aaf158")
 	)
 	(label "LINK_READY"
-		(at 226.06 163.83 90)
+		(at 224.79 163.83 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5567,7 +5567,7 @@
 		(uuid "8a2480a2-66f6-4cb9-ab83-fe6fce74bc0b")
 	)
 	(label "LINK_READY"
-		(at 107.95 111.76 180)
+		(at 106.68 111.76 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5616,7 +5616,7 @@
 		)
 		(uuid "a912e442-6ec8-49b3-ab72-a263ad61a18b")
 	)
-	(label "NRF_MSP_CS"
+	(label "NRF_SPI_CS"
 		(at 142.24 66.04 0)
 		(effects
 			(font
@@ -5871,7 +5871,7 @@
 			)
 		)
 	)
-	(global_label "NRF_MSP_CS"
+	(global_label "NRF_SPI_CS"
 		(shape bidirectional)
 		(at 88.9 77.47 180)
 		(fields_autoplaced yes)
@@ -5883,7 +5883,7 @@
 		)
 		(uuid "67b88525-6a9e-41a5-90e9-6bd82d00f778")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.7688 77.47 0)
+			(at 73.6154 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
