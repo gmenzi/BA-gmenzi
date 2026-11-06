@@ -1653,8 +1653,8 @@
 		(at 161.29 93.2)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
-		(property "Reference" "+HV"
-			(at -0.465 -2.05 90)
+		(property "Reference" "+HV1"
+			(at -0.015 -2.175 90)
 			(layer "F.SilkS")
 			(uuid "27f52564-cad8-452e-b459-60c3cd75f824")
 			(effects
@@ -4860,7 +4860,7 @@
 		(at 140.8 92.25)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
-		(property "Reference" "VRX"
+		(property "Reference" "VRX1"
 			(at 0 -1.45 0)
 			(layer "F.SilkS")
 			(uuid "d339088a-0c7b-4d7c-b2db-c0d612671805")
@@ -8969,8 +8969,8 @@
 		(at 164.05 93.15)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
-		(property "Reference" "-HV"
-			(at -0.725 -1.875 90)
+		(property "Reference" "-HV2"
+			(at -0.05 -2.225 90)
 			(layer "F.SilkS")
 			(uuid "05c5a78f-d8d5-4e81-845d-b3a47b6c4167")
 			(effects
@@ -9929,7 +9929,7 @@
 		(at 156.55 92.25)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
-		(property "Reference" "VLED"
+		(property "Reference" "VLED1"
 			(at 0 -1.448 0)
 			(layer "F.SilkS")
 			(uuid "71d85a13-903c-453d-9367-8f9a36ba56a0")
@@ -35312,7 +35312,7 @@
 			)
 		)
 		(property ki_fp_filters "*WLP_30_MAX77654*")
-		(path "/d463870e-9fcf-4af5-ace7-dfb7bf5f63b9/1d01be87-3cfc-4a4d-be71-f927606c69dd")
+		(path "/d463870e-9fcf-4af5-ace7-dfb7bf5f63b9/6be1a1ca-d01f-46c5-9023-2c8dfc83fe13")
 		(sheetname "/POWER/")
 		(sheetfile "power.kicad_sch")
 		(clearance 0)

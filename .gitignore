@@ -11,3 +11,4 @@ _backup_vor_lcsc_fix
 .claude
 CLAUDE.md
 docs
+fw/nrf/**/build*/
