@@ -1,0 +1,79 @@
+/*
+ * Own-board signals on the nRF54LM20 DK.
+ * P2 has no GPIOTE, so interrupt inputs must stay on P0, P1 or P3.
+ */
+
+/ {
+	patch_outputs {
+		compatible = "gpio-leds";
+
+		link_ready: link_ready {
+			gpios = <&gpio2 6 GPIO_ACTIVE_HIGH>;
+			label = "LINK_READY to MSP P5.7";
+		};
+
+		uups_trig: uups_trig {
+			gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+			label = "UUPS_TRIG_IN to MSP P1.7";
+		};
+
+		ppg_sync: ppg_sync {
+			gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
+			label = "PPG_GPIO sync";
+		};
+	};
+
+	patch_inputs {
+		compatible = "gpio-leds";
+
+		data_ready: data_ready {
+			gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+			label = "DATA_READY from MSP P6.0";
+		};
+
+		ppg_int: ppg_int {
+			gpios = <&gpio1 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "PPG_INT, BUTTON1 on the DK";
+		};
+
+		pmic_irq: pmic_irq {
+			gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "PMIC_IRQ, BUTTON3 on the DK";
+		};
+	};
+};
+
+/* Creates a virtual serial port on the nRF's USB connector. */
+&zephyr_udc0 {
+	cdc_acm_uart0: cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "Patch data link";
+	};
+};
+
+/*
+ * DK only: the onboard flash shares SPI00 and uses P2.05 as CS.
+ * Remove the flash node, keep P2.05 high, and use P1.13 as CS.
+ * On the own board: remove the &gpio2 block and use P2.05 as CS.
+ * WICHTIG: auf DK funktioniert port 2 nicht für SPI (MISO, MOSI) das fürs eigene board aber wieder zurücksetzen. -> &spi00
+ */
+/delete-node/ &mx25r64;
+
+&gpio2 {
+	dk_flash_cs_idle {
+		gpio-hog;
+		gpios = <5 GPIO_ACTIVE_HIGH>;
+		output-high;
+	};
+};
+
+&spi22 {
+	status = "okay";
+	cs-gpios = <&gpio1 13 GPIO_ACTIVE_LOW>;
+
+	msp430: msp430@0 {
+		compatible = "vnd,spi-device";
+		reg = <0>;
+		spi-max-frequency = <DT_FREQ_M(8)>;
+	};
+};

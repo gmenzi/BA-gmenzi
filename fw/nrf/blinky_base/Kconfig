@@ -1,0 +1,4 @@
+# USB helper options from the Zephyr samples.
+source "samples/subsys/usb/common/Kconfig.sample_usbd"
+
+source "Kconfig.zephyr"

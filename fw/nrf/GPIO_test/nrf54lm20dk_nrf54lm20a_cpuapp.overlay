@@ -1,0 +1,19 @@
+/*
+ * GPIO wire test: P2.02 and P2.04 as plain GPIOs.
+ * SPI00 is switched off so it can't take over the pins.
+ * P2.05 stays high so the DK's onboard flash stays deselected.
+ */
+
+/delete-node/ &mx25r64;
+
+&spi00 {
+	status = "disabled";
+};
+
+&gpio2 {
+	dk_flash_cs_idle {
+		gpio-hog;
+		gpios = <5 GPIO_ACTIVE_HIGH>;
+		output-high;
+	};
+};

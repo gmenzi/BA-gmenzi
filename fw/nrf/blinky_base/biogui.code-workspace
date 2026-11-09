@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../host/biogui"
+		},
+		{
+			"name": "blinky_base",
+			"path": "."
+		}
+	],
+	"settings": {
+		"nrf-connect.applications": []
+	}
+}

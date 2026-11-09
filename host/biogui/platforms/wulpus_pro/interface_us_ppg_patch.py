@@ -47,7 +47,7 @@ from biogui.utils import InterfaceModule, PlatformConfig
 
 logger = logging.getLogger(__name__)
 
-# ── ADS1298 decode constants ───────────────────────────────────────────────
+# ── ADS1298 (= EEG) decode constants ───────────────────────────────────────────────
 """das mit PPG ersetzen -gm"""
 """_VREF  = 2.5
 _GAIN  = 6
