@@ -4,7 +4,7 @@
  */
 
 #include "dummy_source.h"
-#include "transport_usb.h"
+#include "transport.h"
 
 #include <string.h>
 #include <zephyr/kernel.h>

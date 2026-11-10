@@ -3,11 +3,11 @@
  * TX keeps whole packets only, so the 211-byte framing in BioGUI stays aligned.
  * this file is the door to the PC. 
  * Senden:    add_data_to_send_buffer() → Ringpuffer → USB → PC
- * Empfangen: PC → USB → Ringpuffer → rx_thread → usb_rx_bytes()
- * Wenn der Computer nicht schnell genug ist, werden Pakete verworfen. Die Anzahl der verworfenen Pakete kann mit usb_dropped_packets() abgefragt werden.
+ * Empfangen: PC → USB → Ringpuffer → rx_thread → transport_rx_bytes()
+ * Wenn der Computer nicht schnell genug ist, werden Pakete verworfen. Die Anzahl der verworfenen Pakete kann mit transport_dropped_packets() abgefragt werden.
  */
 
-#include "transport_usb.h"
+#include "transport.h"
 
 #include <sample_usbd.h>
 #include <stdio.h>
@@ -87,7 +87,7 @@ void add_data_to_send_buffer(uint8_t *data, uint16_t size)
 	uart_irq_tx_enable(uart_dev);
 }
 
-uint32_t usb_dropped_packets(void)
+uint32_t transport_dropped_packets(void)
 {
 	return atomic_get(&dropped);
 }
@@ -102,14 +102,14 @@ static void rx_thread(void *a, void *b, void *c)
 		uint32_t len;
 
 		while ((len = ring_buf_get(&rx_rb, buf, sizeof(buf))) > 0) {
-			usb_rx_bytes(buf, len);
+			transport_rx_bytes(buf, len);
 		}
 	}
 }
 
 K_THREAD_DEFINE(rx_tid, 1536, rx_thread, NULL, NULL, NULL, 6, 0, 0);
 
-int usb_transport_init(void)
+int transport_init(void)
 {
 	if (!device_is_ready(uart_dev)) {
 		printf("USB device not ready\n");

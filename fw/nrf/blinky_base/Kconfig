@@ -1,4 +1,12 @@
 # USB helper options from the Zephyr samples.
 source "samples/subsys/usb/common/Kconfig.sample_usbd"
 
+config APP_TRANSPORT_BLE
+	bool "Send data over BLE (NUS) instead of USB"
+	default y
+	help
+	  y: transport_ble.c, data goes over BLE to the dongle.
+	  n: transport_usb.c, data goes over the DK's nRF USB port.
+
+
 source "Kconfig.zephyr"

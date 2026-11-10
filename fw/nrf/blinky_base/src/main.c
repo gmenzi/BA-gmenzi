@@ -10,7 +10,7 @@
 
 #include "commands.h"
 #include "dummy_source.h"
-#include "transport_usb.h"
+#include "transport.h"
 #include "wulpus_appl.h"
 
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
@@ -36,14 +36,14 @@ static void fake_msp_thread(void *a, void *b, void *c)
 
 K_THREAD_DEFINE(fake_msp_tid, 1024, fake_msp_thread, NULL, NULL, NULL, 7, 0, 0);
 
-static void auto_start(void)
+/*static void auto_start(void)
 {
 	static uint8_t pkg[MSP_RESTART_PCK_LEN];
 
 	memset(pkg, 0x55, sizeof(pkg));
 	pkg[0] = 0xFA;
 	wulpus_set_msp_config(pkg, sizeof(pkg));
-}
+}*/
 
 #endif
 
@@ -57,7 +57,7 @@ int main(void)
 
 	wulpus_init();
 
-	if (commands_init() != 0 || usb_transport_init() != 0) {
+	if (commands_init() != 0 || transport_init() != 0) {
 		return 0;
 	}
 
@@ -65,13 +65,13 @@ int main(void)
 
 	#if defined(WULPUS_LOOPBACK_TEST)
 		k_msleep(1000);
-		auto_start();
+		/*auto_start();*/
 	#endif
 
 	while (1) {
 		gpio_pin_toggle_dt(&led);
 		printf("frames=%u spi_errors=%u ppg_packets=%u dropped=%u\n", wulpus_frames(),
-		       wulpus_spi_errors(), dummy_ppg_packets(), usb_dropped_packets());
+		       wulpus_spi_errors(), dummy_ppg_packets(), transport_dropped_packets());
 		k_msleep(1000);
 	}
 

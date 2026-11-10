@@ -57,7 +57,7 @@
  */
 
 #include "wulpus_appl.h"
-#include "transport_usb.h"
+#include "transport.h"
 
 #include <string.h>
 #include <zephyr/device.h>

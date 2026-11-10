@@ -5,7 +5,7 @@
 
 #include "commands.h"
 #include "dummy_source.h"
-#include "transport_usb.h"
+#include "transport.h"
 #include "wulpus_appl.h"
 
 #include <stdbool.h>
@@ -77,7 +77,12 @@ void handle_connectivity_command(const uint8_t *data, uint16_t size)
 	}
 }
 
-void usb_rx_bytes(const uint8_t *data, uint32_t size)
+/**
+ * Handles received bytes from the transport layer.
+ * @param data Pointer to the received data.
+ * @param size Number of bytes received.
+ */
+void transport_rx_bytes(const uint8_t *data, uint32_t size)
 {
 	for (uint32_t i = 0; i < size; i++) {
 		if (rx_pos == 0) {
@@ -87,7 +92,7 @@ void usb_rx_bytes(const uint8_t *data, uint32_t size)
 				continue;
 			}
 		}
-
+		/*bytes are collected in rx_msg until rx_need (=complete message) is reached*/
 		rx_msg[rx_pos++] = data[i];
 
 		if (rx_pos == rx_need) {
