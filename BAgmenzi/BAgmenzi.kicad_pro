@@ -583,7 +583,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "BAgmenzi.step",
       "svg": "",
       "vrml": ""
     },

@@ -1,4 +1,3 @@
-# Copyright University of Bologna - ETH Zurich 2026
 # Licensed under Apache v2.0 see LICENSE for details.
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -43,22 +42,11 @@ from biogui.platforms.wulpus_pro.runtime import (
     get_standard_signal_definitions_for_mode,
 )
 from biogui.platforms.wulpus_pro.wulpus_pro_config_widget import WulpusConfigWidget
+from biogui.platforms.wulpus_pro.ppg_config_widget import PpgConfig, PpgConfigWidget
 from biogui.utils import InterfaceModule, PlatformConfig
 
 logger = logging.getLogger(__name__)
 
-# ── ADS1298 (= EEG) decode constants ───────────────────────────────────────────────
-"""das mit PPG ersetzen -gm"""
-"""_VREF  = 2.5
-_GAIN  = 6
-_NBIT  = 24
-_SCALE = _VREF / (_GAIN * (2 ** (_NBIT - 1) - 1)) * 1e6   # ADC → µV
-
-_N_SAMPLES      = 4
-_N_CH           = 8
-_BYTES_CH       = 3
-_ADS_BYTES      = _N_CH * _BYTES_CH
-_SAMPLE_OFFSETS = [7 + i * 50 for i in range(_N_SAMPLES)]"""
 
 # ── WULPUS configuration ───────────────────────────────────────────────────
 wulpus_config = create_default_biceps_wulpus_uss_config()
@@ -69,7 +57,25 @@ _BLE_WULPUS_HEADERS = (0x10, 0x11, 0x12, 0x13)
 #_EEG_HEADER         = 0x55
 _PPG_HEADER         = 0x70  #-gm
 _PPG_N_LEDS         = 3     #-gm
-_PPG_START = bytes([39, 0x01, 125, 0x7F, 0x7F, 0x7F, 3, 3, 3, 0, 1, 0])#-gm
+
+"""_PPG_START = bytes([
+    39,    # command START_PPG_STREAMING
+    0x01,  # sensor_mask: sensor 0 (only have one PPG sensor)
+    125,   # sample rate [Hz]
+    0x7F,  # green LED current (byte/255 * range)
+    0x7F,  # IR LED current
+    0x7F,  # red LED current
+    3,     # LED range: 3 = 124 mA full scale
+    3,     # tint: 3 = 117.3 us
+    3,     # ADC range: 3 = 32 uA
+    0,     # averaging: 0 = none
+    1,     # ambient light cancellation on
+    0,     # proximity off
+])"""
+# PPG CONFIGURATION, CHANGED IN THE "PPG" TAB OF THE CONFIG DIALOG
+ppg_config = PpgConfig()
+_PPG_START = ppg_config.get_start_package()
+
 _PPG_STOP  = bytes([40])#-gm
 
 _WULPUS_SPI_BYTES   = 201  # SPI payload bytes per chunk; starts at byte 7
@@ -297,11 +303,20 @@ def _configure_ppg_wulpus_module(
     if isinstance(current_config, WulpusUssConfig):
         config_widget.load_config(copy.deepcopy(current_config))
 
+    # PPG TAB NEXT TO BASIC / ADVANCED / TX-RX. THE WULPUS APPLY BUTTON APPLIES BOTH.
+    ppg_widget = PpgConfigWidget(dialog)
+    config_widget.configTabWidget.addTab(ppg_widget, "PPG")
+    current_ppg = decode_globals.get("ppg_config")
+
+    if isinstance(current_ppg, PpgConfig):
+        ppg_widget.load_config(copy.deepcopy(current_ppg))
+
     configured: list[InterfaceModule | None] = [None]
 
     def _apply_and_accept() -> None:
         try:
             new_cfg = config_widget.get_current_config()
+            new_ppg = ppg_widget.get_current_config()
             mp_s  = new_cfg.meas_period / 1e6
             ppc_s = mp_s * new_cfg.num_txrx_configs
             #acc   = is_accelerometer_enabled_from_config(new_cfg) -gm
@@ -334,15 +349,15 @@ def _configure_ppg_wulpus_module(
                 }
             new_sig.update(get_standard_signal_definitions_for_mode(mp_s, False)) #-gm (False)
             
-            new_sig["ppg"]         = {"fs": 125.0, "nCh": _PPG_N_LEDS, "extras": {"type": "time-series"}}
-            new_sig["ppg_counter"]   = {"fs": 31.25, "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
-            new_sig["ppg_timestamp"] = {"fs": 31.25, "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
+            new_sig["ppg"]         = {"fs": float(new_ppg.sample_rate_hz), "nCh": _PPG_N_LEDS, "extras": {"type": "time-series"}}
+            new_sig["ppg_counter"]   = {"fs": float(new_ppg.packet_rate_hz), "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
+            new_sig["ppg_timestamp"] = {"fs": float(new_ppg.packet_rate_hz), "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
 
             if not new_sig:
                 raise ValueError("No active RX configurations found.")
 
             new_start = [ #-gm
-                _PPG_START, 0.2,
+                new_ppg.get_start_package(), 0.2,
                 bytes([41]), 0.2,
                 new_cfg.get_restart_package(), 0.5,
                 new_cfg.get_conf_package(),
@@ -353,6 +368,7 @@ def _configure_ppg_wulpus_module(
             g["wulpus_config"]       = new_cfg
             g["sigInfo"]             = new_sig
             g["config_to_signal_name"] = new_c2s
+            g["ppg_config"]          = new_ppg
             new_decode = types.FunctionType(
                 interface_module.decodeFn.__code__,
                 g,

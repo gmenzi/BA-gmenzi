@@ -4,6 +4,11 @@
  */
 
 / {
+	/* M7: PPG_NEW_APPL.C USES DEVICE_DT_GET(DT_ALIAS(I2CB)), AS IN BIOGAP. */
+	aliases {
+		i2cb = &i2c21;
+	};
+
 	patch_outputs {
 		compatible = "gpio-leds";
 
@@ -21,6 +26,14 @@
 			gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
 			label = "PPG_GPIO sync";
 		};
+
+		/* M7: BIOGAP'S PPG_DEBUG TOGGLE OUTPUT. ON THE DK IT GOES TO LED2
+		 * (P1.27), SO IT BLINKS EVERY 100 PPG SAMPLES. THE OWN BOARD HAS
+		 * NO SUCH PIN: USE A SPARE PIN OR TEST POINT THERE. */
+		ppg_debug: ppg_debug {
+			gpios = <&gpio1 27 GPIO_ACTIVE_HIGH>;
+			label = "PPG debug toggle (DK LED2)";
+		};
 	};
 
 	patch_inputs {
@@ -31,7 +44,9 @@
 			label = "DATA_READY from MSP P6.0";
 		};
 
-		ppg_int: ppg_int {
+		/* M7: LABEL RENAMED FROM PPG_INT TO PPG_INTB, THE NAME BIOGAP'S
+		 * PPG_NEW_APPL.C EXPECTS. SAME PIN AS BEFORE. */
+		ppg_intb: ppg_intb {
 			gpios = <&gpio1 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 			label = "PPG_INT, BUTTON1 on the DK";
 		};
@@ -76,4 +91,41 @@
 		reg = <0>;
 		spi-max-frequency = <DT_FREQ_M(8)>;
 	};
+};
+
+/*
+ * M7: I2C TO THE MAXM86161.
+ * DK: TWIM21 ON P1.07 (SCL) AND P1.06 (SDA), BOTH ON THE DK'S PIN HEADER.
+ *  - NOT TWIM20: IT SHARES ITS HARDWARE WITH UART20, THE DK'S LOG CONSOLE.
+ *  - NOT TWIM22: IT SHARES ITS HARDWARE WITH SPI22, USED FOR THE MSP ABOVE.
+ *  - NOT P1.28 FOR SDA (OWN-BOARD PIN): ON THE DK IT DRIVES LED3.
+ * OWN BOARD: SCL P1.07, SDA P1.28 (SEE PINBELEGUNG_MSP_NRF.XLSX).
+ * BIAS-PULL-UP TURNS ON THE NRF'S WEAK INTERNAL PULL-UPS. THEY ARE ONLY A
+ * FALLBACK: THE PPG BOARD SHOULD HAVE ITS OWN PULL-UP RESISTORS.
+ */
+&pinctrl {
+	i2c21_default: i2c21_default {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SCL, 1, 7)>,
+				<NRF_PSEL(TWIM_SDA, 1, 6)>;
+			bias-pull-up;
+		};
+	};
+
+	i2c21_sleep: i2c21_sleep {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SCL, 1, 7)>,
+				<NRF_PSEL(TWIM_SDA, 1, 6)>;
+			low-power-enable;
+		};
+	};
+};
+
+&i2c21 {
+	status = "okay";
+	pinctrl-0 = <&i2c21_default>;
+	pinctrl-1 = <&i2c21_sleep>;
+	pinctrl-names = "default", "sleep";
+	/* M7: 400 KHZ. THE MAXM86161 SUPPORTS FAST MODE. but only with pukkups.  */
+	clock-frequency = <I2C_BITRATE_STANDARD>;
 };

@@ -1,6 +1,7 @@
 /*
  * M5: real WULPUS SPI module, PPG still dummy.
  * With WULPUS_LOOPBACK_TEST, a thread plays the MSP on DATA_READY.
+ * M7: REAL PPG SENSOR (MAXM86161) WITH CONFIG_APP_PPG_REAL=Y, OTHERWISE DUMMY.
  */
 
 #include <stdio.h>
@@ -9,9 +10,14 @@
 #include <string.h>
 
 #include "commands.h"
-#include "dummy_source.h"
 #include "transport.h"
 #include "wulpus_appl.h"
+
+#if defined(CONFIG_APP_PPG_REAL)
+#include "ppg_new/ppg_new_appl.h"
+#else
+#include "dummy_source.h"
+#endif
 
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
 
@@ -36,15 +42,6 @@ static void fake_msp_thread(void *a, void *b, void *c)
 
 K_THREAD_DEFINE(fake_msp_tid, 1024, fake_msp_thread, NULL, NULL, NULL, 7, 0, 0);
 
-/*static void auto_start(void)
-{
-	static uint8_t pkg[MSP_RESTART_PCK_LEN];
-
-	memset(pkg, 0x55, sizeof(pkg));
-	pkg[0] = 0xFA;
-	wulpus_set_msp_config(pkg, sizeof(pkg));
-}*/
-
 #endif
 
 int main(void)
@@ -57,21 +54,32 @@ int main(void)
 
 	wulpus_init();
 
+#if defined(CONFIG_APP_PPG_REAL)
+	/* SAME AS BIOGAP MAIN.C: IF THE SENSOR DOESN'T ANSWER, LOG IT AND KEEP
+	 * RUNNING, SO ULTRASOUND STILL WORKS. */
+	if (ppg_new_init() != 0) {
+		printf("PPG init failed - PPG streaming disabled\n");
+	}
+#endif
+
 	if (commands_init() != 0 || transport_init() != 0) {
 		return 0;
 	}
 
-	printf("M5 WULPUS SPI started\n");
-
-	#if defined(WULPUS_LOOPBACK_TEST)
-		k_msleep(1000);
-		/*auto_start();*/
-	#endif
+	printf("M7 started\n");
 
 	while (1) {
 		gpio_pin_toggle_dt(&led);
+#if defined(CONFIG_APP_PPG_REAL)
+		/* PPG_NEW HAS NO PACKET COUNTER GETTER. STATE: 0 IDLE, 1 STARTING,
+		 * 2 STREAMING, 3 STOPPING, 4 ERROR. */
+		printf("frames=%u spi_errors=%u ppg_state=%d dropped=%u\n", wulpus_frames(),
+		       wulpus_spi_errors(), (int)ppg_new_get_state(),
+		       transport_dropped_packets());
+#else
 		printf("frames=%u spi_errors=%u ppg_packets=%u dropped=%u\n", wulpus_frames(),
 		       wulpus_spi_errors(), dummy_ppg_packets(), transport_dropped_packets());
+#endif
 		k_msleep(1000);
 	}
 

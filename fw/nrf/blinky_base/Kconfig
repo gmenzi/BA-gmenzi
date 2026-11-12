@@ -8,5 +8,14 @@ config APP_TRANSPORT_BLE
 	  y: transport_ble.c, data goes over BLE to the dongle.
 	  n: transport_usb.c, data goes over the DK's nRF USB port.
 
+# M7: REAL MAXM86161 OR FAKE PPG DATA.
+config APP_PPG_REAL
+	bool "Read PPG from the MAXM86161 instead of dummy data"
+	default y
+	select I2C
+	help
+	  y: ppg_new (ported from BioGAP), needs the sensor on I2C.
+	  n: dummy_source.c, a fake triangle wave, no sensor needed.
+
 
 source "Kconfig.zephyr"
