@@ -148,7 +148,7 @@ sigInfo.update(get_standard_signal_definitions_for_mode(_meas_period_s, False))
 #sigInfo["eeg_timestamp"] = {"fs": 125.0, "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
 
 
-sigInfo["ppg"] = {"fs": 125.0, "nCh": _PPG_N_LEDS, "extras": {"type": "time-series"}}
+sigInfo["ppg"] = {"fs": 125.0, "nCh": _PPG_N_LEDS, "extras": {"type": "time-series", "fileTag": ppg_config.file_tag()}}
 sigInfo["ppg_counter"]   = {"fs": 31.25, "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
 sigInfo["ppg_timestamp"] = {"fs": 31.25, "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
 
@@ -349,7 +349,7 @@ def _configure_ppg_wulpus_module(
                 }
             new_sig.update(get_standard_signal_definitions_for_mode(mp_s, False)) #-gm (False)
             
-            new_sig["ppg"]         = {"fs": float(new_ppg.sample_rate_hz), "nCh": _PPG_N_LEDS, "extras": {"type": "time-series"}}
+            new_sig["ppg"]         = {"fs": float(new_ppg.sample_rate_hz), "nCh": _PPG_N_LEDS, "extras": {"type": "time-series", "fileTag": new_ppg.file_tag()}}
             new_sig["ppg_counter"]   = {"fs": float(new_ppg.packet_rate_hz), "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
             new_sig["ppg_timestamp"] = {"fs": float(new_ppg.packet_rate_hz), "nCh": 1, "extras": {"type": "time-series", "plotByDefault": False}}
 

@@ -154,8 +154,17 @@ class _FileWriterWorker(QObject):
             self._resetTempFiles()
             return
 
-        # Add timestamp and extension to filename
+        # Add timestamp and extension to filenam
         fileName = self._filePath.name
+        # FILE TAGS FROM THE INTERFACE (E.G. PPG SETTINGS), SO THE NAME SAYS HOW IT WAS MEASURED
+        tags = [
+            str(cfg["extras"]["fileTag"])
+            for cfg in self._sigInfo.values()
+            if cfg.get("extras", {}).get("fileTag")
+        ]
+        
+        if tags:
+            fileName = f"{fileName}_{'_'.join(tags)}"
         fileName = (
             f"{fileName}_{datetime.datetime.now().replace(microsecond=0)}.bio".replace(
                 " ", "_"
@@ -181,7 +190,7 @@ class _FileWriterWorker(QObject):
                     fs = self._sigInfo[sigName]["fs"]
                     nSampData = self._tempData[sigName]["nSampData"]
                     nCh = self._sigInfo[sigName]["nCh"]
-                    dtype = self._tempData[sigName]["dtype"]
+                    dtype = self._tempData[sigName]["dtype"] or "f"  # Default to float if not set
                     nSampTs = self._tempData[sigName]["nSampTs"]
                     nSampTrigger = self._tempData[sigName]["nSampTrigger"]
 
