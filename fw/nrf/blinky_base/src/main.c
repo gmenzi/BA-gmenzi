@@ -2,6 +2,7 @@
  * M5: real WULPUS SPI module, PPG still dummy.
  * With WULPUS_LOOPBACK_TEST, a thread plays the MSP on DATA_READY.
  * M7: REAL PPG SENSOR (MAXM86161) WITH CONFIG_APP_PPG_REAL=Y, OTHERWISE DUMMY.
+ * M8: PMIC FIRST, BECAUSE THE PPG'S V_LED COMES FROM SBB2.
  */
 
 #include <stdio.h>
@@ -17,6 +18,10 @@
 #include "ppg_new/ppg_new_appl.h"
 #else
 #include "dummy_source.h"
+#endif
+
+#if defined(CONFIG_APP_PMIC)
+#include "pwr/pwr.h"
 #endif
 
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios);
@@ -52,6 +57,18 @@ int main(void)
 
 	gpio_pin_configure_dt(&led, GPIO_OUTPUT_INACTIVE);
 
+#if defined(CONFIG_APP_PMIC)
+	/* M8: RAILS FIRST. ON THE OWN BOARD SBB2 (V_LED) MUST BE UP BEFORE
+	 * ppg_new_init() READS THE SENSOR. ON THE DK THERE IS NO MAX77654: INIT
+	 * FAILS AND EVERYTHING ELSE RUNS ON. */
+	if (pwr_init() != 0) {
+		printf("PMIC init failed - running without PMIC (expected on the DK)\n");
+	} else {
+		k_msleep(10); /* M8: LET V_LED SETTLE */
+		pwr_log_status();
+	}
+#endif
+
 	wulpus_init();
 
 #if defined(CONFIG_APP_PPG_REAL)
@@ -66,9 +83,17 @@ int main(void)
 		return 0;
 	}
 
-	printf("M7 started\n");
+	printf("M8 started\n");
+
+	uint32_t loops = 0;
 
 	while (1) {
+#if defined(CONFIG_APP_PMIC)
+		/* M8: BATTERY AND CHARGER STATUS EVERY 10 S. NO-OP IF THE PMIC IS MISSING. */
+		if (loops++ % 10 == 0) {
+			pwr_log_status();
+		}
+#endif
 		gpio_pin_toggle_dt(&led);
 #if defined(CONFIG_APP_PPG_REAL)
 		/* PPG_NEW HAS NO PACKET COUNTER GETTER. STATE: 0 IDLE, 1 STARTING,

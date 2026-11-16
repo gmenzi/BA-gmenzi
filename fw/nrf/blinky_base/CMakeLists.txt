@@ -41,6 +41,18 @@ target_include_directories(app PRIVATE
 	src/ppg_new
 )
 
+# M8: PMIC, SEE CONFIG_APP_PMIC IN KCONFIG. SAME FOLDERS AS IN SENSEI-SDK
+# NRF/SYSTEM, SO THE COPIED FILES KEEP THEIR #INCLUDE LINES
+# ("bsp/pmic_bsp.h", "config/pmic_default.h", "pwr/pwr.h", BARE "max77654.h").
+if(CONFIG_APP_PMIC)
+	target_sources(app PRIVATE
+		src/third_party/max77654/src/max77654.c
+		src/bsp/pmic_bsp.c
+		src/pwr/pwr.c
+	)
+	target_include_directories(app PRIVATE src/third_party/max77654/inc)
+endif()
+
 
 # Part A of M5. Remove for a real MSP.
 target_compile_definitions(app PRIVATE WULPUS_LOOPBACK_TEST)

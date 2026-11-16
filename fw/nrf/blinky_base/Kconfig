@@ -17,5 +17,16 @@ config APP_PPG_REAL
 	  y: ppg_new (ported from BioGAP), needs the sensor on I2C.
 	  n: dummy_source.c, a fake triangle wave, no sensor needed.
 
+# M8: MAX77654 PMIC (SENSEI-SDK DRIVER).
+config APP_PMIC
+	bool "Configure the MAX77654 PMIC at boot"
+	default y
+	select I2C
+	select ADC
+	help
+	  y: pwr.c sets the rails, the charger and the interrupt at boot.
+	     On the DK there is no MAX77654, so init fails and the app runs on.
+	  n: the PMIC keeps its factory (OTP) settings.
+
 
 source "Kconfig.zephyr"

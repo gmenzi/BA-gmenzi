@@ -7,6 +7,17 @@
 	/* M7: PPG_NEW_APPL.C USES DEVICE_DT_GET(DT_ALIAS(I2CB)), AS IN BIOGAP. */
 	aliases {
 		i2cb = &i2c21;
+		/* M8: PMIC_BSP.C AND PWR.C USE DEVICE_DT_GET(DT_ALIAS(I2CA)), AS IN
+		 * SENSEI-SDK. DK: THE PPG BUS, BECAUSE THE OWN-BOARD PMIC PINS
+		 * P0.07/P0.08 ARE THE DK'S UART30 (VCOM), DRIVEN BY THE DEBUGGER CHIP.
+		 * THE DK HAS NO MAX77654, SO ADDRESS 0x48 SIMPLY GETS NO ACK.
+		 * OWN BOARD: I2CA = &I2C30, SCL P0.07, SDA P0.08 (R32/R33 4.7K). */
+		i2ca = &i2c21;
+	};
+
+	/* M8: PMIC_BSP.C READS ADC CHANNEL 0 OF ZEPHYR,USER FOR THE PMIC'S AMUX OUTPUT. */
+	zephyr,user {
+		io-channels = <&adc 0>;
 	};
 
 	patch_outputs {
@@ -128,4 +139,28 @@
 	pinctrl-names = "default", "sleep";
 	/* M7: 400 KHZ. THE MAXM86161 SUPPORTS FAST MODE. but only with pullups. The PPG-Board has no pullups. */
 	clock-frequency = <I2C_BITRATE_STANDARD>;
+};
+
+/*
+ * M8: ADC FOR PMIC_AMUX ON P1.05 (SAME PIN ON THE DK HEADER AND THE OWN BOARD).
+ * THE MAX77654 AMUX OUTPUT IS 0-1.25 V. INTERNAL REFERENCE 0.9 V WITH GAIN 1/2
+ * GIVES 1.8 V FULL SCALE. PMIC_BSP.C TAKES VREF-MV AS THE FULL SCALE, SO IT IS
+ * SET TO 1800 HERE (SENSEI: GAIN 1/6, 3600).
+ * AIN5 = P1.05: FROM THE PATTERN IN NCS'S ADC SAMPLE FOR THIS DK (AIN4 = P1.06,
+ * AIN6 = P1.04). CHECK IN THE NRF54LM20A PIN TABLE BEFORE TRUSTING THE VALUES.
+ */
+&adc {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	status = "okay";
+
+	channel@0 {
+		reg = <0>;
+		zephyr,gain = "ADC_GAIN_1_2";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,vref-mv = <1800>;
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,input-positive = <NRF_SAADC_AIN5>; /* P1.05 */
+		zephyr,resolution = <12>;
+	};
 };
