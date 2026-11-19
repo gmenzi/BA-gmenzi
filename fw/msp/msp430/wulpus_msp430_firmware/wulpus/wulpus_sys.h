@@ -157,7 +157,7 @@ void disableLowPassFilter(void);
 
 //replaced enablePreamp with enableVrx
 void enableVrx(void);
-void enableVrx(void);
+void disableVrx(void);
 
 void enableHvDcDcPwr(void);
 void disableHvDcDcPwr(void);

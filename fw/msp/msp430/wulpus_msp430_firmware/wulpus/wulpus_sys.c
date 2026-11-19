@@ -172,9 +172,9 @@ void initAllPowerSwitches(void)
     GPIO_setOutputLowOnPin(GPIO_PORT_VRX_EN, GPIO_PIN_VRX_EN);
     GPIO_setAsOutputPin(GPIO_PORT_VRX_EN, GPIO_PIN_VRX_EN);
 
-    // Power switch for HV DC DC input
+    // Power switch for HV DC DC input, stays low until enableAll() <- small change compared to WULPUS. 
+    GPIO_setOutputLowOnPin(GPIO_PORT_HV_DCDC_EN, GPIO_PIN_HV_DCDC_EN);
     GPIO_setAsOutputPin(GPIO_PORT_HV_DCDC_EN, GPIO_PIN_HV_DCDC_EN);
-    GPIO_setOutputPin(GPIO_PORT_HV_DCDC_EN, GPIO_PIN_HV_DCDC_EN);
 
     // Enable for + HV converter
     GPIO_setAsOutputPin(GPIO_PORT_HV_POS_EN, GPIO_PIN_HV_POS_EN);

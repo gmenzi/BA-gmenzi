@@ -13,3 +13,4 @@ CLAUDE.md
 docs
 fw/nrf/**/build*/
 CAD
+*.theia-workspace
