@@ -162,25 +162,19 @@ void initAllPowerSwitches(void)
     GPIO_setAsOutputPin(GPIO_PORT_LP_FILT_EN, GPIO_PIN_LP_FILT_EN);
     GPIO_setOutputLowOnPin(GPIO_PORT_LP_FILT_EN, GPIO_PIN_LP_FILT_EN);
 
-    // Envelope Detector Enable control (Disable by default)
-    GPIO_setAsOutputPin(GPIO_PORT_ENV_DET_EN, GPIO_PIN_ENV_DET_EN);
-    GPIO_setOutputLowOnPin(GPIO_PORT_ENV_DET_EN, GPIO_PIN_ENV_DET_EN);
+    //deleted envelope detector, 
+    //  VGA Power Enable, 
+    //  PreampPower switch -gm
 
-    // VGA Power Enable
-    GPIO_setAsOutputPin(GPIO_PORT_VGA_PWR_EN, GPIO_PIN_VGA_PWR_EN);
-    GPIO_setOutputLowOnPin(GPIO_PORT_VGA_PWR_EN, GPIO_PIN_VGA_PWR_EN);
 
-    // Preamp power switch (Off by default, but on dev board is always on in Hardware)
-    GPIO_setAsOutputPin(GPIO_PORT_PREAMP_PWR_EN, GPIO_PIN_PREAMP_PWR_EN);
-    GPIO_setOutputLowOnPin(GPIO_PORT_PREAMP_PWR_EN, GPIO_PIN_PREAMP_PWR_EN);
-
-    // Preamp Shutdown (Enable shutdown by default)
-    GPIO_setAsOutputPin(GPIO_PORT_PREAMP_EN, GPIO_PIN_PREAMP_EN);
-    GPIO_setOutputHighOnPin(GPIO_PORT_PREAMP_EN, GPIO_PIN_PREAMP_EN);
+    // Preamp Shutdown (Enable shutdown by default) 
+    // V_RX off at boot, stays low until enableAll() <- small change compared to WULPUS. 
+    GPIO_setOutputLowOnPin(GPIO_PORT_VRX_EN, GPIO_PIN_VRX_EN);
+    GPIO_setAsOutputPin(GPIO_PORT_VRX_EN, GPIO_PIN_VRX_EN);
 
     // Power switch for HV DC DC input
     GPIO_setAsOutputPin(GPIO_PORT_HV_DCDC_EN, GPIO_PIN_HV_DCDC_EN);
-    GPIO_setOutputHighOnPin(GPIO_PORT_HV_DCDC_EN, GPIO_PIN_HV_DCDC_EN);
+    GPIO_setOutputPin(GPIO_PORT_HV_DCDC_EN, GPIO_PIN_HV_DCDC_EN);
 
     // Enable for + HV converter
     GPIO_setAsOutputPin(GPIO_PORT_HV_POS_EN, GPIO_PIN_HV_POS_EN);
@@ -190,9 +184,6 @@ void initAllPowerSwitches(void)
     GPIO_setAsOutputPin(GPIO_PORT_HV_NEG_EN, GPIO_PIN_HV_NEG_EN);
     GPIO_setOutputHighOnPin(GPIO_PORT_HV_NEG_EN, GPIO_PIN_HV_NEG_EN);
 
-    // Enable for +5V HV MUX supply
-    GPIO_setAsOutputPin(GPIO_PORT_HV_MUX_PWR_EN, GPIO_PIN_HV_MUX_PWR_EN);
-    GPIO_setOutputHighOnPin(GPIO_PORT_HV_MUX_PWR_EN, GPIO_PIN_HV_MUX_PWR_EN);
 
     // HV pulser HiZ state enable
     GPIO_setAsOutputPin(GPIO_PORT_PULSER_HIZ_EN_N, GPIO_PIN_PULSER_HIZ_EN_N);
@@ -210,6 +201,17 @@ void initAllPowerSwitches(void)
     GPIO_setAsOutputPin(GPIO_PORT_VGA_GAIN_RC_SINK, GPIO_PIN_VGA_GAIN_RC_SINK);
     GPIO_setOutputLowOnPin(GPIO_PORT_VGA_GAIN_RC_SINK, GPIO_PIN_VGA_GAIN_RC_SINK);
 
+    // pins not connected on the own board -> output low (TI recommendation)            -gm
+    GPIO_setOutputLowOnPin(GPIO_PORT_P1, GPIO_PIN2 + GPIO_PIN4 + GPIO_PIN5 + GPIO_PIN6);
+    GPIO_setAsOutputPin(GPIO_PORT_P1, GPIO_PIN2 + GPIO_PIN4 + GPIO_PIN5 + GPIO_PIN6);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN0 + GPIO_PIN1 + GPIO_PIN2 + GPIO_PIN3 + GPIO_PIN4);
+    GPIO_setAsOutputPin(GPIO_PORT_P4, GPIO_PIN0 + GPIO_PIN1 + GPIO_PIN2 + GPIO_PIN3 + GPIO_PIN4);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P5, GPIO_PIN6);
+    GPIO_setAsOutputPin(GPIO_PORT_P5, GPIO_PIN6);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P6, GPIO_PIN4 + GPIO_PIN5 + GPIO_PIN6);
+    GPIO_setAsOutputPin(GPIO_PORT_P6, GPIO_PIN4 + GPIO_PIN5 + GPIO_PIN6);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P7, GPIO_PIN0);
+    GPIO_setAsOutputPin(GPIO_PORT_P7, GPIO_PIN0);
 
 
     return;
@@ -220,10 +222,6 @@ void initOtherGpios(void)
 {
     // Set BLE ready pin as input
     GPIO_setAsInputPin(GPIO_PORT_BLE_READY, GPIO_PIN_BLE_READY);
-
-    // Configure LED
-    P1DIR |= GPIO_PIN_LED_MSP430;
-    P1OUT &= ~GPIO_PIN_LED_MSP430;
 
     return;
 }
@@ -330,52 +328,16 @@ void disableLowPassFilter(void)
     return;
 }
 
-
-void enableEnvDet(void)
+// name change Preamp -> Vrx        -gm
+void enableVrx(void)
 {
-    GPIO_setOutputHighOnPin(GPIO_PORT_ENV_DET_EN, GPIO_PIN_ENV_DET_EN);
+    GPIO_setOutputHighOnPin(GPIO_PORT_VRX_EN, GPIO_PIN_VRX_EN);
     return;
 }
 
-void disableEnvDet(void)
+void disableVrx(void)
 {
-    GPIO_setOutputLowOnPin(GPIO_PORT_ENV_DET_EN, GPIO_PIN_ENV_DET_EN);
-    return;
-}
-
-void enableVgaPwr(void)
-{
-    GPIO_setOutputHighOnPin(GPIO_PORT_VGA_PWR_EN, GPIO_PIN_VGA_PWR_EN);
-    return;
-}
-
-void disableVgaPwr(void)
-{
-    GPIO_setOutputLowOnPin(GPIO_PORT_VGA_PWR_EN, GPIO_PIN_VGA_PWR_EN);
-    return;
-}
-
-void enablePreampPwr(void)
-{
-    GPIO_setOutputHighOnPin(GPIO_PORT_PREAMP_PWR_EN, GPIO_PIN_PREAMP_PWR_EN);
-    return;
-}
-
-void disablePreampPwr(void)
-{
-    GPIO_setOutputLowOnPin(GPIO_PORT_PREAMP_PWR_EN, GPIO_PIN_PREAMP_PWR_EN);
-    return;
-}
-
-void enablePreamp(void)
-{
-    GPIO_setOutputHighOnPin(GPIO_PORT_PREAMP_EN, GPIO_PIN_PREAMP_EN);
-    return;
-}
-
-void disablePreamp(void)
-{
-    GPIO_setOutputLowOnPin(GPIO_PORT_PREAMP_EN, GPIO_PIN_PREAMP_EN);
+    GPIO_setOutputLowOnPin(GPIO_PORT_VRX_EN, GPIO_PIN_VRX_EN);
     return;
 }
 
@@ -415,17 +377,6 @@ void disableHvPos(void)
     return;
 }
 
-void enableHvMuxPwr(void)
-{
-    GPIO_setOutputHighOnPin(GPIO_PORT_HV_MUX_PWR_EN, GPIO_PIN_HV_MUX_PWR_EN);
-    return;
-}
-
-void disableHvMuxPwr(void)
-{
-    GPIO_setOutputLowOnPin(GPIO_PORT_HV_MUX_PWR_EN, GPIO_PIN_HV_MUX_PWR_EN);
-    return;
-}
 
 void enableHvPulser(void)
 {
@@ -490,10 +441,10 @@ void enableAll(void)
     enableLowPassFilter();
 
     // Enable VGA
-    enableVgaPwr();
+    //enableVgaPwr(); -> has no own power switch on my board    -gm
 
-    // Enable Preamplifier
-    enablePreamp();
+    // Enable Preamplifier  -> namechange -gm
+    enableVrx();
 
     enableHvDcDcPwr();
     enableHvNeg();
@@ -509,10 +460,10 @@ void disableAll(void)
     disableLowPassFilter();
 
     // Disable VGA
-    disableVgaPwr();
+    //disableVgaPwr();
 
-    // Disable Preamplifier
-    disablePreamp();
+    // Disable Preamplifier  -> namechange  -gm
+    disableVrx();
 
     disableHvDcDcPwr();
     disableHvNeg();

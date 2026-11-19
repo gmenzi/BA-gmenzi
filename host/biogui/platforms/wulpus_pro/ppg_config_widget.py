@@ -70,13 +70,13 @@ class PpgConfig:
 
 
     def file_tag(self) -> str:
-    """SHORT TEXT FOR THE FILE NAME. LED BYTES IN HEX, LIKE THE DK LOG."""
-    return (
-        f"{self.sample_rate_hz}Hz"
-        f"_G{self.led_green:02X}-IR{self.led_ir:02X}-R{self.led_red:02X}"
-        f"_LR{self.led_range}_T{self.tint}_ADC{self.adc_range}"
-        f"_AVG{self.sample_avg}_ALC{self.alc_enable}"
-    )
+        """SHORT TEXT FOR THE FILE NAME. LED BYTES IN HEX, LIKE THE DK LOG."""
+        return (
+            f"{self.sample_rate_hz}Hz"
+            f"_G{self.led_green:02X}-IR{self.led_ir:02X}-R{self.led_red:02X}"
+            f"_LR{self.led_range}_T{self.tint}_ADC{self.adc_range}"
+            f"_AVG{self.sample_avg}_ALC{self.alc_enable}"
+        )
 
 
 class PpgConfigWidget(QWidget):

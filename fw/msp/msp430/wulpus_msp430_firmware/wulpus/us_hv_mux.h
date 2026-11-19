@@ -23,33 +23,35 @@
 
 #include "driverlib.h"
 
+// NO MUX ON MY BOARD, ONLY NEED INIT AND SPI   -gm
+
 // Delay in MCLK cycles (should be at least 12 ns according to HV2707 datasheet)
-#define DELAY_CYCLES    1
+//#define DELAY_CYCLES    1
 
 
-#define HV_MUX_LE_PORT     GPIO_PORT_P7
-#define HV_MUX_LE_PIN      GPIO_PIN0
+//#define HV_MUX_LE_PORT     GPIO_PORT_P7
+//#define HV_MUX_LE_PIN      GPIO_PIN0
 
-#define HV_MUX_CLR_PORT    GPIO_PORT_P4
-#define HV_MUX_CLR_PIN     GPIO_PIN3
+//#define HV_MUX_CLR_PORT    GPIO_PORT_P4
+//#define HV_MUX_CLR_PIN     GPIO_PIN3
 
 
 
 void hvMuxInit(void);
-void hvMuxConfTx(uint16_t tx_config);
-void hvMuxConfRx(uint16_t rx_config);
+//void hvMuxConfTx(uint16_t tx_config);     -gm
+//void hvMuxConfRx(uint16_t rx_config);     -gm
 
 void rxSpiSend(uint8_t byte);
 
 // Latch outputs
 // Transition from High to Low  transfers the contents of the
 // shift registers into the latches and turn on switches
-void hvMuxLatchOutput(void);
+//void hvMuxLatchOutput(void);              -gm
 
-void hvMuxLatchHighToLow(void);
-void hvMuxLatchLowToHigh(void);
+//void hvMuxLatchHighToLow(void);           -gm
+//void hvMuxLatchLowToHigh(void);           -gm
 
 // Instructs the driver to ignore the next latch event
-void hvMuxIgnoreNxtLatchEvt(void);
+// void hvMuxIgnoreNxtLatchEvt(void);       -gm
 
 #endif /* US_HV_MUX_H_ */

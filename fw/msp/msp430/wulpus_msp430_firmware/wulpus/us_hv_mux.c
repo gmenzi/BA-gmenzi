@@ -27,13 +27,13 @@ void hvMuxInit(void)
 {
     // HV MUX Initialization
 
-    // Latch enable (SW_LE) signal will be manually controlled
-    GPIO_setAsOutputPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
+    // Latch enable (SW_LE) signal will be manually controlled          not needed, -gm
+    //GPIO_setAsOutputPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
 
-    // Clear (CLR) signal will be manually controlled
-    GPIO_setAsOutputPin(HV_MUX_CLR_PORT, HV_MUX_CLR_PIN);
-    // Pull CLR Low (no action)
-    GPIO_setOutputLowOnPin(HV_MUX_CLR_PORT, HV_MUX_CLR_PIN);
+    // Clear (CLR) signal will be manually controlled                   not needed, -gm
+    //GPIO_setAsOutputPin(HV_MUX_CLR_PORT, HV_MUX_CLR_PIN);
+    // Pull CLR Low (no action)                                         not needed, -gm
+    //GPIO_setOutputLowOnPin(HV_MUX_CLR_PORT, HV_MUX_CLR_PIN);
 
 
     // Configure SPI pins
@@ -45,11 +45,11 @@ void hvMuxInit(void)
         GPIO_PIN4 + GPIO_PIN5,
         GPIO_SECONDARY_MODULE_FUNCTION);
 
-    // Configure MISO pin
-    GPIO_setAsPeripheralModuleFunctionInputPin(
-        GPIO_PORT_P5,
-        GPIO_PIN6,
-        GPIO_SECONDARY_MODULE_FUNCTION);
+    // Configure MISO pin       not needed, -gm
+    //GPIO_setAsPeripheralModuleFunctionInputPin(
+    //    GPIO_PORT_P5,
+    //    GPIO_PIN6,
+    //    GPIO_SECONDARY_MODULE_FUNCTION);
 
 
     // Initialize SPI master: MSB first, inactive high clock polarity and 4 wire SPI
@@ -70,93 +70,15 @@ void hvMuxInit(void)
     EUSCI_B_SPI_enable(EUSCI_B1_BASE);
 }
 
-void hvMuxConfTx(uint16_t tx_config)
-{
-    // Pull ~LE High
-    GPIO_setOutputHighOnPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
 
-    __delay_cycles(DELAY_CYCLES);
+// deleted the following fcts:      -gm
+// - hvMuxConfTx
+// - hvMuxConfRx
+// - hvMuxLatchOutput
+// - hvMuxLatchHighToLow
+// - hvMuxLatchLowToHigh
+// - hvMuxIgnoreNxtLatchEvt
 
-    // Write first byte (MSB) (Channel 0...3)
-    UCB1TXBUF = (uint8_t) (tx_config >> 8);
-    // Wait until the byte is sent
-    while(UCB1STAT & UCBBUSY);
-    // Write second byte (LSB)(Channel 4...7)
-    UCB1TXBUF = (uint8_t) (tx_config & 0xFF);
-    // Wait until the byte is sent
-    while(UCB1STAT & UCBBUSY);
-
-    hvMuxLatchOutput();  // by pulling ~LE LOW for a while
-}
-
-void hvMuxConfRx(uint16_t rx_config)
-{
-    // Pull ~LE High
-    GPIO_setOutputHighOnPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
-
-    __delay_cycles(DELAY_CYCLES);
-
-    // Write first byte (MSB) (Channel 0...3)
-    UCB1TXBUF = (uint8_t) (rx_config >> 8);
-    // Wait until the byte is sent
-    while(UCB1STAT & UCBBUSY);
-    // Write second byte (LSB)(Channel 4...7)
-    UCB1TXBUF = (uint8_t) (rx_config & 0xFF);
-    // Wait until the byte is sent
-    while(UCB1STAT & UCBBUSY);
-}
-
-// Latch outputs
-// Transition from High to Low transfers the contents of the
-// shift registers into the latches and turns on switches
-void hvMuxLatchOutput(void)
-{
-    // Check the flag to ignore latch event
-    if (!ignore_nxt_le_evt)
-    {
-        // Pull ~LE Low to latch the signal
-        GPIO_setOutputLowOnPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
-
-        // Wait
-
-        __delay_cycles(DELAY_CYCLES);
-
-        // Pull ~LE High
-        GPIO_setOutputHighOnPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
-    }
-    else
-    {
-        // Clear the flag
-        ignore_nxt_le_evt = 0;
-    }
-
-}
-
-void hvMuxLatchHighToLow(void)
-{
-    // Check the flag to ignore latch event
-    if (!ignore_nxt_le_evt)
-    {
-        // Pull ~LE Low to latch the signal
-        GPIO_setOutputLowOnPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
-    }
-    else
-    {
-        // Clear the flag
-        ignore_nxt_le_evt = 0;
-    }
-}
-
-void hvMuxLatchLowToHigh(void)
-{
-    // Pull ~LE High
-    GPIO_setOutputHighOnPin(HV_MUX_LE_PORT, HV_MUX_LE_PIN);
-}
-
-void hvMuxIgnoreNxtLatchEvt(void)
-{
-    ignore_nxt_le_evt = 1;
-}
 
 void rxSpiSend(uint8_t byte)
 {

@@ -85,15 +85,7 @@ int main(void)
         // Configure Uss according to the new package
         confUsSubsystem();
 
-        // Configure envelope extractor
-        if (msp_config.enEnvDetector)
-        {
-            enableEnvDet();
-        }
-        else
-        {
-            disableEnvDet();
-        }
+        // Configure envelope extractor  -> deleted  -gm
 
         // Configure the events of slow and fast timers
         confTimerSlowSwEvents();
@@ -113,7 +105,7 @@ int main(void)
     }
     // Not reachable
 	
-	return 0;
+    return 0;
 }
 
 void configAfterPowerUp(void)
@@ -245,22 +237,9 @@ static void usAcquisitionLoop(void)
             }
 
 
-            // Configure TX config (applied immediately)
-            hvMuxConfTx(msp_config.txConfigs[tx_rx_id]);
-
-            // Check if TX and RX configs are identical
-            if (msp_config.txConfigs[tx_rx_id] == msp_config.rxConfigs[tx_rx_id])
-            {
-                // Instruct the driver to ignore the next latch event
-                hvMuxIgnoreNxtLatchEvt();
-            }
-            else
-            {
-                // Configure RX config (loaded into shift register but not latched)
-                // Latching will occur in the timer interrupt after completion
-                // of pulse generation
-                hvMuxConfRx(msp_config.rxConfigs[tx_rx_id]);
-            }
+            // Configure TX config (applied immediately)  -> deleted    -gm
+            
+            
             // Switch HV pulser from HiZ to active state
             enableHvPulser();
 
@@ -374,11 +353,6 @@ static void slowTimerCc2Callback(void)
 static void fastTimerCc0Callback(void)
 {
 
-    // Switch HV Mux (has internal delay)
-//    hvMuxLatchOutput();
-    // New approach for faster latching
-    hvMuxLatchHighToLow();
-
     // disable Pulser (switch to HiZ state)
     disableHvPulser();
 
@@ -386,12 +360,7 @@ static void fastTimerCc0Callback(void)
     {
         vgaDigipotRcEnable();
     }
-
-    // New approach for faster latching
-    hvMuxLatchLowToHigh();
-
-    // Disable HV DC-DC (we don't need switching at this point)
-//    disableHvDcDc();
+    
     // Disable Fast Timer
     timerFastStop();
 }
