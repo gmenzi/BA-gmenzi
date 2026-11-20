@@ -368,7 +368,7 @@
 	(net 182 "unconnected-(M1-P126-PadJ9)")
 	(net 183 "unconnected-(M1-P009-PadE3)")
 	(net 184 "/NRF/DBG_TX")
-	(net 185 "unconnected-(U5-CH2-Pad3)")
+	(net 185 "unconnected-(U5-CH3-Pad4)")
 	(net 186 "unconnected-(U5-CH7-Pad8)")
 	(net 187 "unconnected-(U5-CH8-Pad9)")
 	(net 188 "unconnected-(U5-NC2-Pad11)")
@@ -10736,18 +10736,18 @@
 			(at 8.7 -3 180)
 			(size 1 0.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 185 "unconnected-(U5-CH2-Pad3)")
+			(net 106 "PULSE_HV")
 			(pinfunction "CH2")
-			(pintype "passive+no_connect")
+			(pintype "passive")
 			(uuid "1dc3df73-694c-4dc6-9a35-4556d2ab1eca")
 		)
 		(pad "4" smd rect
 			(at 8.7 -1.5 180)
 			(size 1 0.9)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 106 "PULSE_HV")
+			(net 185 "unconnected-(U5-CH3-Pad4)")
 			(pinfunction "CH3")
-			(pintype "passive")
+			(pintype "passive+no_connect")
 			(uuid "31ee5513-3a57-48ec-9264-ad8638284968")
 		)
 		(pad "5" smd rect
@@ -30687,9 +30687,9 @@
 	(footprint "wulpus:NanoT160BP"
 		(layer "B.Cu")
 		(uuid "15f5494c-bb4e-4917-b393-cf99efc33199")
-		(at 159.125 90.85 -90)
+		(at 156.75 90.1)
 		(property "Reference" "S1"
-			(at 0.9 1.25 90)
+			(at 0.9 1.25 0)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "6229ff01-3513-4db7-b04a-4e7fe2cbe38e")
@@ -30702,7 +30702,7 @@
 			)
 		)
 		(property "Value" "NanoT160BP"
-			(at 2.14 4.355 90)
+			(at 2.14 4.355 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "04682f92-ba4e-4db5-bd3b-0cc73309e900")
@@ -30715,7 +30715,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "208fda92-b015-4334-9001-1f37e723b475")
@@ -30728,7 +30728,7 @@
 			)
 		)
 		(property "Description" "Switch"
-			(at 0 0 90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "949bf634-931f-4c2a-b899-bf4c5ea9b047")
@@ -30741,7 +30741,7 @@
 			)
 		)
 		(property "Datasheet Link" "https://www.ckswitches.com/media/2866/nanot.pdf"
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30755,7 +30755,7 @@
 			)
 		)
 		(property "Height" "1mm"
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30769,7 +30769,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "LITTELFUSE"
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30783,7 +30783,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "NanoT160BP"
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30797,7 +30797,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30811,7 +30811,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30825,7 +30825,7 @@
 			)
 		)
 		(property "Arrow Part Number" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30839,7 +30839,7 @@
 			)
 		)
 		(property "Arrow Price/Stock" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30853,7 +30853,7 @@
 			)
 		)
 		(property "LCSC Part #" "C2760983"
-			(at 0 0 270)
+			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -30903,16 +30903,6 @@
 			(uuid "95dce928-8275-4046-be6f-c84093a9144a")
 		)
 		(fp_line
-			(start -1.55 1.55)
-			(end 3.95 1.55)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "Eco2.User")
-			(uuid "e675b17f-0eb0-4496-9e2d-c40968ea0924")
-		)
-		(fp_line
 			(start -1.55 -0.85)
 			(end -1.55 1.55)
 			(stroke
@@ -30933,6 +30923,16 @@
 			(uuid "10c0c76c-89ae-492c-84b7-d7d694b297f0")
 		)
 		(fp_line
+			(start -1.55 1.55)
+			(end 3.95 1.55)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "Eco2.User")
+			(uuid "e675b17f-0eb0-4496-9e2d-c40968ea0924")
+		)
+		(fp_line
 			(start 3.95 -0.85)
 			(end 3.95 1.55)
 			(stroke
@@ -30941,16 +30941,6 @@
 			)
 			(layer "Eco2.User")
 			(uuid "ee11ceaa-5554-42f5-b203-a1fd2ee9f8fb")
-		)
-		(fp_line
-			(start 0.1 0.2)
-			(end 2.3 0.2)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "20cf3fab-bdf6-4e58-8945-f43ae1efe248")
 		)
 		(fp_line
 			(start 0.1 -0.85)
@@ -30973,6 +30963,16 @@
 			(uuid "3fef3ff9-8741-4926-9f52-8866f736a1cd")
 		)
 		(fp_line
+			(start 0.1 0.2)
+			(end 2.3 0.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "20cf3fab-bdf6-4e58-8945-f43ae1efe248")
+		)
+		(fp_line
 			(start 2.3 -0.85)
 			(end 2.3 0.2)
 			(stroke
@@ -30983,7 +30983,7 @@
 			(uuid "752d19ba-40b5-4341-b3b6-e34acf5170e2")
 		)
 		(pad "1" thru_hole circle
-			(at 0 0 270)
+			(at 0 0)
 			(size 1.1 1.1)
 			(drill 0.6)
 			(layers "*.Cu" "*.Mask")
@@ -30995,7 +30995,7 @@
 			(uuid "cfba92ba-6c5b-4786-bd77-a2cc7bd8d2ce")
 		)
 		(pad "2" thru_hole circle
-			(at 2.4 0 270)
+			(at 2.4 0)
 			(size 1.1 1.1)
 			(drill 0.6)
 			(layers "*.Cu" "*.Mask")
@@ -66474,12 +66474,12 @@
 		(uuid "bd131d5f-e4a1-4914-b1ab-04ad3559a673")
 	)
 	(segment
-		(start 154.065412 110.25)
-		(end 154.077999 110.262587)
+		(start 152.63 112.35)
+		(end 152.75 112.35)
 		(width 0.5)
 		(layer "F.Cu")
 		(net 106)
-		(uuid "12584aa8-85a5-4399-ade5-93d32cd107a1")
+		(uuid "10a30dd7-9b48-4698-a22b-ebc2d3a47984")
 	)
 	(segment
 		(start 151.92 115.44)
@@ -66498,20 +66498,12 @@
 		(uuid "23ab96aa-ee96-46aa-8e6a-1071a9598c49")
 	)
 	(segment
-		(start 152.63 111.17)
-		(end 153.55 110.25)
+		(start 153.175 111.925)
+		(end 153.915586 111.925)
 		(width 0.5)
 		(layer "F.Cu")
 		(net 106)
-		(uuid "40a5a8af-2a61-4aca-a962-60ee2ea4095b")
-	)
-	(segment
-		(start 153.55 110.25)
-		(end 154.065412 110.25)
-		(width 0.5)
-		(layer "F.Cu")
-		(net 106)
-		(uuid "80e117c4-7a6b-4fad-a2a5-fde3c3a1bf07")
+		(uuid "55c009be-eef6-4e21-bd08-116c9b23f8a6")
 	)
 	(segment
 		(start 151.991472 113.121)
@@ -66522,20 +66514,28 @@
 		(uuid "8600e19f-c051-45a2-b360-3aa2dc503799")
 	)
 	(segment
+		(start 152.75 112.35)
+		(end 153.175 111.925)
+		(width 0.5)
+		(layer "F.Cu")
+		(net 106)
+		(uuid "874d7110-75fa-4d89-8595-a1e52dc8eced")
+	)
+	(segment
+		(start 153.915586 111.925)
+		(end 154.077999 111.762587)
+		(width 0.5)
+		(layer "F.Cu")
+		(net 106)
+		(uuid "9035868b-d23d-4e0f-b877-9ca443b89f3a")
+	)
+	(segment
 		(start 152.63 112.482472)
 		(end 152.63 112.35)
 		(width 0.5)
 		(layer "F.Cu")
 		(net 106)
 		(uuid "a520074e-142f-47c4-b0b6-79789d0dfefb")
-	)
-	(segment
-		(start 152.63 112.35)
-		(end 152.63 111.17)
-		(width 0.5)
-		(layer "F.Cu")
-		(net 106)
-		(uuid "a65fb83a-c0e5-43ba-9d39-244c1c4bbfbf")
 	)
 	(segment
 		(start 151.92 113.192472)
@@ -68858,36 +68858,44 @@
 		(uuid "188dd1cc-5299-4cf9-94cb-9c32533da513")
 	)
 	(segment
-		(start 155.057545 91.51255)
+		(start 158.175 91.15)
+		(end 156.25 91.15)
+		(width 0.15)
+		(layer "B.Cu")
+		(net 123)
+		(uuid "3db43397-7b5f-4987-9d10-89ff54b6e146")
+	)
+	(segment
+		(start 159.175 90.15)
+		(end 158.175 91.15)
+		(width 0.15)
+		(layer "B.Cu")
+		(net 123)
+		(uuid "4acc4d1c-2ec3-4627-92a0-9e5c06b7a21b")
+	)
+	(segment
+		(start 155.88745 91.51255)
 		(end 154.857545 91.51255)
 		(width 0.15)
 		(layer "B.Cu")
 		(net 123)
-		(uuid "9fdeeda3-a531-4194-9705-6ac8473e7693")
+		(uuid "7fbffed9-8db8-4b9c-80b9-6319e3b28af2")
 	)
 	(segment
-		(start 156.722545 93.17755)
-		(end 155.057545 91.51255)
+		(start 156.25 91.15)
+		(end 155.88745 91.51255)
 		(width 0.15)
 		(layer "B.Cu")
 		(net 123)
-		(uuid "a124357f-a10c-43fc-8fcc-06e4372ba402")
+		(uuid "a69fddd6-51c5-4f81-9d29-fa9db9f3c9be")
 	)
 	(segment
-		(start 159.05255 93.17755)
-		(end 156.722545 93.17755)
+		(start 159.175 90.1)
+		(end 159.175 90.15)
 		(width 0.15)
 		(layer "B.Cu")
 		(net 123)
-		(uuid "a74ae725-75c4-48a3-a838-e2e8453f2149")
-	)
-	(segment
-		(start 159.125 93.25)
-		(end 159.05255 93.17755)
-		(width 0.15)
-		(layer "B.Cu")
-		(net 123)
-		(uuid "b1caca09-2997-4916-99ec-8a44f546b422")
+		(uuid "ddb7bba8-2d0c-4309-bac7-6cc18e9254f6")
 	)
 	(segment
 		(start 150.766545 93.098295)
@@ -69544,6 +69552,14 @@
 		(layer "In3.Cu")
 		(net 184)
 		(uuid "48aee41f-8fcf-48f0-acd1-dd2f0ef58bf9")
+	)
+	(segment
+		(start 154.065412 110.25)
+		(end 154.077999 110.262587)
+		(width 0.5)
+		(layer "F.Cu")
+		(net 185)
+		(uuid "12584aa8-85a5-4399-ade5-93d32cd107a1")
 	)
 	(segment
 		(start 126.156 102.883545)
